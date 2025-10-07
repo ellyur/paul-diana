@@ -5,7 +5,7 @@ import { Menu, X } from 'lucide-react';
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   const navItems = [
     { name: 'Our Moments', href: '#slideshow' },
@@ -20,14 +20,6 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show/hide navigation based on scroll - only show when scrolling starts
-      if (window.scrollY > 100) {
-        setIsVisible(true);
-      } else {
-        // Hide navigation when at the top
-        setIsVisible(false);
-      }
-
       // Update active section
       const sections = navItems.map(item => item.href.slice(1));
       const currentSection = sections.find(section => {
@@ -43,9 +35,6 @@ const Navigation = () => {
         setActiveSection(currentSection);
       }
     };
-
-    // Don't show navigation immediately when component mounts
-    setIsVisible(false);
     
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -98,7 +87,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <h2 className="text-xl font-display font-semibold text-primary">
-              E<span className="text-primary">&</span>C
+              P<span className="text-primary">&</span>C
             </h2>
           </div>
 
