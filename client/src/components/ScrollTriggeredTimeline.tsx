@@ -200,7 +200,7 @@ export default function ScrollTriggeredTimeline() {
                     <h2 className="text-4xl md:text-5xl font-serif italic mb-4 text-primary" data-testid="text-timeline-title">
                         Our Wedding Day
                     </h2>
-                    <p className="max-w-2xl mx-auto text-[#e44a4a]">
+                    <p className="max-w-2xl mx-auto text-[#0b0c0b]">
                         Join us as we celebrate our love story. Here's what to expect on our special day.
                     </p>
                 </motion.div>
