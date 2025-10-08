@@ -7,7 +7,7 @@ const RSVPSection = () => {
   return (
     <motion.section 
       id="rsvp" 
-      className="section-pastel-blue py-20 px-4 relative overflow-hidden"
+      className="section-pastel-blue relative overflow-hidden"
       initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
       animate={{ opacity: 1 }}
       transition={animationsEnabled ? { duration: 1, delay: 10.5 } : { duration: 0 }}

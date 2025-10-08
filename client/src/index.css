@@ -204,7 +204,7 @@
     overflow-x: hidden;
   }
 
-  /* Texture Layer - 10% opacity for subtle texture effect */
+  /* Texture Layer - 5% opacity for subtle texture effect */
   body::before {
     content: "";
     position: fixed;
@@ -212,7 +212,7 @@
     background-image: url('https://images.unsplash.com/photo-1601325059290-eac581b71510?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-size: cover;
     background-position: center;
-    opacity: 0.10;
+    opacity: 0.05;
     z-index: -1;
     pointer-events: none;
   }

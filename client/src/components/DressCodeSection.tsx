@@ -17,7 +17,7 @@ const DressCodeSection = () => {
   return (
     <motion.section 
       id="dresscode" 
-      className="section-pastel-blue py-20 px-4 relative overflow-hidden"
+      className="section-pastel-blue relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 7.5 }}

@@ -18,7 +18,7 @@ const EntourageSection = () => {
   return (
     <motion.section 
       id="entourage" 
-      className="section-hard-blue py-20 px-4 relative overflow-hidden"
+      className="section-hard-blue relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 8.5 }}

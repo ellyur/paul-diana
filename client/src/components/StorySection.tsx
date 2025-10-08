@@ -169,7 +169,7 @@ const StorySection = () => {
         </svg>
       </div>
       {/* Header */}
-      <div className="text-center py-16 sm:py-20 px-4 relative z-10">
+      <div className="text-center relative z-10">
         <motion.div
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}

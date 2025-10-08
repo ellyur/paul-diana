@@ -49,12 +49,12 @@ const VideoSection = () => {
 
   return (
     <motion.section 
-      className="section-hard-blue relative w-full overflow-hidden py-12"
+      className="section-hard-blue relative w-full overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 4.5 }}
     >
-      <div className="max-w-4xl mx-auto px-4">
+      <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-display mb-8 text-center text-primary" data-testid="text-video-title">
           Save the Date Video
         </h2>
