@@ -5,7 +5,7 @@ import { Menu, X } from 'lucide-react';
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
 
   const navItems = [
     { name: 'Our Moments', href: '#slideshow' },
@@ -20,6 +20,10 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      // Show navigation after scrolling down
+      const scrollPosition = window.scrollY;
+      setIsVisible(scrollPosition > 100);
+
       // Update active section
       const sections = navItems.map(item => item.href.slice(1));
       const currentSection = sections.find(section => {
