@@ -103,7 +103,7 @@ const Index = () => {
         />
 
         {/* Main Content Sections */}
-        <main className="relative z-10">
+        <main className="relative z-10 space-y-20">
           <HeroSection />
           <InvitationRevealSection />
           <CountdownSection />

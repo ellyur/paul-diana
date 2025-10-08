@@ -26,23 +26,35 @@ const RusticInvitationReveal = ({ animationsEnabled }: RusticInvitationRevealPro
           className="relative group"
           data-testid={`polaroid-${index}`}
         >
-          {/* Minimalist Frame */}
-          <div 
-            className="bg-white p-4 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
-          >
-            <div className="relative overflow-hidden bg-gray-50" style={{ width: '240px', height: '240px' }}>
-              <img
-                src={polaroid.src}
-                alt={polaroid.alt}
-                className="w-full h-full object-cover"
-              />
-            </div>
+          {/* Modern Minimalist Frame with Accent */}
+          <div className="relative">
+            {/* Decorative background layer */}
+            <div className="absolute -inset-2 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent rounded-lg blur-sm opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
             
-            {/* Simple caption */}
-            <div className="mt-3 text-center">
-              <p className="text-gray-600 text-sm font-light">
-                {polaroid.alt}
-              </p>
+            {/* Main card */}
+            <div 
+              className="relative bg-white p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border-t-2 border-primary rounded-sm"
+            >
+              {/* Top accent line */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-0.5 bg-primary/30" />
+              
+              <div className="relative overflow-hidden bg-gray-50 rounded-sm" style={{ width: '240px', height: '240px' }}>
+                <img
+                  src={polaroid.src}
+                  alt={polaroid.alt}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                {/* Subtle overlay on hover */}
+                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300" />
+              </div>
+              
+              {/* Modern caption with accent */}
+              <div className="mt-4 text-center relative">
+                <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-8 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+                <p className="text-gray-700 text-sm font-medium tracking-wider uppercase">
+                  {polaroid.alt}
+                </p>
+              </div>
             </div>
           </div>
         </div>
