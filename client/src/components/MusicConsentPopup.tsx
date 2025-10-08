@@ -26,7 +26,7 @@ const MusicConsentPopup = ({ onConsent, isVisible }: MusicConsentPopupProps) => 
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.9, opacity: 0, y: 20 }}
             transition={{ type: "spring", duration: 0.5 }}
-            className="bg-white rounded-lg p-8 md:p-12 max-w-lg w-full mx-4 shadow-2xl border border-gray-100 relative overflow-hidden"
+            className="bg-background rounded-lg p-8 md:p-12 max-w-lg w-full mx-4 shadow-2xl border border-border relative overflow-hidden"
           >
             {/* Minimalist decorative corners */}
             <div className="absolute top-0 left-0 w-16 h-16 border-l-2 border-t-2 border-primary opacity-20"></div>
@@ -49,7 +49,7 @@ const MusicConsentPopup = ({ onConsent, isVisible }: MusicConsentPopupProps) => 
                 className="flex justify-center"
               >
                 <div className="bg-primary p-5 rounded-full shadow-lg">
-                  <Music className="h-10 w-10 text-white" />
+                  <Music className="h-10 w-10 text-primary-foreground" />
                 </div>
               </motion.div>
               
@@ -65,7 +65,7 @@ const MusicConsentPopup = ({ onConsent, isVisible }: MusicConsentPopupProps) => 
                   <div className="h-px w-12 bg-primary"></div>
                 </div>
 
-                <p className="text-gray-600 leading-relaxed text-base md:text-lg italic px-4">
+                <p className="text-foreground/80 leading-relaxed text-base md:text-lg italic px-4">
                   Would you like to play music to explore more of our wedding invitation?
                 </p>
               </div>
@@ -73,7 +73,7 @@ const MusicConsentPopup = ({ onConsent, isVisible }: MusicConsentPopupProps) => 
               <div className="flex flex-col sm:flex-row gap-4 pt-8">
                 <Button
                   onClick={() => handleConsent(true)}
-                  className="flex-1 bg-primary hover:bg-primary/90 text-white font-bold py-5 px-6 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-xl text-base"
+                  className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-5 px-6 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-xl text-base"
                   data-testid="button-allow-music"
                 >
                   <Volume2 className="h-5 w-5 mr-2" />
@@ -82,7 +82,7 @@ const MusicConsentPopup = ({ onConsent, isVisible }: MusicConsentPopupProps) => 
                 <Button
                   onClick={() => handleConsent(false)}
                   variant="outline"
-                  className="flex-1 border-2 border-gray-200 hover:border-primary text-gray-700 hover:text-primary bg-transparent hover:bg-gray-50 font-medium py-5 px-6 rounded-lg transition-all duration-300 text-base"
+                  className="flex-1 border-2 border-border hover:border-primary text-foreground hover:text-primary bg-transparent hover:bg-muted font-medium py-5 px-6 rounded-lg transition-all duration-300 text-base"
                   data-testid="button-skip-music"
                 >
                   <VolumeX className="h-5 w-5 mr-2" />

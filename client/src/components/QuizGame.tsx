@@ -113,7 +113,7 @@ const QuizGame = ({ onComplete, animationsEnabled }: QuizGameProps) => {
           initial={animationsEnabled ? { y: -20, opacity: 0 } : { y: 0, opacity: 1 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-4"
+          className="inline-flex items-center gap-2 bg-background/20 backdrop-blur-sm rounded-full px-6 py-3 mb-4"
         >
           <Heart className="w-5 h-5 text-primary" />
           <span className="text-foreground font-medium">
@@ -146,10 +146,10 @@ const QuizGame = ({ onComplete, animationsEnabled }: QuizGameProps) => {
           animate={{ x: 0, opacity: 1 }}
           exit={animationsEnabled ? { x: -50, opacity: 0 } : { x: 0, opacity: 1 }}
           transition={{ duration: 0.3 }}
-          className="bg-white rounded-2xl shadow-2xl p-8 mb-6"
+          className="bg-background rounded-2xl shadow-2xl p-8 mb-6"
           data-testid={`question-${currentQuestion}`}
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
             {currentQ.question}
           </h2>
 
@@ -173,7 +173,7 @@ const QuizGame = ({ onComplete, animationsEnabled }: QuizGameProps) => {
                         : 'bg-secondary text-white scale-105'
                       : index === currentQ.correctAnswer && selectedAnswer !== null
                       ? 'bg-primary text-primary-foreground'
-                      : 'bg-gray-300 text-gray-600'
+                      : 'bg-muted text-muted-foreground'
                   }`}
                   data-testid={`answer-${index}`}
                 >
@@ -220,7 +220,7 @@ const QuizGame = ({ onComplete, animationsEnabled }: QuizGameProps) => {
 
       {/* Score indicator */}
       <div className="mt-6 text-center">
-        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+        <div className="inline-flex items-center gap-2 bg-background/10 backdrop-blur-sm rounded-full px-4 py-2">
           <Star className="w-4 h-4 text-primary" />
           <span className="text-white text-sm font-medium" data-testid="text-current-score">
             Score: {score}/{questions.length}
