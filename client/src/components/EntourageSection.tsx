@@ -254,7 +254,7 @@ const EntourageSection = () => {
                 Senior Groomsmen
               </h3>
               {entourageData.seniorGroomsmen.map((name, index) => (
-                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1" data-testid={`senior-groomsman-${index}`}>
+                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1 text-right" data-testid={`senior-groomsman-${index}`}>
                   {name}
                 </p>
               ))}
@@ -264,7 +264,7 @@ const EntourageSection = () => {
                 Senior Bridesmaids
               </h3>
               {entourageData.seniorBridesmaids.map((name, index) => (
-                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1" data-testid={`senior-bridesmaid-${index}`}>
+                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1 text-left" data-testid={`senior-bridesmaid-${index}`}>
                   {name}
                 </p>
               ))}
