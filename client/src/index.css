@@ -204,7 +204,7 @@
     overflow-x: hidden;
   }
 
-  /* Texture Layer - exactly like your sample code */
+  /* Texture Layer - 10% opacity for subtle texture effect */
   body::before {
     content: "";
     position: fixed;
