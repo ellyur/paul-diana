@@ -166,14 +166,14 @@ const EntourageSection = () => {
           <div className="grid grid-cols-2 gap-2 md:gap-4 max-w-5xl mx-auto">
             <div className="text-center">
               {entourageData.principalSponsors.men.map((name, index) => (
-                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1" data-testid={`principal-sponsor-men-${index}`}>
+                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1 whitespace-nowrap" data-testid={`principal-sponsor-men-${index}`}>
                   {name}
                 </p>
               ))}
             </div>
             <div className="text-center">
               {entourageData.principalSponsors.women.map((name, index) => (
-                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1" data-testid={`principal-sponsor-women-${index}`}>
+                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1 whitespace-nowrap" data-testid={`principal-sponsor-women-${index}`}>
                   {name}
                 </p>
               ))}
