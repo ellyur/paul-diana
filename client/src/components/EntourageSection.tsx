@@ -3,55 +3,107 @@ import { motion } from 'framer-motion';
 const EntourageSection = () => {
   const entourageData = {
     parents: [
-      { label: "Parents of the Groom", names: ["Elmer Paran", "Genalyn Paran"] },
-      { label: "Parents of the Bride", names: ["Jaymar Manlangit", "Merlyn Manlangit"] }
+      { label: "Parents of the Groom", names: ["Sergio B. Garcia", "Leonora A. Garcia"] },
+      { label: "Parents of the Bride", names: ["Fernando R. Magalong Jr. (+)", "to be represented with honor by his son, Dave Julius S. Magalong", "Imelda S. Magalong"] }
     ],
     principalSponsors: {
       title: "Principal Sponsors",
-      couples: [
-        { male: "Mr. & Mrs. Sponsor 1", female: "" },
-        { male: "Mr. & Mrs. Sponsor 2", female: "" },
-        { male: "Mr. & Mrs. Sponsor 3", female: "" },
-        { male: "Mr. & Mrs. Sponsor 4", female: "" },
-        { male: "Mr. & Mrs. Sponsor 5", female: "" },
-        { male: "Mr. & Mrs. Sponsor 6", female: "" },
-        { male: "Mr. & Mrs. Sponsor 7", female: "" },
+      men: [
+        "Major Gamaliel Ibale",
+        "Mr. Joven De Vera",
+        "Dr. Armando Ceralde",
+        "CSM Artemio De Vera",
+        "Ret. Police Domingo Agbuya",
+        "Mr. Ernesto Agbuya",
+        "Mr. Ronnie June Santiago",
+        "Engr. Joel Cadiang",
+        "Mr. Ernesto Pacia Jr.",
+        "Capt. Brando Gabriel",
+        "Engr. Arnold Diño",
+        "Mr. Mark Jonas Plegino",
+        "Mr. Armenio Oloa",
+        "Mr. Joel Andres",
+        "Mr. Bernie Baladjay",
+        "Ms. Ghie Serrano",
+        "Mr. Mario Camba",
+        "Mr. Erwin Cacal"
+      ],
+      women: [
+        "Major Irene Ibale",
+        "Mdm. Anecita Diaz",
+        "Mdm. Elsie Obenza",
+        "HT Perla De Vera",
+        "Mrs. Jane Agbuya",
+        "Mrs. Lucila Agbuya",
+        "Mrs. Myrna Agbuya",
+        "Dr. Beah Bautista",
+        "Dr. Leah Ellen Pacia",
+        "Mrs. Josephine Gabriel",
+        "Mrs. Mia Tamayo",
+        "Mrs. Mary Grace Plegino",
+        "Mrs. Revelina Oloa",
+        "Mrs. Memilyn Andres",
+        "Mrs. Joelyn Kuo",
+        "Ms. Mhindy Serrano",
+        "Mrs. Marissa Bautista",
+        "Mrs. Sheryl Cacal"
       ]
     },
     secondarySponsors: {
       title: "Secondary Sponsors",
       roles: [
-        { role: "Candle", names: ["Name 1", "Name 2"] },
-        { role: "Veil", names: ["Name 1", "Name 2"] },
-        { role: "Cord", names: ["Name 1", "Name 2"] }
+        { role: "Candle", names: ["Orlando Tagum Jr.", "Divina Angela Tagum"] },
+        { role: "Veil", names: ["Harold Lambago", "Chris Lambago"] },
+        { role: "Cord", names: ["Danilo Tabasa", "Pearl Blessy Catalan"] }
       ]
     },
-    bestMan: { name: "Brandon Lemoshiro", role: "Best Man" },
-    maidOfHonor: { name: "Daisy Jane Macairan", role: "Maid of Honor" },
-    groomsmen: [
-      "Groomsman 1",
-      "Groomsman 2",
-      "Groomsman 3",
-      "Groomsman 4",
-      "Groomsman 5",
-      "Groomsman 6"
+    matronOfHonor: { name: "Daniella Paula Magalong", role: "Matron of Honor" },
+    bestMan: { name: "Denver Josh Magalong", role: "Best Man" },
+    maidOfHonor: { name: "Lyca May Baladjay", role: "Maid of Honor" },
+    seniorGroomsmen: [
+      "KEANE KIMVERLEE EUSEBIO",
+      "RUEL FERRER",
+      "ELLIOTT NESS CONDE",
+      "ADRIAN MOISES SOLIS",
+      "ZION JOHN LOBO",
+      "JOHN ANDREI SISON"
     ],
-    bridesmaids: [
-      "Bridesmaid 1",
-      "Bridesmaid 2",
-      "Bridesmaid 3",
-      "Bridesmaid 4",
-      "Bridesmaid 5",
-      "Bridesmaid 6"
+    seniorBridesmaids: [
+      "MARIANNE ROMERO",
+      "MONICA AGBUYA",
+      "JENIA REINE GABRIEL",
+      "PRINCESS RICA ARAMBULO",
+      "MA. ANDREA ROSE RUIZ",
+      "JASNEY MAE MAGALONG"
     ],
-    others: [
-      { role: "Flower Men", names: ["Name 1", "Name 2"] },
-      { role: "Flower Ladies", names: ["Name 1", "Name 2"] },
-      { role: "Ring Bearer", names: ["Name"] },
-      { role: "Coin Bearer", names: ["Name"] },
-      { role: "Bible Bearer", names: ["Name"] }
+    juniorGroomsmen: [
+      "RANDY II BALADJAY",
+      "MARK JURIEL RAMOS",
+      "REON JAMES CHING",
+      "FRED GABRIEL GARCIA",
+      "MARK ENZO GARCIA"
     ],
-    officiant: { name: "Rev. Fr. Wilson T. Lagare", role: "Officiating Priest" }
+    juniorBridesmaids: [
+      "MA. JASMINE RAMOS",
+      "DIVINE GRACE GARCIA",
+      "MICHAELLA ROSE GARCIA",
+      "NERIAH GARCIA",
+      "ATASHA MYRLYN RUIZ"
+    ],
+    bearers: [
+      { role: "Ring Bearer", names: ["AIEON AZRAEL ARAMBULO"] },
+      { role: "Coin Bearer", names: ["SYMON REMILLOSA"] },
+      { role: "Bible Bearer", names: ["WIZE AXL MACARANAS"] }
+    ],
+    flowerGirls: [
+      "MINEAH ROWAINE GARCIA",
+      "MEZIAH GARCIA",
+      "DAYANA NHEBEA QUIÑONES",
+      "ANGEL BAÑAGA"
+    ],
+    bannerBearers: ["Oleen Andana", "Oyeen Andana"],
+    littleGroom: "EMMANUEL AGBUYA",
+    littleBride: "OLIVIA IVANNA TAGUM"
   };
 
   return (
@@ -111,12 +163,21 @@ const EntourageSection = () => {
           <h3 className="text-xl md:text-2xl lg:text-3xl font-display font-bold mb-4 md:mb-6 text-primary" data-testid="principal-sponsors-title">
             {entourageData.principalSponsors.title}
           </h3>
-          <div className="grid grid-cols-2 gap-2 md:gap-3 max-w-3xl mx-auto">
-            {entourageData.principalSponsors.couples.map((couple, index) => (
-              <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground" data-testid={`principal-sponsor-${index}`}>
-                {couple.male}
-              </p>
-            ))}
+          <div className="grid grid-cols-2 gap-2 md:gap-4 max-w-5xl mx-auto">
+            <div className="text-center">
+              {entourageData.principalSponsors.men.map((name, index) => (
+                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1" data-testid={`principal-sponsor-men-${index}`}>
+                  {name}
+                </p>
+              ))}
+            </div>
+            <div className="text-center">
+              {entourageData.principalSponsors.women.map((name, index) => (
+                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1" data-testid={`principal-sponsor-women-${index}`}>
+                  {name}
+                </p>
+              ))}
+            </div>
           </div>
         </motion.div>
 
@@ -146,14 +207,22 @@ const EntourageSection = () => {
           </div>
         </motion.div>
 
-        {/* Best Man & Maid of Honor */}
+        {/* Matron of Honor, Best Man & Maid of Honor */}
         <motion.div 
           className="mb-8 md:mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 9.4 }}
         >
-          <div className="grid grid-cols-2 gap-4 md:gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-3 gap-2 md:gap-6 max-w-4xl mx-auto">
+            <div className="text-center" data-testid="matron-of-honor-section">
+              <h3 className="text-sm md:text-lg lg:text-xl font-display font-semibold mb-2 md:mb-3 text-primary">
+                {entourageData.matronOfHonor.role}
+              </h3>
+              <p className="text-xs md:text-base lg:text-lg font-body text-foreground" data-testid="matron-of-honor-name">
+                {entourageData.matronOfHonor.name}
+              </p>
+            </div>
             <div className="text-center" data-testid="best-man-section">
               <h3 className="text-sm md:text-lg lg:text-xl font-display font-semibold mb-2 md:mb-3 text-primary">
                 {entourageData.bestMan.role}
@@ -173,7 +242,7 @@ const EntourageSection = () => {
           </div>
         </motion.div>
 
-        {/* Groomsmen & Bridesmaids */}
+        {/* Senior Groomsmen & Senior Bridesmaids */}
         <motion.div 
           className="mb-8 md:mb-12"
           initial={{ opacity: 0, y: 30 }}
@@ -181,22 +250,22 @@ const EntourageSection = () => {
           transition={{ duration: 0.8, ease: "easeOut", delay: 9.6 }}
         >
           <div className="grid grid-cols-2 gap-4 md:gap-8 max-w-4xl mx-auto">
-            <div className="text-center" data-testid="groomsmen-section">
+            <div className="text-center" data-testid="senior-groomsmen-section">
               <h3 className="text-lg md:text-2xl lg:text-3xl font-display font-bold mb-3 md:mb-6 text-primary">
-                Groomsmen
+                Senior Groomsmen
               </h3>
-              {entourageData.groomsmen.map((name, index) => (
-                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1" data-testid={`groomsman-${index}`}>
+              {entourageData.seniorGroomsmen.map((name, index) => (
+                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1" data-testid={`senior-groomsman-${index}`}>
                   {name}
                 </p>
               ))}
             </div>
-            <div className="text-center" data-testid="bridesmaids-section">
+            <div className="text-center" data-testid="senior-bridesmaids-section">
               <h3 className="text-lg md:text-2xl lg:text-3xl font-display font-bold mb-3 md:mb-6 text-primary">
-                Bridesmaids
+                Senior Bridesmaids
               </h3>
-              {entourageData.bridesmaids.map((name, index) => (
-                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1" data-testid={`bridesmaid-${index}`}>
+              {entourageData.seniorBridesmaids.map((name, index) => (
+                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1" data-testid={`senior-bridesmaid-${index}`}>
                   {name}
                 </p>
               ))}
@@ -204,21 +273,52 @@ const EntourageSection = () => {
           </div>
         </motion.div>
 
-        {/* Other Roles */}
+        {/* Junior Groomsmen & Junior Bridesmaids */}
         <motion.div 
-          className="mb-12 md:mb-16"
+          className="mb-8 md:mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 9.8 }}
         >
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {entourageData.others.map((item, index) => (
-              <div key={index} className="text-center" data-testid={`other-role-${item.role.toLowerCase().replace(/\s+/g, '-')}`}>
-                <h4 className="text-base md:text-lg font-display font-semibold mb-2 text-primary">
+          <div className="grid grid-cols-2 gap-4 md:gap-8 max-w-4xl mx-auto">
+            <div className="text-center" data-testid="junior-groomsmen-section">
+              <h3 className="text-lg md:text-2xl lg:text-3xl font-display font-bold mb-3 md:mb-6 text-primary">
+                Junior Groomsmen
+              </h3>
+              {entourageData.juniorGroomsmen.map((name, index) => (
+                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1" data-testid={`junior-groomsman-${index}`}>
+                  {name}
+                </p>
+              ))}
+            </div>
+            <div className="text-center" data-testid="junior-bridesmaids-section">
+              <h3 className="text-lg md:text-2xl lg:text-3xl font-display font-bold mb-3 md:mb-6 text-primary">
+                Junior Bridesmaids
+              </h3>
+              {entourageData.juniorBridesmaids.map((name, index) => (
+                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1" data-testid={`junior-bridesmaid-${index}`}>
+                  {name}
+                </p>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Bearers */}
+        <motion.div 
+          className="mb-8 md:mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 10.0 }}
+        >
+          <div className="grid grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
+            {entourageData.bearers.map((item, index) => (
+              <div key={index} className="text-center" data-testid={`bearer-${item.role.toLowerCase().replace(/\s+/g, '-')}`}>
+                <h4 className="text-sm md:text-lg font-display font-semibold mb-2 text-primary">
                   {item.role}
                 </h4>
                 {item.names.map((name, nameIndex) => (
-                  <p key={nameIndex} className="text-sm md:text-base font-body text-foreground" data-testid={`${item.role.toLowerCase().replace(/\s+/g, '-')}-name-${nameIndex}`}>
+                  <p key={nameIndex} className="text-xs md:text-base font-body text-foreground" data-testid={`${item.role.toLowerCase().replace(/\s+/g, '-')}-name-${nameIndex}`}>
                     {name}
                   </p>
                 ))}
@@ -227,19 +327,69 @@ const EntourageSection = () => {
           </div>
         </motion.div>
 
-        {/* Officiant */}
+        {/* Flower Girls */}
+        <motion.div 
+          className="mb-8 md:mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 10.2 }}
+        >
+          <div className="text-center" data-testid="flower-girls-section">
+            <h3 className="text-lg md:text-2xl lg:text-3xl font-display font-bold mb-3 md:mb-6 text-primary">
+              Flower Girls
+            </h3>
+            <div className="grid grid-cols-2 gap-2 max-w-3xl mx-auto">
+              {entourageData.flowerGirls.map((name, index) => (
+                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1" data-testid={`flower-girl-${index}`}>
+                  {name}
+                </p>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Banner Bearers */}
+        <motion.div 
+          className="mb-8 md:mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 10.4 }}
+        >
+          <div className="text-center" data-testid="banner-bearers-section">
+            <h3 className="text-lg md:text-xl font-display font-semibold mb-3 text-primary">
+              Banner Bearers
+            </h3>
+            {entourageData.bannerBearers.map((name, index) => (
+              <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1" data-testid={`banner-bearer-${index}`}>
+                {name}
+              </p>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Little Groom & Little Bride */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 10.0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 10.6 }}
         >
-          <div className="text-center" data-testid="officiant-section">
-            <h3 className="text-lg md:text-xl font-display font-semibold mb-3 text-primary">
-              {entourageData.officiant.role}
-            </h3>
-            <p className="text-base md:text-lg font-body text-foreground" data-testid="officiant-name">
-              {entourageData.officiant.name}
-            </p>
+          <div className="grid grid-cols-2 gap-4 md:gap-8 max-w-4xl mx-auto">
+            <div className="text-center" data-testid="little-groom-section">
+              <h3 className="text-sm md:text-lg lg:text-xl font-display font-semibold mb-2 md:mb-3 text-primary">
+                Little Groom
+              </h3>
+              <p className="text-xs md:text-base lg:text-lg font-body text-foreground" data-testid="little-groom-name">
+                {entourageData.littleGroom}
+              </p>
+            </div>
+            <div className="text-center" data-testid="little-bride-section">
+              <h3 className="text-sm md:text-lg lg:text-xl font-display font-semibold mb-2 md:mb-3 text-primary">
+                Little Bride
+              </h3>
+              <p className="text-xs md:text-base lg:text-lg font-body text-foreground" data-testid="little-bride-name">
+                {entourageData.littleBride}
+              </p>
+            </div>
           </div>
         </motion.div>
       </div>
