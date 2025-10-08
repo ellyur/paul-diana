@@ -80,19 +80,19 @@ const EntourageSection = () => {
 
         {/* Parents */}
         <motion.div 
-          className="mb-12 md:mb-16"
+          className="mb-8 md:mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 8.8 }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 gap-4 md:gap-8 max-w-4xl mx-auto">
             {entourageData.parents.map((parent, index) => (
               <div key={index} className="text-center" data-testid={`parents-section-${index}`}>
-                <h3 className="text-lg md:text-xl font-display font-semibold mb-3 text-primary">
+                <h3 className="text-sm md:text-lg lg:text-xl font-display font-semibold mb-2 md:mb-3 text-primary">
                   {parent.label}
                 </h3>
                 {parent.names.map((name, nameIndex) => (
-                  <p key={nameIndex} className="text-base md:text-lg font-body text-foreground" data-testid={`parent-name-${index}-${nameIndex}`}>
+                  <p key={nameIndex} className="text-xs md:text-base lg:text-lg font-body text-foreground" data-testid={`parent-name-${index}-${nameIndex}`}>
                     {name}
                   </p>
                 ))}
@@ -103,17 +103,17 @@ const EntourageSection = () => {
 
         {/* Principal Sponsors */}
         <motion.div 
-          className="mb-12 md:mb-16"
+          className="mb-8 md:mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 9.0 }}
         >
-          <h3 className="text-2xl md:text-3xl font-display font-bold mb-6 text-primary" data-testid="principal-sponsors-title">
+          <h3 className="text-xl md:text-2xl lg:text-3xl font-display font-bold mb-4 md:mb-6 text-primary" data-testid="principal-sponsors-title">
             {entourageData.principalSponsors.title}
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-3xl mx-auto">
+          <div className="grid grid-cols-2 gap-2 md:gap-3 max-w-3xl mx-auto">
             {entourageData.principalSponsors.couples.map((couple, index) => (
-              <p key={index} className="text-base md:text-lg font-body text-foreground" data-testid={`principal-sponsor-${index}`}>
+              <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground" data-testid={`principal-sponsor-${index}`}>
                 {couple.male}
               </p>
             ))}
@@ -122,22 +122,22 @@ const EntourageSection = () => {
 
         {/* Secondary Sponsors */}
         <motion.div 
-          className="mb-12 md:mb-16"
+          className="mb-8 md:mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 9.2 }}
         >
-          <h3 className="text-2xl md:text-3xl font-display font-bold mb-6 text-primary" data-testid="secondary-sponsors-title">
+          <h3 className="text-xl md:text-2xl lg:text-3xl font-display font-bold mb-4 md:mb-6 text-primary" data-testid="secondary-sponsors-title">
             {entourageData.secondarySponsors.title}
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
             {entourageData.secondarySponsors.roles.map((item, index) => (
               <div key={index} className="text-center" data-testid={`secondary-sponsor-${item.role.toLowerCase()}`}>
-                <h4 className="text-lg md:text-xl font-display font-semibold mb-2 text-primary">
+                <h4 className="text-sm md:text-lg lg:text-xl font-display font-semibold mb-1 md:mb-2 text-primary">
                   {item.role}
                 </h4>
                 {item.names.map((name, nameIndex) => (
-                  <p key={nameIndex} className="text-base md:text-lg font-body text-foreground" data-testid={`${item.role.toLowerCase()}-name-${nameIndex}`}>
+                  <p key={nameIndex} className="text-xs md:text-base lg:text-lg font-body text-foreground" data-testid={`${item.role.toLowerCase()}-name-${nameIndex}`}>
                     {name}
                   </p>
                 ))}
@@ -148,25 +148,25 @@ const EntourageSection = () => {
 
         {/* Best Man & Maid of Honor */}
         <motion.div 
-          className="mb-12 md:mb-16"
+          className="mb-8 md:mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 9.4 }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 gap-4 md:gap-8 max-w-4xl mx-auto">
             <div className="text-center" data-testid="best-man-section">
-              <h3 className="text-lg md:text-xl font-display font-semibold mb-3 text-primary">
+              <h3 className="text-sm md:text-lg lg:text-xl font-display font-semibold mb-2 md:mb-3 text-primary">
                 {entourageData.bestMan.role}
               </h3>
-              <p className="text-base md:text-lg font-body text-foreground" data-testid="best-man-name">
+              <p className="text-xs md:text-base lg:text-lg font-body text-foreground" data-testid="best-man-name">
                 {entourageData.bestMan.name}
               </p>
             </div>
             <div className="text-center" data-testid="maid-of-honor-section">
-              <h3 className="text-lg md:text-xl font-display font-semibold mb-3 text-primary">
+              <h3 className="text-sm md:text-lg lg:text-xl font-display font-semibold mb-2 md:mb-3 text-primary">
                 {entourageData.maidOfHonor.role}
               </h3>
-              <p className="text-base md:text-lg font-body text-foreground" data-testid="maid-of-honor-name">
+              <p className="text-xs md:text-base lg:text-lg font-body text-foreground" data-testid="maid-of-honor-name">
                 {entourageData.maidOfHonor.name}
               </p>
             </div>
@@ -175,28 +175,28 @@ const EntourageSection = () => {
 
         {/* Groomsmen & Bridesmaids */}
         <motion.div 
-          className="mb-12 md:mb-16"
+          className="mb-8 md:mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 9.6 }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 gap-4 md:gap-8 max-w-4xl mx-auto">
             <div className="text-center" data-testid="groomsmen-section">
-              <h3 className="text-2xl md:text-3xl font-display font-bold mb-6 text-primary">
+              <h3 className="text-lg md:text-2xl lg:text-3xl font-display font-bold mb-3 md:mb-6 text-primary">
                 Groomsmen
               </h3>
               {entourageData.groomsmen.map((name, index) => (
-                <p key={index} className="text-base md:text-lg font-body text-foreground mb-1" data-testid={`groomsman-${index}`}>
+                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1" data-testid={`groomsman-${index}`}>
                   {name}
                 </p>
               ))}
             </div>
             <div className="text-center" data-testid="bridesmaids-section">
-              <h3 className="text-2xl md:text-3xl font-display font-bold mb-6 text-primary">
+              <h3 className="text-lg md:text-2xl lg:text-3xl font-display font-bold mb-3 md:mb-6 text-primary">
                 Bridesmaids
               </h3>
               {entourageData.bridesmaids.map((name, index) => (
-                <p key={index} className="text-base md:text-lg font-body text-foreground mb-1" data-testid={`bridesmaid-${index}`}>
+                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1" data-testid={`bridesmaid-${index}`}>
                   {name}
                 </p>
               ))}
