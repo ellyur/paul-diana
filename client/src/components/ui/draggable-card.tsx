@@ -117,8 +117,8 @@ export const DraggableCardBody = ({
             }}
             data-testid="x-mark-blood"
           >
-            <div className="text-red-600 text-6xl font-bold drop-shadow-lg transform rotate-12" style={{
-              textShadow: '2px 2px 4px rgba(139, 0, 0, 0.8), 0 0 10px rgba(220, 20, 60, 0.6)'
+            <div className="text-primary text-6xl font-bold drop-shadow-lg transform rotate-12" style={{
+              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.6)'
             }}>
               ✗
             </div>
