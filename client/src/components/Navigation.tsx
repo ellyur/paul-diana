@@ -91,7 +91,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <h2 className="text-xl font-display font-semibold text-primary">
-              P<span className="text-primary">&</span>C
+              P<span className="text-primary">&</span>D
             </h2>
           </div>
 
