@@ -56,7 +56,7 @@ const MemorableMomentsSection = () => {
           <h2 className="text-5xl font-script italic font-black text-gold-bright mb-8" data-testid="text-prenup-photos-title">
             Save the Date Photos
           </h2>
-          <p className="text-xl font-script italic max-w-2xl mx-auto leading-relaxed text-[#f04258]">
+          <p className="text-xl font-script italic max-w-2xl mx-auto leading-relaxed text-[#0d0d0d]">
             Captured moments before forever begins
           </p>
         </motion.div>
