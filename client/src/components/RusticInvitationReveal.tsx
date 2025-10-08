@@ -61,75 +61,110 @@ const RusticInvitationReveal = ({ animationsEnabled }: RusticInvitationRevealPro
         ))}
       </div>
 
-      {/* Minimalist Invitation */}
+      {/* Modern Minimalist Invitation */}
       <div
         className="relative z-10 max-w-2xl w-full"
         data-testid="invitation-paper"
       >
-        {/* Clean Paper */}
+        {/* Layered background effect */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5 rounded-lg transform rotate-1" />
+        <div className="absolute inset-0 bg-white/50 backdrop-blur-sm rounded-lg transform -rotate-1" />
+        
+        {/* Main Container */}
         <div 
-          className="relative bg-white p-12 md:p-16 shadow-lg border-t-4 border-primary overflow-hidden"
+          className="relative bg-white p-12 md:p-16 shadow-2xl rounded-sm overflow-hidden border border-primary/20"
         >
+          {/* Decorative corner accents */}
+          <div className="absolute top-0 left-0 w-20 h-20 border-l-2 border-t-2 border-primary/30" />
+          <div className="absolute top-0 right-0 w-20 h-20 border-r-2 border-t-2 border-primary/30" />
+          <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-primary/30" />
+          <div className="absolute bottom-0 right-0 w-20 h-20 border-r-2 border-b-2 border-primary/30" />
+          
           {/* Decorative Flowers on Edges */}
           <img 
             src={flower1Image} 
             alt="" 
-            className="absolute top-4 left-4 w-12 h-12 md:w-16 md:h-16 object-contain opacity-70 animate-float pointer-events-none"
+            className="absolute top-4 left-4 w-12 h-12 md:w-16 md:h-16 object-contain opacity-60 animate-float pointer-events-none"
             data-testid="decoration-flower-invitation-topleft"
           />
           <img 
             src={flowerImage} 
             alt="" 
-            className="absolute top-4 right-4 w-12 h-12 md:w-16 md:h-16 object-contain opacity-70 animate-float-delayed pointer-events-none"
+            className="absolute top-4 right-4 w-12 h-12 md:w-16 md:h-16 object-contain opacity-60 animate-float-delayed pointer-events-none"
             data-testid="decoration-flower-invitation-topright"
           />
           <img 
             src={flower1Image} 
             alt="" 
-            className="absolute bottom-4 left-4 w-12 h-12 md:w-16 md:h-16 object-contain opacity-70 animate-float-delayed pointer-events-none transform rotate-45"
+            className="absolute bottom-4 left-4 w-12 h-12 md:w-16 md:h-16 object-contain opacity-60 animate-float-delayed pointer-events-none transform rotate-45"
             data-testid="decoration-flower-invitation-bottomleft"
           />
           <img 
             src={flowerImage} 
             alt="" 
-            className="absolute bottom-4 right-4 w-12 h-12 md:w-16 md:h-16 object-contain opacity-70 animate-float pointer-events-none transform -rotate-12"
+            className="absolute bottom-4 right-4 w-12 h-12 md:w-16 md:h-16 object-contain opacity-60 animate-float pointer-events-none transform -rotate-12"
             data-testid="decoration-flower-invitation-bottomright"
           />
 
           {/* Content */}
           <div className="text-center relative z-10 space-y-8">
-            {/* Heart Icon */}
+            {/* Heart Icon with modern styling */}
             <div className="flex justify-center">
-              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                <Heart className="w-8 h-8 text-primary fill-primary" />
+              <div className="relative w-20 h-20">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 animate-pulse" />
+                <div className="relative w-full h-full rounded-full bg-white border-2 border-primary/20 flex items-center justify-center">
+                  <Heart className="w-8 h-8 text-primary fill-primary" />
+                </div>
               </div>
             </div>
 
+            {/* Modern divider above title */}
+            <div className="flex items-center justify-center gap-2">
+              <div className="w-8 h-px bg-gradient-to-r from-transparent to-primary/50" />
+              <div className="w-2 h-2 rounded-full bg-primary" />
+              <div className="w-8 h-px bg-gradient-to-l from-transparent to-primary/50" />
+            </div>
+
             <h2 
-              className="text-5xl md:text-6xl font-script italic text-primary"
+              className="text-5xl md:text-6xl font-script italic text-primary relative"
               style={{ fontFamily: 'Boska, serif' }}
             >
               You're Invited
+              {/* Subtle underline accent */}
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-32 h-0.5 bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
             </h2>
 
-            <div className="w-20 h-px bg-primary mx-auto"/>
+            <div className="w-24 h-px bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"/>
 
             <p 
-              className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-xl mx-auto"
+              className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-xl mx-auto font-light"
             >
               Come witness the moment we tie the knot and start our greatest adventure together
             </p>
+
+            {/* Stylized divider */}
+            <div className="flex items-center justify-center gap-3 py-2">
+              <div className="w-12 h-px bg-primary/30" />
+              <div className="w-1.5 h-1.5 rounded-full bg-primary/50" />
+              <div className="w-12 h-px bg-primary/30" />
+            </div>
 
             <div className="text-base md:text-lg text-gray-600 italic space-y-2">
               <p>with love, laughter,</p>
               <p>and a lifetime of memories</p>
             </div>
 
-            {/* Simple Hearts decoration */}
+            {/* Modern Hearts decoration */}
             <div className="flex items-center justify-center gap-3 pt-6">
-              <Heart className="w-4 h-4 text-primary fill-primary animate-pulse" />
-              <Heart className="w-5 h-5 text-primary fill-primary animate-pulse" style={{ animationDelay: '0.5s' }} />
-              <Heart className="w-4 h-4 text-primary fill-primary animate-pulse" style={{ animationDelay: '1s' }} />
+              <div className="w-8 h-8 rounded-full bg-primary/5 flex items-center justify-center">
+                <Heart className="w-4 h-4 text-primary fill-primary animate-pulse" />
+              </div>
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <Heart className="w-5 h-5 text-primary fill-primary animate-pulse" style={{ animationDelay: '0.5s' }} />
+              </div>
+              <div className="w-8 h-8 rounded-full bg-primary/5 flex items-center justify-center">
+                <Heart className="w-4 h-4 text-primary fill-primary animate-pulse" style={{ animationDelay: '1s' }} />
+              </div>
             </div>
           </div>
         </div>

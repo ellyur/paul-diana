@@ -9,11 +9,11 @@
     /* 70-20-10 Color Rule: Aesthetic Black Theme */
     
     /* 70% PRIMARY - Modern Beige Gray Background */
-    --background: 45 14% 82%; /* #d3d1cb background */
+    --background: 41 14% 82%; /* #d8d4cb background */
     --foreground: 150 33% 1%; /* #020403 dark text */
 
     /* Card Colors - Primary Palette */
-    --card: 45 14% 82%; /* #d3d1cb cards */
+    --card: 41 14% 82%; /* #d8d4cb cards */
     --card-foreground: 150 33% 1%; /* #020403 dark text on cards */
 
     /* Popover Colors - Primary Palette */
@@ -197,7 +197,7 @@
   body {
     @apply text-foreground font-body;
     font-family: var(--font-body);
-    background: #d3d1cb;
+    background: #d8d4cb;
     position: relative;
     min-height: 100vh;
     margin: 0;
