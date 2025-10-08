@@ -119,7 +119,6 @@ const EntourageSection = () => {
         <div className="absolute top-0 right-0 w-96 h-96 border border-primary/30 rounded-full transform translate-x-1/3 -translate-y-1/3"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 border border-primary/30 rounded-full transform -translate-x-1/3 translate-y-1/3"></div>
       </div>
-      
       <div className="max-w-6xl mx-auto px-4 text-center relative z-10">
         <motion.h2 
           className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gold-bright mb-12 md:mb-16"
@@ -166,7 +165,7 @@ const EntourageSection = () => {
           <div className="grid grid-cols-2 gap-2 md:gap-4 max-w-5xl mx-auto">
             <div className="text-center">
               {entourageData.principalSponsors.men.map((name, index) => (
-                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1 whitespace-nowrap" data-testid={`principal-sponsor-men-${index}`}>
+                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1 whitespace-nowrap text-right" data-testid={`principal-sponsor-men-${index}`}>
                   {name}
                 </p>
               ))}
