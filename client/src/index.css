@@ -204,6 +204,7 @@
     overflow-x: hidden;
   }
 
+  /* Texture Layer */
   body::before {
     content: "";
     position: fixed;
@@ -211,10 +212,25 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
-      repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(0,0,0,.15) 20px, rgba(0,0,0,.15) 22px),
-      repeating-linear-gradient(-45deg, transparent, transparent 20px, rgba(0,0,0,.12) 20px, rgba(0,0,0,.12) 22px);
-    opacity: 1;
+    background-image: url('https://images.unsplash.com/photo-1601325059290-eac581b71510?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25;
+    z-index: -2;
+    pointer-events: none;
+  }
+
+  /* Gradient Overlays */
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at top left, rgba(0,0,0,0.05) 0%, transparent 60%),
+      radial-gradient(circle at bottom right, rgba(0,0,0,0.05) 0%, transparent 60%);
     z-index: -1;
     pointer-events: none;
   }
