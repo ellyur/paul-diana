@@ -172,7 +172,7 @@ const EntourageSection = () => {
             </div>
             <div className="text-center">
               {entourageData.principalSponsors.women.map((name, index) => (
-                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1 whitespace-nowrap" data-testid={`principal-sponsor-women-${index}`}>
+                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1 whitespace-nowrap text-left" data-testid={`principal-sponsor-women-${index}`}>
                   {name}
                 </p>
               ))}
