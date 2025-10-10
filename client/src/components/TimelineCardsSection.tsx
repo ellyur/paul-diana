@@ -99,7 +99,7 @@ const TimelineCardsSection = () => {
                 {/* Text content */}
                 <div className="text-center space-y-2">
                   <h3 
-                    className="text-base sm:text-lg font-serif dark:text-gray-100 text-[#000000]"
+                    className="text-base sm:text-lg font-serif dark:text-gray-100 text-[#090908]"
                     data-testid={`text-timeline-title-${card.id}`}
                   >
                     {card.title}
