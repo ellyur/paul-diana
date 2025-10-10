@@ -19,60 +19,91 @@ interface TimelineCardProps {
 
 const TimelineCard: React.FC<TimelineCardProps> = ({ timelineEvent, i }) => {
     const IconComponent = timelineEvent.icon;
+    const isEven = i % 2 === 0;
 
     return (
         <motion.div
-            className={`relative pl-8 md:pl-12 py-4 md:py-6 group`}
+            className="relative py-6 md:py-8"
             initial="offscreen"
             whileInView="onscreen"
             viewport={{ amount: 0.3, once: true }}
             data-testid={`timeline-card-${i}`}
         >
-            {/* Timeline dot */}
-            <div className="absolute left-0 top-6 md:top-8 w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center z-10"
+            {/* Timeline dot in center */}
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 md:w-5 md:h-5 rounded-full flex items-center justify-center z-20"
                 style={{
                     background: 'hsl(var(--primary))',
                     boxShadow: '0 0 0 4px rgba(212, 168, 83, 0.2)'
                 }}
             >
-                <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-white rounded-full"></div>
+                <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
             </div>
 
-            {/* Timeline line */}
-            <div className="absolute left-2.5 md:left-3 top-0 bottom-0 w-0.5 bg-primary/30"></div>
-            
-            {/* Card */}
-            <motion.div 
-                className="bg-card/40 backdrop-blur-sm border border-primary/20 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/40"
-                variants={cardVariants}
-                whileHover={{ y: -5 }}
-            >
-                <div className="p-4 md:p-6">
-                    <div className="flex items-start gap-3 md:gap-4">
-                        <div className="flex-shrink-0">
-                            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center bg-primary/20 border-2 border-primary" 
-                            >
-                                <IconComponent className="w-4 h-4 md:w-5 md:h-5 text-primary" />
+            {/* Content alternating left/right */}
+            <div className={`flex items-center ${isEven ? 'justify-start' : 'justify-end'}`}>
+                {/* Left side content */}
+                {isEven ? (
+                    <>
+                        <motion.div 
+                            className="w-[45%] pr-4 md:pr-8 text-right"
+                            variants={cardVariants}
+                        >
+                            <div className="space-y-1">
+                                {timelineEvent.time && (
+                                    <div className="text-xs font-bold text-primary">
+                                        {timelineEvent.time}
+                                    </div>
+                                )}
+                                <h3 className="text-sm md:text-base font-serif font-semibold text-foreground uppercase tracking-wide">
+                                    {timelineEvent.event}
+                                </h3>
+                                <p className="text-[10px] md:text-xs text-muted-foreground/80 leading-tight">
+                                    {timelineEvent.description}
+                                </p>
                             </div>
-                        </div>
-                        
-                        <div className="flex-1 min-w-0">
-                            {timelineEvent.time && (
-                                <div className="text-xs md:text-sm font-bold text-primary mb-1">
-                                    {timelineEvent.time}
-                                </div>
-                            )}
-                            <h3 className="text-base md:text-lg font-serif font-semibold text-foreground mb-2">
-                                {timelineEvent.event}
-                            </h3>
-                            <div className="w-10 h-0.5 bg-primary my-2 md:my-3"></div>
-                            <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
-                                {timelineEvent.description}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </motion.div>
+                        </motion.div>
+                        <div className="w-[10%]"></div>
+                        <motion.div 
+                            className="w-[45%] pl-4 md:pl-8"
+                            variants={cardVariants}
+                        >
+                            <div className="w-16 h-16 md:w-20 md:h-20 bg-background border-2 border-primary/30 flex items-center justify-center">
+                                <IconComponent className="w-6 h-6 md:w-8 md:h-8 text-foreground" />
+                            </div>
+                        </motion.div>
+                    </>
+                ) : (
+                    <>
+                        <motion.div 
+                            className="w-[45%] pr-4 md:pr-8 text-right"
+                            variants={cardVariants}
+                        >
+                            <div className="w-16 h-16 md:w-20 md:h-20 bg-background border-2 border-primary/30 flex items-center justify-center ml-auto">
+                                <IconComponent className="w-6 h-6 md:w-8 md:h-8 text-foreground" />
+                            </div>
+                        </motion.div>
+                        <div className="w-[10%]"></div>
+                        <motion.div 
+                            className="w-[45%] pl-4 md:pl-8 text-left"
+                            variants={cardVariants}
+                        >
+                            <div className="space-y-1">
+                                {timelineEvent.time && (
+                                    <div className="text-xs font-bold text-primary">
+                                        {timelineEvent.time}
+                                    </div>
+                                )}
+                                <h3 className="text-sm md:text-base font-serif font-semibold text-foreground uppercase tracking-wide">
+                                    {timelineEvent.event}
+                                </h3>
+                                <p className="text-[10px] md:text-xs text-muted-foreground/80 leading-tight">
+                                    {timelineEvent.description}
+                                </p>
+                            </div>
+                        </motion.div>
+                    </>
+                )}
+            </div>
         </motion.div>
     );
 };
@@ -224,7 +255,10 @@ export default function ScrollTriggeredTimeline() {
                 </motion.div>
             </div>
             {/* Timeline Cards Container */}
-            <div style={container}>
+            <div className="relative max-w-4xl mx-auto px-4 py-8">
+                {/* Center vertical line */}
+                <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/30 -translate-x-1/2"></div>
+                
                 {timelineEvents.map((timelineEvent, i) => (
                     <TimelineCard i={i} timelineEvent={timelineEvent} key={`${timelineEvent.event}-${i}`} />
                 ))}
