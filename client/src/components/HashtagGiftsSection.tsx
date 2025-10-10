@@ -13,6 +13,18 @@ const HashtagGiftsSection = () => {
       transition={{ duration: 1, delay: 0.3 }}
     >
       <div className="max-w-5xl mx-auto px-4 relative z-10">
+        {/* Header */}
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+        >
+          <h2 className="text-4xl md:text-5xl font-display text-primary" data-testid="text-gifts-header">
+            Gifts
+          </h2>
+        </motion.div>
+
         <motion.div 
           className="relative overflow-hidden rounded-2xl shadow-2xl"
           initial={{ opacity: 0, y: 30 }}
@@ -57,26 +69,11 @@ const HashtagGiftsSection = () => {
               >
                 <p 
                   className="text-base md:text-lg text-foreground/80 leading-relaxed"
-                  data-testid="text-gifts-message-1"
-                >
-                  We can't express how happy we are to have you join us for our big day. 
-                  Your presence alone is the best gift we could ever ask for.
-                </p>
-
-                <p 
-                  className="text-base md:text-lg text-foreground/80 leading-relaxed"
-                  data-testid="text-gifts-message-2"
-                >
-                  If you're thinking of contributing, we're totally cool with monetary gifts. 
-                  They'll help us start this awesome journey together, and we promise to spend 
-                  it wisely on making our lives even more amazing.
-                </p>
-
-                <p 
-                  className="text-base md:text-lg text-foreground/80 leading-relaxed font-medium"
-                  data-testid="text-gifts-message-3"
+                  data-testid="text-gifts-message"
                 >
                   Thanks a million for your love and support. Let's make some great memories together!
+                  <br /><br />
+                  If you wish to send us an early gift, please scan the QR below.
                 </p>
               </motion.div>
             </motion.div>
@@ -90,13 +87,6 @@ const HashtagGiftsSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.4 }}
             >
-              <p 
-                className="text-lg md:text-xl text-foreground/80 mb-8"
-                data-testid="text-qr-instruction"
-              >
-                If you wish to send us an early gift, please scan the QR below.
-              </p>
-              
               <motion.div
                 className="inline-block bg-white p-6 rounded-2xl shadow-xl"
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -107,7 +97,7 @@ const HashtagGiftsSection = () => {
                 <img 
                   src={qrCodeImage}
                   alt="Bank QR Code"
-                  className="w-48 h-48 md:w-64 md:h-64 object-contain"
+                  className="w-[576px] h-[576px] object-contain max-w-full"
                   data-testid="img-qr-code"
                 />
               </motion.div>
