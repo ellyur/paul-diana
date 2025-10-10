@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
-import { Clock, Camera, Utensils, Music, Heart } from 'lucide-react';
+import { Clock, Camera, Utensils, Music, Heart, Users, Wine, PartyPopper, Sparkles } from 'lucide-react';
 import { useAnimationContext } from '@/contexts/AnimationContext';
 
 interface TimelineEvent {
     time: string;
     event: string;
+    description: string;
     icon: React.ComponentType<any>;
     hueA: number;
     hueB: number;
@@ -18,18 +19,6 @@ interface TimelineCardProps {
 
 const TimelineCard: React.FC<TimelineCardProps> = ({ timelineEvent, i }) => {
     const IconComponent = timelineEvent.icon;
-    const accentColor = `hsl(${timelineEvent.hueA}, 80%, 60%)`;
-
-    const getEventDescription = (eventName: string): string => {
-        const descriptions: Record<string, string> = {
-            "Ceremony": "Witness our vows and the beginning of our journey together as we exchange rings and promises.",
-            "Photo": "Capture beautiful moments with us and our loved ones.",
-            "Grazing": "Enjoy delicious refreshments and mingle with our guests.",
-            "Dinner": "A delightful meal to celebrate our special day.",
-            "Party": "Let's celebrate with music and dancing as we create unforgettable memories together."
-        };
-        return descriptions[eventName] || "Join us for this special moment in our lives.";
-    };
 
     return (
         <motion.div
@@ -78,7 +67,7 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ timelineEvent, i }) => {
                             </h3>
                             <div className="w-10 h-0.5 bg-primary my-2 md:my-3"></div>
                             <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
-                                {getEventDescription(timelineEvent.event)}
+                                {timelineEvent.description}
                             </p>
                         </div>
                     </div>
@@ -125,39 +114,68 @@ const container: React.CSSProperties = {
 
 const timelineEvents: TimelineEvent[] = [
     {
-        time: "",
-        event: "Ceremony",
+        time: "3:00 PM",
+        event: "Arrival",
+        description: "Guests arrive and are welcomed to our special day.",
+        icon: Users,
+        hueA: 40,
+        hueB: 40,
+    },
+    {
+        time: "3:30 PM",
+        event: "CEREMONY",
+        description: "Witness our vows and the beginning of our journey together as we exchange rings and promises.",
         icon: Heart,
-        hueA: 40, // Gold
-        hueB: 40, // Gold
+        hueA: 40,
+        hueB: 40,
     },
     {
-        time: "",
-        event: "Photo",
+        time: "5:00 PM",
+        event: "PHOTOS",
+        description: "Capture beautiful moments with us and our loved ones.",
         icon: Camera,
-        hueA: 40, // Gold
-        hueB: 40, // Gold
+        hueA: 40,
+        hueB: 40,
     },
     {
-        time: "",
-        event: "Grazing", 
-        icon: Clock,
-        hueA: 40, // Gold
-        hueB: 40, // Gold
+        time: "5:30 PM",
+        event: "Grazing",
+        description: "Enjoy delicious refreshments and mingle with our guests.",
+        icon: Wine,
+        hueA: 40,
+        hueB: 40,
     },
     {
-        time: "",
-        event: "Dinner",
+        time: "6:30 PM",
+        event: "RECEPTION",
+        description: "Join us in a joyful celebration of love, laughter, and gratitude.",
+        icon: Sparkles,
+        hueA: 40,
+        hueB: 40,
+    },
+    {
+        time: "7:30 PM",
+        event: "DINNER",
+        description: "A delightful meal to celebrate our special day.",
         icon: Utensils,
-        hueA: 40, // Gold
-        hueB: 40, // Gold
+        hueA: 40,
+        hueB: 40,
     },
     {
-        time: "",
-        event: "Party",
+        time: "8:30 PM",
+        event: "PARTY",
+        description: "Let's celebrate with music and dancing as we create unforgettable memories together.",
         icon: Music,
-        hueA: 40, // Gold
-        hueB: 40, // Gold
+        hueA: 40,
+        hueB: 40,
+    },
+    {
+        time: "10:30 PM",
+        event: "SEND OFF",
+        description: "Say goodbye as we close the night with love, gratitude, and blessings.",
+        icon: PartyPopper,
+        hueA: 40,
+        hueB: 40,
     },
 ];
 
@@ -198,10 +216,10 @@ export default function ScrollTriggeredTimeline() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                     <h2 className="text-4xl md:text-5xl font-serif italic mb-4 text-primary" data-testid="text-timeline-title">
-                        Our Wedding Day
+                        Wedding Timeline
                     </h2>
                     <p className="max-w-2xl mx-auto text-[#0b0c0b]">
-                        Join us as we celebrate our love story. Here's what to expect on our special day.
+                        Here's what to expect on our special day.
                     </p>
                 </motion.div>
             </div>
@@ -211,9 +229,36 @@ export default function ScrollTriggeredTimeline() {
                     <TimelineCard i={i} timelineEvent={timelineEvent} key={`${timelineEvent.event}-${i}`} />
                 ))}
             </div>
+
+            {/* Oh Snap! Section */}
+            <motion.div 
+                className="mt-16 max-w-md mx-auto text-center px-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+                <div className="bg-card/60 backdrop-blur-sm border border-primary/30 rounded-2xl p-8 shadow-lg">
+                    <div className="mb-4">
+                        <Camera className="w-12 h-12 mx-auto text-primary" />
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-script italic mb-4 text-foreground" data-testid="text-ohsnap-title">
+                        Oh Snap!
+                    </h3>
+                    <p className="text-sm md:text-base text-muted-foreground mb-4">
+                        Help us capture moments on our special day by using the hashtag
+                    </p>
+                    <div className="inline-block bg-primary/20 border-2 border-primary rounded-lg px-6 py-3">
+                        <p className="font-bold text-primary text-lg" data-testid="text-hashtag">
+                            #PaulDianaWedding
+                        </p>
+                    </div>
+                </div>
+            </motion.div>
+
             {/* Bottom Decorative */}
             <motion.div 
-                className="mt-16 text-center"
+                className="mt-16 text-center pb-8"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, amount: 0.5 }}
@@ -224,9 +269,6 @@ export default function ScrollTriggeredTimeline() {
                     <div className="w-2 h-2 bg-[#ffffff] rounded-full animate-pulse"></div>
                     <div className="w-8 h-px bg-[#ffffff]"></div>
                 </div>
-                <p className="mt-4 font-body italic text-[#020303]">
-                    Our Love Shines Till Evening
-                </p>
             </motion.div>
         </motion.section>
     );
