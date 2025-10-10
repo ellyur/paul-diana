@@ -179,19 +179,6 @@ const VenueSection = () => {
             </motion.div>
           ))}
         </div>
-        
-        {/* Unplugged Ceremony Note */}
-        <motion.div 
-          className="mt-16 text-center border border-primary/30 rounded-lg p-8 max-w-4xl mx-auto"
-          initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 8.4 } : { duration: 0 }}
-        >
-          <h3 className="text-xl font-display text-foreground mb-4">Unplugged Ceremony</h3>
-          <p className="text-sm font-body text-foreground/80 leading-relaxed mb-4">
-            We kindly ask that the ceremony be camera-free so everyone can be fully present in the moment. Once we move to the reception venue, please feel free to take as many photos and videos as you like—we'd love for you to help us capture more memories!
-          </p>
-        </motion.div>
       </div>
     </motion.section>
   );
