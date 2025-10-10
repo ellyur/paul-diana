@@ -76,59 +76,57 @@ const HeroSection = ({ audioRef }: HeroSectionProps) => {
       {/* Overlay for better text readability */}
       <div className="absolute inset-0 bg-black/40" />
 
-      {/* Date on the top right */}
-      <div className="absolute top-8 right-6 sm:top-12 sm:right-12 lg:top-16 lg:right-20 z-20">
-        <div className={`text-right transition-all duration-700 ${(animationsEnabled && showElements) ? 'animate-fade-up opacity-100' : (!animationsEnabled ? 'opacity-100' : 'opacity-0')}`}>
-          <p className="text-3xl sm:text-4xl lg:text-5xl text-white font-light tracking-wider leading-relaxed" data-testid="text-date" style={{ fontFamily: 'Boska, serif', fontWeight: 300 }}>
-            12<br />26<br />25
+      {/* Content - Centered Names */}
+      <div className="relative z-10 flex flex-col items-center justify-center text-center px-6">
+        {/* Tagline */}
+        <div className={`transition-all duration-700 mb-4 ${(animationsEnabled && showElements) ? 'animate-fade-up opacity-100' : (!animationsEnabled ? 'opacity-100' : 'opacity-0')}`}>
+          <p className="text-sm sm:text-base md:text-lg text-white font-light tracking-[0.3em] uppercase" data-testid="text-tagline" style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 300 }}>
+            WHERE LOVE BLOOMS
           </p>
         </div>
-      </div>
+        
+        {/* Names */}
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white tracking-wide" data-testid="text-main-invitation" style={{ fontFamily: 'Boska, serif', fontWeight: 300 }}>
+          {animationsEnabled ? (
+            <TypeAnimation
+              sequence={[
+                'PAUL\n& DIANA',
+                () => {
+                  setShowElements(true);
+                }
+              ]}
+              wrapper="span"
+              speed={{ type: 'keyStrokeDelayInMs', value: 273 }}
+              style={{ 
+                whiteSpace: 'pre-line',
+                display: 'inline-block',
+                lineHeight: '1.2'
+              }}
+              cursor={true}
+              repeat={0}
+              className="typewriter-text"
+            />
+          ) : (
+            <span 
+              style={{ 
+                whiteSpace: 'pre-line',
+                display: 'inline-block',
+                lineHeight: '1.2'
+              }}
+              className="typewriter-text"
+            >
+              PAUL
+              <br />
+              & DIANA
+            </span>
+          )}
+        </h1>
 
-      {/* Content - Names on the left */}
-      <div className="relative z-10 w-full max-w-7xl px-6 sm:px-12 lg:px-16">
-        <div className="flex flex-col items-start">
-          {/* Top decorative line */}
-          <div className="w-1 h-16 sm:h-20 lg:h-24 bg-white mb-4 sm:mb-6 lg:mb-8"></div>
-          
-          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-white tracking-wide leading-tight" data-testid="text-main-invitation" style={{ fontFamily: 'Boska, serif', fontWeight: 300 }}>
-            {animationsEnabled ? (
-              <TypeAnimation
-                sequence={[
-                  'Paul\n&\nDiana',
-                  () => {
-                    setShowElements(true);
-                  }
-                ]}
-                wrapper="span"
-                speed={{ type: 'keyStrokeDelayInMs', value: 273 }}
-                style={{ 
-                  whiteSpace: 'pre-line',
-                  display: 'inline-block'
-                }}
-                cursor={true}
-                repeat={0}
-                className="typewriter-text"
-              />
-            ) : (
-              <span 
-                style={{ 
-                  whiteSpace: 'pre-line',
-                  display: 'inline-block'
-                }}
-                className="typewriter-text"
-              >
-                Paul
-                <br />
-                &
-                <br />
-                Diana
-              </span>
-            )}
-          </h1>
-          
-          {/* Bottom decorative line */}
-          <div className="w-1 h-16 sm:h-20 lg:h-24 bg-white mt-4 sm:mt-6 lg:mt-8"></div>
+        {/* Date */}
+        <div className={`transition-all duration-700 mt-6 ${(animationsEnabled && showElements) ? 'animate-fade-up opacity-100' : (!animationsEnabled ? 'opacity-100' : 'opacity-0')}`}>
+          <p className="text-lg sm:text-xl md:text-2xl text-white font-light tracking-[0.2em]" data-testid="text-date" style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 300 }}>
+            12.26.25
+          </p>
         </div>
       </div>
 
