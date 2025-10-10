@@ -4,10 +4,10 @@ import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import ImageLoop from '@/components/ImageLoop';
 import MusicConsentPopup from '@/components/MusicConsentPopup';
-// Cover images from attached assets
-import cover1Image from '@assets/cover1_1759741344819.png';
-import cover2Image from '@assets/cover2_1759741344819.png';
-import cover3Image from '@assets/cover3_1759741344820.png';
+// Cover videos
+const cover1Video = "https://res.cloudinary.com/dr3xey7h9/video/upload/v1760101535/cover2_tpy0ji.mp4";
+const cover2Video = "https://res.cloudinary.com/dr3xey7h9/video/upload/v1760101543/part3_q0uvmz.mp4";
+const cover3Video = "https://res.cloudinary.com/dr3xey7h9/video/upload/v1760101550/part4_swg7kv.mp4";
 import CountdownSection from '@/components/CountdownSection';
 import StorySection from '@/components/StorySection';
 import VideoSection from '@/components/VideoSection';
@@ -110,15 +110,15 @@ const Index = () => {
           <ImageLoop />
           <StorySection />
           <CoverSection
-            imageUrl={cover1Image}
-            alt="Andrei & Sam Wedding Cover Image 1"
+            videoUrl={cover1Video}
+            alt="Paul & Diana Wedding Cover Video 1"
           />
           <VideoSection />
           <ScrollTriggeredTimeline />
           <VenueSection />
           <CoverSection
-            imageUrl={cover2Image}
-            alt="Andrei & Sam Wedding Cover Image 2"
+            videoUrl={cover2Video}
+            alt="Paul & Diana Wedding Cover Video 2"
           />
           <DressCodeSection />
           <HashtagGiftsSection />
@@ -126,8 +126,8 @@ const Index = () => {
           <RSVPSection />
           <EntourageSection />
           <CoverSection
-            imageUrl={cover3Image}
-            alt="Andrei & Sam Wedding Cover Image 3"
+            videoUrl={cover3Video}
+            alt="Paul & Diana Wedding Cover Video 3"
           />
           <FAQSection />
           <Footer />
