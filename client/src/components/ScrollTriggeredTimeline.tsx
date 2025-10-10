@@ -229,7 +229,6 @@ export default function ScrollTriggeredTimeline() {
                     <TimelineCard i={i} timelineEvent={timelineEvent} key={`${timelineEvent.event}-${i}`} />
                 ))}
             </div>
-
             {/* Oh Snap! Section */}
             <motion.div 
                 className="mt-16 max-w-md mx-auto text-center px-4"
@@ -249,13 +248,10 @@ export default function ScrollTriggeredTimeline() {
                         Help us capture moments on our special day by using the hashtag
                     </p>
                     <div className="inline-block bg-primary/20 border-2 border-primary rounded-lg px-6 py-3">
-                        <p className="font-bold text-primary text-lg" data-testid="text-hashtag">
-                            #PaulDianaWedding
-                        </p>
+                        <p className="font-bold text-primary text-lg" data-testid="text-hashtag">#HapPAULyEverAfterWithDIANA</p>
                     </div>
                 </div>
             </motion.div>
-
             {/* Bottom Decorative */}
             <motion.div 
                 className="mt-16 text-center pb-8"
