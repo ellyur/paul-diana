@@ -284,57 +284,52 @@ const StorySection = () => {
             </div>
           ))}
 
-          {/* Final "The Vow" Section */}
-          <div className="story-card flex-shrink-0 w-screen h-full flex items-center justify-center px-4 sm:px-8 py-8 sm:py-12">
-            <div className="max-w-4xl mx-auto text-center relative">
-              {/* Background SVG */}
-              <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 800 600">
-                <defs>
-                  <radialGradient id="vowGradient" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stopColor="hsl(var(--primary-foreground))" stopOpacity="0.3"/>
-                    <stop offset="100%" stopColor="hsl(var(--primary-foreground))" stopOpacity="0"/>
-                  </radialGradient>
-                </defs>
-                <circle cx="400" cy="300" r="250" fill="url(#vowGradient)"/>
+          {/* Final "Our Promise" Card */}
+          <div
+            className="story-card flex-shrink-0 h-full flex items-center justify-center px-4 sm:px-8 py-8 sm:py-12"
+            style={{ width: '100vw', minWidth: '100vw' }}
+          >
+            <div 
+              className="max-w-6xl mx-auto grid lg:grid-cols-1 gap-8 lg:gap-16 items-center h-full relative overflow-hidden rounded-3xl p-8 transition-all duration-300 bg-black/5 dark:bg-white/5 border border-white/10 backdrop-blur-sm"
+              style={{ background: 'rgba(0, 0, 0, 0.05)' }}
+              data-testid="card-story-promise"
+            >
+              {/* Content - Centered */}
+              <div className="space-y-6 sm:space-y-8 text-center max-w-3xl mx-auto">
+                <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full mb-4 sm:mb-6 bg-primary/20 border-2 border-primary">
+                  <Heart className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-primary" strokeWidth={2} />
+                </div>
                 
-                {/* Decorative hearts */}
-                <g className="animate-pulse">
-                  <path d="M200,150 C200,140 185,130 175,140 C165,130 155,140 155,150 C155,160 175,180 200,200 C225,180 245,160 245,150 C245,140 235,130 225,140 C215,130 200,140 200,150 Z" 
-                        fill="hsl(var(--primary-foreground))" opacity="0.2"/>
-                  <path d="M600,450 C600,440 585,430 575,440 C565,430 555,440 555,450 C555,460 575,480 600,500 C625,480 645,460 645,450 C645,440 635,430 625,440 C615,430 600,440 600,450 Z" 
-                        fill="hsl(var(--primary-foreground))" opacity="0.2"/>
-                </g>
-              </svg>
-
-              <div className="relative z-10 space-y-6 sm:space-y-8">
-                <h3 className="text-4xl sm:text-5xl md:text-6xl font-script italic font-black mb-6 sm:mb-8 text-primary" data-testid="text-story-vow-title">
+                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-script italic mb-4 sm:mb-6 text-foreground" data-testid="text-story-promise-title">
                   Our Promise
                 </h3>
                 
-                <div className="max-w-2xl mx-auto">
-                  <p className="text-xl sm:text-2xl leading-relaxed italic mb-4 text-foreground">
+                <div className="space-y-4">
+                  <p className="text-xl sm:text-2xl leading-relaxed italic text-foreground/90" data-testid="text-story-promise-verse">
                     "Above all, clothe yourselves with love, which binds us all together in perfect harmony."
                   </p>
-                  <p className="text-base sm:text-lg font-body text-foreground/80">
+                  <p className="text-base sm:text-lg text-foreground/80" data-testid="text-story-promise-reference">
                     Colossians 3:14
                   </p>
                 </div>
-                
-                {/* SVG Hearts decoration */}
-                <div className="flex justify-center items-center space-x-4 sm:space-x-6 mt-8 sm:mt-12">
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-primary animate-pulse" viewBox="0 0 24 24">
+
+                {/* SVG Decorative Element */}
+                <div className="flex items-center justify-center space-x-4 pt-4 sm:pt-6">
+                  <div className="w-12 sm:w-16 h-px bg-primary-foreground/60"></div>
+                  <svg className="w-3 h-3 sm:w-4 sm:h-4 text-primary-foreground/70" viewBox="0 0 24 24">
                     <path fill="currentColor" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5 C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.04L12,21.35Z"/>
                   </svg>
-                  <div className="w-16 sm:w-24 h-px bg-primary/60"></div>
-                  <svg className="w-6 h-6 sm:w-8 sm:h-8 text-primary animate-pulse" viewBox="0 0 24 24" style={{ animationDelay: '0.5s' }}>
-                    <path fill="currentColor" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5 C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.04L12,21.35Z"/>
-                  </svg>
-                  <div className="w-16 sm:w-24 h-px bg-primary/60"></div>
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-primary animate-pulse" viewBox="0 0 24 24" style={{ animationDelay: '1s' }}>
-                    <path fill="currentColor" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5 C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.04L12,21.35Z"/>
-                  </svg>
+                  <div className="w-12 sm:w-16 h-px bg-primary-foreground/60"></div>
                 </div>
               </div>
+
+              {/* Decorative Flower - Lower Right */}
+              <img 
+                src={flowerImage} 
+                alt="" 
+                className="absolute bottom-4 right-4 w-16 h-16 sm:w-20 sm:h-20 object-contain opacity-80 animate-float pointer-events-none"
+                data-testid="decoration-flower-story-promise"
+              />
             </div>
           </div>
         </div>
