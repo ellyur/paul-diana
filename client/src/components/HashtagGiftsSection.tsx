@@ -95,7 +95,7 @@ const HashtagGiftsSection = () => {
                 whileHover={{ scale: 1.05 }}
               >
                 <img 
-                  src={qrCodeImage}
+                  src="https://res.cloudinary.com/dr3xey7h9/image/upload/v1760114149/qr_werccl.png"
                   alt="Bank QR Code"
                   className="w-[576px] h-[576px] object-contain max-w-full"
                   data-testid="img-qr-code"
