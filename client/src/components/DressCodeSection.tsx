@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-const principalSponsorsImage = "https://res.cloudinary.com/dnlreax2z/image/upload/v1759853280/princi_d0ydtv.png";
+const principalSponsorsImage = "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760112353/Gemini_Generated_Image_220smd220smd220s_evguzq.png";
 const guestsImage = "https://res.cloudinary.com/dnlreax2z/image/upload/v1759853280/guestss_h99tbm.png";
 import flower9 from '@assets/flower9_1759741371017.png';
 import flower3 from '@assets/flower3_1759741371015.png';
