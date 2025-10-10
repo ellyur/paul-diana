@@ -40,8 +40,8 @@ const RSVPSection = () => {
           <div className="relative z-10 text-center px-4 w-full max-w-4xl mx-auto">
             {/* "please" */}
             <motion.p 
-              className="text-6xl md:text-7xl lg:text-8xl text-gray-600 mb-12"
-              style={{ fontFamily: "'Pencerio', cursive" }}
+              className="text-6xl md:text-7xl lg:text-8xl text-black mb-12"
+              style={{ fontFamily: 'Pencerio, serif' }}
               initial={animationsEnabled ? { opacity: 0, y: -20 } : { opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={animationsEnabled ? { duration: 0.6, delay: 11.0 } : { duration: 0 }}
@@ -92,8 +92,8 @@ const RSVPSection = () => {
 
             {/* "thank you" */}
             <motion.p 
-              className="text-6xl md:text-7xl lg:text-8xl text-gray-600"
-              style={{ fontFamily: "'Pencerio', cursive" }}
+              className="text-6xl md:text-7xl lg:text-8xl text-black"
+              style={{ fontFamily: 'Pencerio, serif' }}
               initial={animationsEnabled ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={animationsEnabled ? { duration: 0.6, delay: 11.6 } : { duration: 0 }}
