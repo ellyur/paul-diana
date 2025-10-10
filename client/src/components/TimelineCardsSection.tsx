@@ -14,19 +14,19 @@ const TimelineCardsSection = () => {
       id: 1,
       image: "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760106978/48385962_1941090289302750_8392576910558756864_n-eUdMZ_kw3idd.jpg",
       title: "Our first day as a couple",
-      date: "02.22.12"
+      date: "09.17.18"
     },
     {
       id: 2,
       image: "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760106977/513281087_10081304398590972_8164128154106684885_n_1_fore49.jpg",
-      title: "The day Yam said \"yes\"",
-      date: "02.22.22"
+      title: "The day diana said \"Yes\"",
+      date: "12.17.24"
     },
     {
       id: 3,
       image: "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760106974/JAH02565_1_upazo1.jpg",
-      title: "The day we'll say \"I do\"",
-      date: "02.22.24"
+      title: "The day diana we'll say \"I do\"",
+      date: "12.26.25"
     }
   ];
 
@@ -63,7 +63,7 @@ const TimelineCardsSection = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#f5f5f0] dark:bg-gray-950"
       data-testid="section-timeline-cards"
     >
       <div className="max-w-7xl mx-auto">
@@ -81,8 +81,10 @@ const TimelineCardsSection = () => {
               className="timeline-card group"
               data-testid={`card-timeline-${card.id}`}
             >
-              <div className="relative bg-white dark:bg-gray-900 p-6 rounded-lg shadow-xl border-4 border-gray-800 dark:border-gray-200 transition-all duration-300 hover:shadow-2xl hover:scale-105">
-                <div className="relative bg-white dark:bg-gray-800 p-4 mb-6 border-2 border-gray-800 dark:border-gray-200">
+              {/* Outer border container with transparent background */}
+              <div className="relative bg-transparent p-6 sm:p-8 border-[3px] border-black dark:border-white transition-all duration-300">
+                {/* Inner border around image */}
+                <div className="relative border-[3px] border-black dark:border-white p-3 mb-6">
                   <div className="aspect-square overflow-hidden">
                     <img
                       src={card.image}
@@ -94,15 +96,16 @@ const TimelineCardsSection = () => {
                   </div>
                 </div>
 
-                <div className="text-center space-y-3">
+                {/* Text content */}
+                <div className="text-center space-y-2">
                   <h3 
-                    className="text-lg sm:text-xl font-serif text-gray-800 dark:text-gray-200"
+                    className="text-base sm:text-lg font-serif text-gray-900 dark:text-gray-100"
                     data-testid={`text-timeline-title-${card.id}`}
                   >
                     {card.title}
                   </h3>
                   <p 
-                    className="text-base sm:text-lg text-gray-600 dark:text-gray-400 font-medium"
+                    className="text-sm sm:text-base text-gray-700 dark:text-gray-300"
                     data-testid={`text-timeline-date-${card.id}`}
                   >
                     {card.date}
@@ -113,10 +116,6 @@ const TimelineCardsSection = () => {
           ))}
         </div>
       </div>
-
-      {/* Decorative elements */}
-      <div className="absolute top-10 left-10 w-20 h-20 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-10 right-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
     </section>
   );
 };
