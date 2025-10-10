@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        pencerio: ['Pencerio', 'cursive'],
+        pencerio: ['Dancing Script', 'cursive'],
       },
       borderRadius: {
         lg: "var(--radius)",
