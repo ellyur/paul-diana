@@ -84,9 +84,7 @@ const RSVPSection = () => {
                 rel="noopener noreferrer"
                 className="inline-block px-10 py-4 bg-black text-white text-sm md:text-base font-display tracking-wider hover:bg-gray-800 transition-colors duration-300 border-2 border-black uppercase"
                 data-testid="button-rsvp"
-              >
-                paul-diana-rsvp.replit.app
-              </a>
+              >RSVP HERE!</a>
             </motion.div>
 
             {/* "thank you" */}
