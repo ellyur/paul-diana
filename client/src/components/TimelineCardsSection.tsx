@@ -105,7 +105,7 @@ const TimelineCardsSection = () => {
                     {card.title}
                   </h3>
                   <p 
-                    className="text-sm sm:text-base text-gray-700 dark:text-gray-300"
+                    className="text-sm sm:text-base dark:text-gray-300 text-[#000000]"
                     data-testid={`text-timeline-date-${card.id}`}
                   >
                     {card.date}
