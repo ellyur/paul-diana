@@ -90,7 +90,7 @@ const HeroSection = ({ audioRef }: HeroSectionProps) => {
           {animationsEnabled ? (
             <TypeAnimation
               sequence={[
-                'PAUL\n& DIANA',
+                'PAUL & DIANA',
                 () => {
                   setShowElements(true);
                 }
@@ -98,9 +98,7 @@ const HeroSection = ({ audioRef }: HeroSectionProps) => {
               wrapper="span"
               speed={{ type: 'keyStrokeDelayInMs', value: 273 }}
               style={{ 
-                whiteSpace: 'pre-line',
-                display: 'inline-block',
-                lineHeight: '1.2'
+                display: 'inline-block'
               }}
               cursor={true}
               repeat={0}
@@ -109,15 +107,11 @@ const HeroSection = ({ audioRef }: HeroSectionProps) => {
           ) : (
             <span 
               style={{ 
-                whiteSpace: 'pre-line',
-                display: 'inline-block',
-                lineHeight: '1.2'
+                display: 'inline-block'
               }}
               className="typewriter-text"
             >
-              PAUL
-              <br />
-              & DIANA
+              PAUL & DIANA
             </span>
           )}
         </h1>
