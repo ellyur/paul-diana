@@ -8,7 +8,7 @@ const RSVPSection = () => {
   return (
     <motion.section 
       id="rsvp" 
-      className="relative overflow-hidden py-20 min-h-screen flex items-center justify-center bg-white"
+      className="section-pastel-blue relative overflow-hidden py-20 min-h-screen flex items-center justify-center"
       initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
       animate={{ opacity: 1 }}
       transition={animationsEnabled ? { duration: 1, delay: 10.5 } : { duration: 0 }}
@@ -46,7 +46,7 @@ const RSVPSection = () => {
           transition={animationsEnabled ? { duration: 0.8, delay: 11.2 } : { duration: 0 }}
         >
           <h2 
-            className="font-display text-[120px] md:text-[180px] lg:text-[220px] leading-[0.85] text-black tracking-tight"
+            className="font-display text-[150px] md:text-[240px] lg:text-[300px] leading-[0.85] text-black tracking-tight"
             style={{ fontWeight: 300 }}
             data-testid="text-rsvp-title"
           >
@@ -56,7 +56,7 @@ const RSVPSection = () => {
 
         {/* Deadline */}
         <motion.div 
-          className="space-y-2 mb-8"
+          className="space-y-6 mb-8"
           initial={animationsEnabled ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={animationsEnabled ? { duration: 0.6, delay: 11.4 } : { duration: 0 }}
@@ -71,8 +71,8 @@ const RSVPSection = () => {
             href="https://paul-diana-rsvp.replit.app" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-block text-xs md:text-sm text-gray-500 hover:text-black transition-colors duration-300 tracking-wide"
-            data-testid="link-rsvp-email"
+            className="inline-block px-8 py-3 bg-black text-white text-xs md:text-sm font-display tracking-wider hover:bg-gray-800 transition-colors duration-300 border-2 border-black"
+            data-testid="button-rsvp"
           >
             PAUL-DIANA-RSVP.REPLIT.APP
           </a>
