@@ -282,7 +282,7 @@ export default function ScrollTriggeredTimeline() {
                         Help us capture moments on our special day by using the hashtag
                     </p>
                     <div className="inline-block bg-primary/20 border-2 border-primary rounded-lg px-6 py-3">
-                        <p className="font-bold text-primary text-lg" data-testid="text-hashtag">#HapPAULyEverAfterWithDIANA</p>
+                        <p className="font-body font-bold text-primary text-lg" data-testid="text-hashtag">#HapPAULyEverAfterWithDIANA</p>
                     </div>
                 </div>
             </motion.div>
