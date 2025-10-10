@@ -63,7 +63,7 @@ const TimelineCardsSection = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#f5f5f0] dark:bg-gray-950"
+      className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
       data-testid="section-timeline-cards"
     >
       <div className="max-w-7xl mx-auto">
@@ -82,9 +82,9 @@ const TimelineCardsSection = () => {
               data-testid={`card-timeline-${card.id}`}
             >
               {/* Outer border container with transparent background */}
-              <div className="relative bg-transparent p-6 sm:p-8 border-[3px] border-black dark:border-white transition-all duration-300">
+              <div className="relative bg-transparent p-6 sm:p-8 border-[3px] border-black transition-all duration-300">
                 {/* Inner border around image */}
-                <div className="relative border-[3px] border-black dark:border-white p-3 mb-6">
+                <div className="relative border-[3px] border-black p-3 mb-6">
                   <div className="aspect-square overflow-hidden">
                     <img
                       src={card.image}
@@ -99,7 +99,7 @@ const TimelineCardsSection = () => {
                 {/* Text content */}
                 <div className="text-center space-y-2">
                   <h3 
-                    className="text-base sm:text-lg font-serif text-gray-900 dark:text-gray-100"
+                    className="text-base sm:text-lg font-serif dark:text-gray-100 text-[#000000]"
                     data-testid={`text-timeline-title-${card.id}`}
                   >
                     {card.title}
