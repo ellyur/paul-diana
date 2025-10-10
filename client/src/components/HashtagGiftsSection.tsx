@@ -20,7 +20,7 @@ const HashtagGiftsSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
         >
-          <h2 className="md:text-5xl font-display text-primary text-[36px]" data-testid="text-gifts-header">Gifts Guide</h2>
+          <h2 className="md:text-5xl font-display text-primary text-[36px]" data-testid="text-gifts-header">Gift Guide</h2>
         </motion.div>
 
         <motion.div 
