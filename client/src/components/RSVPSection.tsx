@@ -21,7 +21,7 @@ const RSVPSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 10.8 } : { duration: 0 }}
         >
-          <h2 className="font-display italic text-gold text-[48px] md:text-5xl" data-testid="text-rsvp-header">RSVP</h2>
+          <h2 className="font-display italic text-gold text-[48px] md:text-5xl" data-testid="text-rsvp-header">RSVP Here</h2>
         </motion.div>
 
         {/* RSVP Content */}
@@ -40,8 +40,7 @@ const RSVPSection = () => {
           <div className="relative z-10 text-center px-4 w-full max-w-4xl mx-auto">
             {/* "please" */}
             <motion.p 
-              className="text-6xl md:text-7xl lg:text-8xl text-black mb-12"
-              style={{ fontFamily: 'Pencerio, serif' }}
+              className="font-pencerio text-6xl md:text-7xl lg:text-8xl text-black mb-12"
               initial={animationsEnabled ? { opacity: 0, y: -20 } : { opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={animationsEnabled ? { duration: 0.6, delay: 11.0 } : { duration: 0 }}
@@ -92,8 +91,7 @@ const RSVPSection = () => {
 
             {/* "thank you" */}
             <motion.p 
-              className="text-6xl md:text-7xl lg:text-8xl text-black"
-              style={{ fontFamily: 'Pencerio, serif' }}
+              className="font-pencerio text-6xl md:text-7xl lg:text-8xl text-black"
               initial={animationsEnabled ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={animationsEnabled ? { duration: 0.6, delay: 11.6 } : { duration: 0 }}
