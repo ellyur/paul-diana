@@ -1,146 +1,118 @@
 import { motion } from 'framer-motion';
-import { Camera, Gift } from 'lucide-react';
-import boq1Image from '@assets/boq1_1759854441527.png';
-import flowerImage from '@assets/flower_1759854441531.png';
+
+const backgroundImage = "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760112875/fb109d51-e0f3-4bfe-990b-d0d91e07eaf9.png";
+const qrCodeImage = "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760112758/e0470bd7-d558-4ffc-ab72-05979e344aee.png";
 
 const HashtagGiftsSection = () => {
   return (
     <motion.section 
       id="hashtag-gifts" 
-      className="section-pastel-blue relative overflow-hidden"
+      className="section-pastel-blue relative overflow-hidden py-20"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 0.3 }}
     >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 border border-primary/30 rounded-full"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-48 h-48 border border-primary/30 rounded-full"></div>
-      </div>
-
-      <div className="max-w-4xl mx-auto relative z-10 space-y-12">
-        {/* Oh Snap! Section */}
+      <div className="max-w-5xl mx-auto px-4 relative z-10">
         <motion.div 
-          className="bg-card/30 border border-border rounded-xl p-8 shadow-soft hover-elegant transition-all duration-500 text-center relative overflow-hidden"
+          className="relative overflow-hidden rounded-2xl shadow-2xl"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
         >
-          {/* Decorative Flower */}
-          <img 
-            src={flowerImage} 
-            alt="" 
-            className="absolute top-4 right-4 w-16 h-16 object-contain opacity-60 animate-float pointer-events-none"
-            data-testid="decoration-flower-hashtag"
-          />
-          <motion.div
-            className="flex justify-center mb-6"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.7, type: "spring" }}
-          >
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-              <Camera className="w-8 h-8 text-primary" data-testid="icon-camera" />
-            </div>
-          </motion.div>
+          {/* Black and White Background Image */}
+          <div className="relative h-96 md:h-[500px] overflow-hidden">
+            <img 
+              src={backgroundImage}
+              alt="Background"
+              className="w-full h-full object-cover grayscale"
+              data-testid="img-gifts-background"
+            />
+            {/* Overlay for better text readability */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40"></div>
+          </div>
 
-          <motion.h2 
-            className="font-display italic text-gold mb-4 text-[48px]"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            data-testid="text-ohsnap-title"
-          >
-            Oh Snap!
-          </motion.h2>
-
-          <motion.p 
-            className="text-lg text-foreground mb-4 leading-relaxed"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.9 }}
-            data-testid="text-hashtag-description"
-          >
-            Help us capture moments on our
-            <br />
-            special day by using the hashtag:
-          </motion.p>
-
-          <motion.div
-            className="bg-primary/10 border border-primary/20 rounded-xl px-4 sm:px-6 md:px-8 py-3 sm:py-4 inline-block max-w-full"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 1.0, type: "spring" }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <p 
-              className="text-base sm:text-lg md:text-xl lg:text-2xl font-display font-semibold text-primary break-words"
-              data-testid="text-hashtag"
+          {/* White Card Overlay */}
+          <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 px-4 md:px-8">
+            <motion.div 
+              className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 md:p-12 max-w-3xl mx-auto shadow-2xl"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
             >
-              #HapPAULyEverAfterWithDIANA
-            </p>
-          </motion.div>
-        </motion.div>
+              <motion.h2 
+                className="font-script italic text-foreground mb-6 text-4xl md:text-5xl lg:text-6xl text-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.0 }}
+                data-testid="text-gifts-title"
+              >
+                Gift Guide
+              </motion.h2>
 
-        {/* Gifts Section */}
-        <motion.div 
-          className="bg-card/30 border border-border rounded-xl p-8 shadow-soft hover-elegant transition-all duration-500 text-center relative overflow-hidden"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
-        >
-          {/* Decorative Bouquet */}
-          <img 
-            src={boq1Image} 
-            alt="" 
-            className="absolute bottom-4 left-4 w-20 h-20 object-contain opacity-60 animate-float-delayed pointer-events-none"
-            data-testid="decoration-bouquet-gifts"
-          />
-          <motion.div
-            className="flex justify-center mb-6"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.9, type: "spring" }}
-          >
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-              <Gift className="w-8 h-8 text-primary" data-testid="icon-gift" />
-            </div>
-          </motion.div>
+              <motion.div
+                className="space-y-6 text-center"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 1.2 }}
+              >
+                <p 
+                  className="text-base md:text-lg text-foreground/80 leading-relaxed"
+                  data-testid="text-gifts-message-1"
+                >
+                  We can't express how happy we are to have you join us for our big day. 
+                  Your presence alone is the best gift we could ever ask for.
+                </p>
 
-          <motion.h2 
-            className="font-display italic text-gold mb-6 text-[48px]"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.0 }}
-            data-testid="text-gifts-title"
-          >
-            Gifts
-          </motion.h2>
+                <p 
+                  className="text-base md:text-lg text-foreground/80 leading-relaxed"
+                  data-testid="text-gifts-message-2"
+                >
+                  If you're thinking of contributing, we're totally cool with monetary gifts. 
+                  They'll help us start this awesome journey together, and we promise to spend 
+                  it wisely on making our lives even more amazing.
+                </p>
 
-          <motion.div
-            className="bg-card/20 border border-border/50 rounded-xl p-6 max-w-2xl mx-auto"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.1 }}
-          >
-            <p 
-              className="text-lg text-foreground leading-relaxed"
-              data-testid="text-gifts-message"
+                <p 
+                  className="text-base md:text-lg text-foreground/80 leading-relaxed font-medium"
+                  data-testid="text-gifts-message-3"
+                >
+                  Thanks a million for your love and support. Let's make some great memories together!
+                </p>
+              </motion.div>
+            </motion.div>
+          </div>
+
+          {/* Bottom Section with QR Code */}
+          <div className="bg-background/95 backdrop-blur-sm py-12 px-4">
+            <motion.div 
+              className="max-w-2xl mx-auto text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.4 }}
             >
-              With all that we have,
-              <br />
-              <br />
-              We've been truly blessed. Your
-              <br />
-              presence and prayers are all that we
-              <br />
-              request. But if you desire to give
-              <br />
-              nonetheless, Monetary gift is much
-              <br />
-              appreciated.
-            </p>
-          </motion.div>
+              <p 
+                className="text-lg md:text-xl text-foreground/80 mb-8"
+                data-testid="text-qr-instruction"
+              >
+                If you wish to send us an early gift, please scan the QR below.
+              </p>
+              
+              <motion.div
+                className="inline-block bg-white p-6 rounded-2xl shadow-xl"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 1.6, type: "spring" }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <img 
+                  src={qrCodeImage}
+                  alt="Bank QR Code"
+                  className="w-48 h-48 md:w-64 md:h-64 object-contain"
+                  data-testid="img-qr-code"
+                />
+              </motion.div>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </motion.section>
