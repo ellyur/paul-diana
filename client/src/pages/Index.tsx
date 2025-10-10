@@ -104,7 +104,7 @@ const Index = () => {
 
         {/* Main Content Sections */}
         <main className="relative z-10 space-y-20">
-          <HeroSection />
+          <HeroSection audioRef={audioRef} />
           <InvitationRevealSection />
           <CountdownSection />
           <ImageLoop />

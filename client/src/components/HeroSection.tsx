@@ -1,12 +1,58 @@
 import { TypeAnimation } from 'react-type-animation';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useAnimationContext } from '@/contexts/AnimationContext';
 
-const heroImage = "https://res.cloudinary.com/dnlreax2z/image/upload/v1759851675/hero-section_azhook.jpg";
+const heroVideo = "https://res.cloudinary.com/dr3xey7h9/video/upload/v1760101530/top_page_eeee0w.mp4";
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  audioRef: React.RefObject<HTMLAudioElement>;
+}
+
+const HeroSection = ({ audioRef }: HeroSectionProps) => {
   const [showElements, setShowElements] = useState(false);
   const { animationsEnabled } = useAnimationContext();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Sync video sound with background music
+  useEffect(() => {
+    const audio = audioRef.current;
+    const video = videoRef.current;
+    if (!audio || !video) return;
+
+    const syncVideoWithAudio = () => {
+      // Sync mute state and volume
+      video.muted = audio.paused || audio.muted || audio.volume === 0;
+      if (!video.muted) {
+        video.volume = audio.volume;
+      }
+    };
+
+    const handlePlay = () => {
+      video.muted = false;
+      video.volume = audio.volume;
+    };
+
+    const handlePause = () => {
+      video.muted = true;
+    };
+
+    const handleVolumeChange = () => {
+      syncVideoWithAudio();
+    };
+
+    audio.addEventListener('play', handlePlay);
+    audio.addEventListener('pause', handlePause);
+    audio.addEventListener('volumechange', handleVolumeChange);
+
+    // Initial sync
+    syncVideoWithAudio();
+
+    return () => {
+      audio.removeEventListener('play', handlePlay);
+      audio.removeEventListener('pause', handlePause);
+      audio.removeEventListener('volumechange', handleVolumeChange);
+    };
+  }, [audioRef]);
 
   return (
     <section 
@@ -15,11 +61,16 @@ const HeroSection = () => {
         backgroundColor: 'transparent'
       }}
     >
-      {/* Background Image */}
-      <img 
-        src={heroImage} 
-        alt="Wedding photo"
+      {/* Background Video */}
+      <video
+        ref={videoRef}
+        src={heroVideo}
+        autoPlay
+        loop
+        muted
+        playsInline
         className="absolute inset-0 w-full h-full object-cover"
+        data-testid="hero-video"
       />
 
       {/* Overlay for better text readability */}
