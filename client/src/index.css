@@ -257,25 +257,16 @@
     font-family: 'Telma', sans-serif;
   }
 
-  /* Apply Telma to all headers except hero section and custom styled headers */
+  /* Apply Boska weight 300 to all headers except hero section and entourage section */
   h1:not([style*="fontFamily"]), 
   h2:not([style*="fontFamily"]), 
   h3:not([style*="fontFamily"]), 
   h4:not([style*="fontFamily"]), 
   h5:not([style*="fontFamily"]), 
   h6:not([style*="fontFamily"]) {
-    font-family: 'Telma', sans-serif !important;
-  }
-
-  /* Main section headers - bolder weight */
-  h1:not([style*="fontWeight"]), 
-  h2:not([style*="fontWeight"]) {
-    font-weight: 700 !important;
-  }
-
-  /* Sub-headers - lighter weight */
-  h3, h4, h5, h6 {
-    font-weight: 400 !important;
+    font-family: 'Boska', serif !important;
+    font-weight: 300 !important;
+    color: hsl(var(--primary)) !important;
   }
 
   /* Restore original fonts and weights for headers in hero section */
@@ -287,6 +278,18 @@
   .hero-section h6 {
     font-family: var(--font-display) !important;
     font-weight: 300 !important;
+  }
+
+  /* Restore original styles for entourage section */
+  .entourage-section h1,
+  .entourage-section h2,
+  .entourage-section h3,
+  .entourage-section h4,
+  .entourage-section h5,
+  .entourage-section h6 {
+    font-family: 'Telma', sans-serif !important;
+    font-weight: 700 !important;
+    color: inherit !important;
   }
 
   /* Mobile-First Responsive Typography */
