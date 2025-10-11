@@ -7,7 +7,7 @@ const HashtagGiftsSection = () => {
   return (
     <motion.section 
       id="hashtag-gifts" 
-      className="section-pastel-blue bg-white relative overflow-hidden py-20 mt-[-34px] mb-[-34px]"
+      className="section-pastel-blue bg-white relative overflow-hidden py-8 mt-[-34px] mb-[-34px]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 0.3 }}
