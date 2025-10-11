@@ -14,26 +14,26 @@
     
     /* PRIMARY - Clean White Background */
     --background: 0 0% 100%; /* Pure white background */
-    --foreground: 0 0% 10%; /* Dark text for contrast */
+    --foreground: 0 0% 20%; /* #333333 text for contrast */
 
     /* Card Colors - White with Shadow */
     --card: 0 0% 100%; /* Pure white cards */
-    --card-foreground: 0 0% 10%; /* Dark text on cards */
+    --card-foreground: 0 0% 20%; /* #333333 text on cards */
 
     /* Popover Colors */
     --popover: 0 0% 100%; /* White popover */
-    --popover-foreground: 0 0% 10%; /* Dark text */
+    --popover-foreground: 0 0% 20%; /* #333333 text */
 
     /* Brand Color */
-    --brand: 0 0% 15%; /* Dark brand color */
+    --brand: 0 0% 20%; /* #333333 brand color */
     
     /* SECONDARY - Dark Accents */
-    --primary: 0 0% 15%; /* Dark primary */
+    --primary: 0 0% 20%; /* #333333 primary */
     --primary-foreground: 0 0% 100%; /* White text on dark */
 
     /* Secondary Colors */
     --secondary: 0 0% 96%; /* Light gray secondary */
-    --secondary-foreground: 0 0% 10%; /* Dark text */
+    --secondary-foreground: 0 0% 20%; /* #333333 text */
 
     /* Muted Colors */
     --muted: 0 0% 96%; /* Light gray muted */
@@ -41,14 +41,14 @@
 
     /* ACCENT - Subtle Gray Accent */
     --accent: 0 0% 96%; /* Light gray accent */
-    --accent-foreground: 0 0% 10%; /* Dark text */
+    --accent-foreground: 0 0% 20%; /* #333333 text */
 
     /* Special Accent - for CTAs and highlights */
-    --gold: 0 0% 15%; /* Dark for buttons */
+    --gold: 0 0% 20%; /* #333333 for buttons */
     --gold-foreground: 0 0% 100%; /* White text on dark */
     
     /* Bright Accent - for emphasis */
-    --gold-bright: 0 0% 10%; /* Darker for emphasis */
+    --gold-bright: 0 0% 20%; /* #333333 for emphasis */
 
     /* Aesthetic Palette - Modern grays */
     --rose-gold: 0 0% 96%; /* Light gray */
@@ -69,16 +69,16 @@
     /* Borders & Inputs */
     --border: 0 0% 90%; /* Light gray border */
     --input: 0 0% 100%; /* White input */
-    --ring: 0 0% 15%; /* Dark accent ring */
+    --ring: 0 0% 20%; /* #333333 accent ring */
 
     /* Border Radius */
     --radius: 0.75rem;
 
     /* Modern Gradients */
     --gradient-elegant: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 0%, 98%));
-    --gradient-gold: linear-gradient(135deg, hsl(0, 0%, 15%), hsl(0, 0%, 25%));
+    --gradient-gold: linear-gradient(135deg, hsl(0, 0%, 20%), hsl(0, 0%, 30%));
     --gradient-night: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 98%) 100%);
-    --gradient-bokeh: radial-gradient(ellipse at center, hsl(0, 0%, 15%) 0%, transparent 60%);
+    --gradient-bokeh: radial-gradient(ellipse at center, hsl(0, 0%, 20%) 0%, transparent 60%);
 
     /* Modern Clean Shadows */
     --shadow-elegant: 0 10px 40px -10px rgba(0, 0, 0, 0.15);
@@ -97,13 +97,13 @@
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 0 0% 10%;
-    --sidebar-primary: 0 0% 15%;
+    --sidebar-foreground: 0 0% 20%;
+    --sidebar-primary: 0 0% 20%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 0 0% 96%;
-    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-accent-foreground: 0 0% 20%;
     --sidebar-border: 0 0% 90%;
-    --sidebar-ring: 0 0% 15%;
+    --sidebar-ring: 0 0% 20%;
   }
 
   /* Custom Wedding Animations */

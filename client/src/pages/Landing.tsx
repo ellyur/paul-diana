@@ -30,7 +30,7 @@ const Landing = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="text-4xl font-display font-[350] tracking-wider text-gray-800"
+          className="text-4xl font-display font-[350] tracking-wider text-primary"
         >
           PAUL & DIANA
         </motion.span>
@@ -40,7 +40,7 @@ const Landing = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="text-2xl tracking-widest text-gray-700"
+          className="text-2xl tracking-widest text-primary"
         >
           12 | 26 | 25
         </motion.p>
@@ -54,7 +54,7 @@ const Landing = () => {
         >
           <button
             onClick={handleEnter}
-            className="px-12 py-4 bg-black hover:bg-gray-800 text-white font-semibold text-lg shadow-2xl transition-all duration-300 hover:scale-105"
+            className="px-12 py-4 bg-primary hover:bg-primary/90 text-white font-semibold text-lg shadow-2xl transition-all duration-300 hover:scale-105"
             data-testid="button-enter-invitation"
           >
             Open Invitation
