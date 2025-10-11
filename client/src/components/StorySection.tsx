@@ -283,13 +283,13 @@ And now, as we begin this new chapter hand in hand, we remain hopeful and prayer
                 </div>
 
                 {/* Image */}
-                <div className={`relative ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                <div className={`relative self-start ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
                   <div className="aspect-square max-w-[70vw] sm:max-w-sm md:max-w-md mx-auto relative">
                     {/* Square image with rounded corners on all screen sizes */}
                     <img
                       src={card.image}
                       alt={`Story moment ${index + 1}`}
-                      className="w-full h-full object-contain rounded-2xl shadow-lg"
+                      className="w-full h-full object-cover rounded-2xl shadow-lg"
                       data-testid={`img-story-card-${card.id}`}
                     />
 
