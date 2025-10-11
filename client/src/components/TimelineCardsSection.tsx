@@ -12,7 +12,7 @@ const TimelineCardsSection = () => {
   const timelineCards = [
     {
       id: 1,
-      image: "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760106978/48385962_1941090289302750_8392576910558756864_n-eUdMZ_kw3idd.jpg",
+      image: "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760179831/f16846e9-82d9-4b4c-9197-935b9ac83617.png",
       title: "Our first day as a couple",
       date: "09.17.18"
     },
