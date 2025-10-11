@@ -51,13 +51,13 @@ const RSVPSection = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={animationsEnabled ? { duration: 0.8, delay: 11.2 } : { duration: 0 }}
             >
-              <h2 
-                className="text-[150px] md:text-[240px] lg:text-[320px] leading-[0.8] text-black tracking-tight"
-                style={{ fontFamily: 'Boska, serif', fontWeight: 300 }}
+              <span 
+                className="text-[150px] md:text-[240px] lg:text-[320px] leading-[0.8] text-black tracking-tight block"
+                style={{ fontFamily: 'Boska, serif', fontWeight: 350 }}
                 data-testid="text-rsvp-title"
               >
                 RS<br />VP
-              </h2>
+              </span>
             </motion.div>
 
             {/* Deadline and Button */}
