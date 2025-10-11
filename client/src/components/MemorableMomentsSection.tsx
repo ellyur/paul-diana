@@ -4,20 +4,19 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/compone
 import { X } from 'lucide-react';
 
 // Prenup photos
-const prenup = "https://res.cloudinary.com/dnlreax2z/image/upload/v1759851678/saveThedate_ihz2n3.jpg";
-const prenup1 = "https://res.cloudinary.com/dnlreax2z/image/upload/v1759851678/saveThedate2_o314bm.jpg";
-const prenup2 = "https://res.cloudinary.com/dnlreax2z/image/upload/v1759851678/saveThedate3_y8zdj9.jpg";
-const prenup3 = "https://res.cloudinary.com/dnlreax2z/image/upload/v1759851679/saveThedate4_oqdbzx.jpg";
-const prenup4 = "https://res.cloudinary.com/dnlreax2z/image/upload/v1759851679/saveThedate5_jdycun.jpg";
-const prenup5 = "https://res.cloudinary.com/dnlreax2z/image/upload/v1759851679/saveThedate6_cyx8xe.jpg";
-const prenup6 = "https://res.cloudinary.com/dnlreax2z/image/upload/v1759851679/saveThedate8_yhocbp.jpg";
-const prenup7 = "https://res.cloudinary.com/dnlreax2z/image/upload/v1759851680/saveThedate9_bcwpio.jpg";
-const prenup8 = "https://res.cloudinary.com/dnlreax2z/image/upload/v1759851680/saveThedate10_iiaasz.jpg";
-
-// Cover images
-const cover1Image = "https://res.cloudinary.com/dnlreax2z/image/upload/v1759851680/saveThedate11_lzl3yr.jpg";
-const cover2Image = "https://res.cloudinary.com/dnlreax2z/image/upload/v1759851681/saveThedate12_yivltn.jpg";
-const cover3Image = "https://res.cloudinary.com/dnlreax2z/image/upload/v1759851680/saveThedate10_iiaasz.jpg";
+const prenup = "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170289/JAH02449_m2d5nl.jpg";
+const prenup1 = "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170290/JAH02851_gevif1.jpg";
+const prenup2 = "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170290/JAH02557_rncjlm.jpg";
+const prenup3 = "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170291/JAH02783_rixrlo.jpg";
+const prenup4 = "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170291/JAH03027_oevui5.jpg";
+const prenup5 = "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170293/JAH03090_pifxoh.jpg";
+const prenup6 = "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170294/JAH03133_tfhm3n.jpg";
+const prenup7 = "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170295/JAH03213_m2qf1t.jpg";
+const prenup8 = "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170296/JAH03239_ryy3xy.jpg";
+const prenup9 = "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170298/JAH03286_nnbv3n.jpg";
+const prenup10 = "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170299/JAH03363_zsco95.jpg";
+const prenup11 = "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170490/JAH03394_vhicji.jpg";
+const prenup12 = "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170490/JAH03438_db2lvx.jpg";
 
 const MemorableMomentsSection = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
@@ -32,9 +31,10 @@ const MemorableMomentsSection = () => {
     { src: prenup6, alt: "Prenup photo 7", height: "h-72" },
     { src: prenup7, alt: "Prenup photo 8", height: "h-64" },
     { src: prenup8, alt: "Prenup photo 9", height: "h-96" },
-    { src: cover1Image, alt: "Prenup photo 10", height: "h-80" },
-    { src: cover2Image, alt: "Prenup photo 11", height: "h-72" },
-    { src: cover3Image, alt: "Prenup photo 12", height: "h-64" }
+    { src: prenup9, alt: "Prenup photo 10", height: "h-80" },
+    { src: prenup10, alt: "Prenup photo 11", height: "h-72" },
+    { src: prenup11, alt: "Prenup photo 12", height: "h-64" },
+    { src: prenup12, alt: "Prenup photo 13", height: "h-80" }
   ];
 
   return (

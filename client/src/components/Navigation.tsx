@@ -90,9 +90,11 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h2 className="text-xl font-display font-semibold text-primary">
-              P<span className="text-primary">&</span>D
-            </h2>
+            <img 
+              src="https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170580/17ea81a6-dbcd-4dbc-b598-ab591dc176c2-removebg-preview_vfbeaq.png" 
+              alt="P&D Logo" 
+              className="h-12 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
