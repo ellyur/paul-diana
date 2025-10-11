@@ -22,13 +22,12 @@ import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/Footer';
 import CoverSection from '@/components/CoverSection';
 import InvitationRevealSection from '@/components/InvitationRevealSection';
-import MusicControl from '@/components/MusicControl';
 import MusicConsentPopup from '@/components/MusicConsentPopup';
 import { AnimationContext } from '@/contexts/AnimationContext';
 
 const Index = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
-  const [animationsEnabled, setAnimationsEnabled] = useState(true);
+  const [animationsEnabled, setAnimationsEnabled] = useState(false);
   const [showMusicConsent, setShowMusicConsent] = useState(true);
 
   // Setup audio when component mounts
@@ -43,6 +42,7 @@ const Index = () => {
   // Handle music consent
   const handleMusicConsent = async (consent: boolean) => {
     setShowMusicConsent(false);
+    setAnimationsEnabled(true);
     
     if (consent && audioRef.current) {
       try {
@@ -75,7 +75,7 @@ const Index = () => {
       {/* Music Consent Popup */}
       <MusicConsentPopup 
         onConsent={handleMusicConsent} 
-        isVisible={showMusicConsent && animationsEnabled} 
+        isVisible={showMusicConsent} 
       />
 
       <div className="min-h-screen relative">
@@ -112,9 +112,6 @@ const Index = () => {
           <FAQSection />
           <Footer />
         </main>
-
-        {/* Music Control - always show */}
-        <MusicControl audioRef={audioRef} />
       </div>
     </AnimationContext.Provider>
   );

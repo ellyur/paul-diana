@@ -201,3 +201,5 @@ Successfully migrated from Lovable to Replit environment:
     - Updated App.tsx to make invitation page (Index) the default home page route
     - Visitors now see the invitation directly at "/" without an intermediate landing page
     - Music consent popup appears immediately upon entering the site
+    - Hero section animation now waits for user to choose music option before starting
+    - TypeAnimation and fade-up effects only trigger after clicking "Play Music" or "Continue Silently"
