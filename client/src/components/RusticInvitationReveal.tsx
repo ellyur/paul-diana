@@ -84,14 +84,14 @@ const RusticInvitationReveal = ({ animationsEnabled }: RusticInvitationRevealPro
               <div className="w-8 h-px bg-gradient-to-l from-transparent to-primary/50" />
             </div>
 
-            <h2 
-              className="text-5xl md:text-6xl text-primary relative"
+            <span 
+              className="text-5xl md:text-6xl text-primary relative block"
               style={{ fontFamily: 'Boska, serif', fontWeight: 300 }}
             >
               You're Invited
               {/* Subtle underline accent */}
               <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-32 h-0.5 bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
-            </h2>
+            </span>
 
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"/>
 

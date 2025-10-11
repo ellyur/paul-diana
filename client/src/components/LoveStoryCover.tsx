@@ -18,7 +18,7 @@ const LoveStoryCover = () => {
           style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 300 }}
           data-testid="text-love-story-quote"
         >
-          <span style={{ fontFamily: 'Telma, sans-serif', fontWeight: 400 }}>EVERY LOVE STORY IS BEAUTIFUL BUT OURS IS MY FAVORITE</span>
+          <span style={{ fontFamily: 'Telma, sans-serif', fontWeight: 400 }}>Every love story is beautiful but ours is my favorite</span>
         </motion.p>
       </div>
 
