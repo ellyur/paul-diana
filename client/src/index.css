@@ -257,9 +257,9 @@
     font-family: 'Telma', sans-serif;
   }
 
-  /* Apply Dancing Script to all headers except hero section */
+  /* Apply Telma to all headers except hero section */
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Dancing Script', cursive !important;
+    font-family: 'Telma', sans-serif !important;
   }
 
   /* Restore original fonts for headers in hero section */
