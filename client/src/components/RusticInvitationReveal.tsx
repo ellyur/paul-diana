@@ -85,7 +85,7 @@ const RusticInvitationReveal = ({ animationsEnabled }: RusticInvitationRevealPro
             </div>
 
             <h2 
-              className="text-5xl md:text-6xl font-script italic text-primary relative"
+              className="text-5xl md:text-6xl font-script text-primary relative"
               style={{ fontFamily: 'Boska, serif' }}
             >
               You're Invited
