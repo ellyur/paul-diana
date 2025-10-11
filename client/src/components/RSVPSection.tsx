@@ -47,7 +47,7 @@ const RSVPSection = () => {
             >
               <h2 
                 className="text-[150px] md:text-[240px] lg:text-[320px] leading-[0.8] text-black tracking-tight"
-                style={{ fontFamily: 'Boska, serif', fontWeight: 300, fontStyle: 'italic' }}
+                style={{ fontFamily: 'Boska, serif', fontWeight: 300 }}
                 data-testid="text-rsvp-title"
               >
                 RS<br />VP

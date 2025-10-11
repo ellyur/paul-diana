@@ -16,7 +16,7 @@ const ImageLoop = () => {
               <p 
                 className="text-sm sm:text-base md:text-lg text-foreground font-light tracking-[0.3em] uppercase whitespace-nowrap" 
                 data-testid={`text-invitation-${index}`}
-                style={{ fontFamily: 'Boska, serif', fontWeight: 300, fontStyle: 'italic' }}
+                style={{ fontFamily: 'Boska, serif', fontWeight: 300 }}
               >
                 {text}
               </p>
@@ -28,7 +28,7 @@ const ImageLoop = () => {
               <p 
                 className="text-sm sm:text-base md:text-lg text-foreground font-light tracking-[0.3em] uppercase whitespace-nowrap" 
                 data-testid={`text-invitation-dup-${index}`}
-                style={{ fontFamily: 'Boska, serif', fontWeight: 300, fontStyle: 'italic' }}
+                style={{ fontFamily: 'Boska, serif', fontWeight: 300 }}
               >
                 {text}
               </p>
