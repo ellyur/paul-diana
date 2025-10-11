@@ -196,3 +196,8 @@ Successfully migrated from Lovable to Replit environment:
     - Changed CoverSection videos from objectFit 'contain' to 'cover' to eliminate blank white space on mobile
     - Videos now properly fill the screen on all mobile devices with objectPosition 'center'
     - Resolved mobile deployment issues where videos showed blank white space on deployed sites
+  - Removed landing page:
+    - Deleted Landing.tsx page completely
+    - Updated App.tsx to make invitation page (Index) the default home page route
+    - Visitors now see the invitation directly at "/" without an intermediate landing page
+    - Music consent popup appears immediately upon entering the site
