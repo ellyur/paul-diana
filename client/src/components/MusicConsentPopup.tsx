@@ -28,14 +28,12 @@ const MusicConsentPopup = ({ onConsent, isVisible }: MusicConsentPopupProps) => 
             transition={{ type: "spring", duration: 0.5 }}
             className="bg-background rounded-lg p-8 md:p-12 max-w-lg w-full mx-4 shadow-2xl border border-border relative overflow-hidden"
           >
-            {/* Minimalist decorative corners */}
             <div className="absolute top-0 left-0 w-16 h-16 border-l-2 border-t-2 border-primary opacity-20"></div>
             <div className="absolute top-0 right-0 w-16 h-16 border-r-2 border-t-2 border-primary opacity-20"></div>
             <div className="absolute bottom-0 left-0 w-16 h-16 border-l-2 border-b-2 border-primary opacity-20"></div>
             <div className="absolute bottom-0 right-0 w-16 h-16 border-r-2 border-b-2 border-primary opacity-20"></div>
             
             <div className="relative text-center space-y-6">
-              {/* Divider line above icon */}
               <div className="flex items-center justify-center gap-3 mb-4">
                 <div className="h-px w-16 bg-gradient-to-r from-transparent to-primary"></div>
                 <Heart className="w-4 h-4 text-primary fill-primary" />
@@ -58,7 +56,6 @@ const MusicConsentPopup = ({ onConsent, isVisible }: MusicConsentPopupProps) => 
                   A Musical Journey
                 </h2>
                 
-                {/* Divider */}
                 <div className="flex items-center justify-center gap-2">
                   <div className="h-px w-12 bg-primary"></div>
                   <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
@@ -90,7 +87,6 @@ const MusicConsentPopup = ({ onConsent, isVisible }: MusicConsentPopupProps) => 
                 </Button>
               </div>
 
-              {/* Bottom decorative element */}
               <div className="flex items-center justify-center gap-2 pt-4">
                 <Heart className="w-3 h-3 text-primary fill-primary opacity-50" />
                 <div className="w-1 h-1 rounded-full bg-primary opacity-50"></div>

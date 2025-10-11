@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motion } from 'framer-motion';
-import { useAnimationContext } from '@/contexts/AnimationContext';
 import { Church, Clock, Calendar, Plane, Heart, Infinity, BookOpen } from 'lucide-react';
 import flowerImage from '@assets/flower_1759854441531.png';
 
@@ -10,7 +9,6 @@ import flowerImage from '@assets/flower_1759854441531.png';
 gsap.registerPlugin(ScrollTrigger);
 
 const StorySection = () => {
-  const { animationsEnabled } = useAnimationContext();
   const containerRef = useRef<HTMLDivElement>(null);
   const horizontalRef = useRef<HTMLDivElement>(null);
   const [mousePosition, setMousePosition] = useState<{ [key: number]: { x: number; y: number } }>({});
@@ -80,7 +78,7 @@ And now, as we begin this new chapter hand in hand, we remain hopeful and prayer
     const container = containerRef.current;
     const horizontal = horizontalRef.current;
 
-    if (!container || !horizontal || !animationsEnabled) return;
+    if (!container || !horizontal) return;
 
     // Detect mobile/tablet viewports
     const isMobile = window.innerWidth < 1024;
@@ -151,7 +149,7 @@ And now, as we begin this new chapter hand in hand, we remain hopeful and prayer
       });
       ScrollTrigger.getAll().forEach(st => st.kill());
     };
-  }, [animationsEnabled]);
+  }, []);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>, cardId: number) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -176,9 +174,9 @@ And now, as we begin this new chapter hand in hand, we remain hopeful and prayer
     <motion.section 
       id="story" 
       className="section-hard-blue bg-white relative overflow-hidden isolate"
-      initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
+      initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={animationsEnabled ? { duration: 1, delay: 3.5 } : { duration: 0 }}
+      transition={{ duration: 1, delay: 3.5 }}
     >
       {/* SVG Background Decorations - Urban City Theme */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -194,9 +192,9 @@ And now, as we begin this new chapter hand in hand, we remain hopeful and prayer
       {/* Header */}
       <div className="text-center relative z-10">
         <motion.div
-          initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 3.8 } : { duration: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 3.8 }}
         >
           <h2 className="text-4xl sm:text-5xl font-display font-light italic mb-6 sm:mb-8 text-foreground" data-testid="text-story-title">
             Our Story

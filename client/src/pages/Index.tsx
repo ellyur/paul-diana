@@ -30,7 +30,6 @@ const Index = () => {
   const [animationsEnabled, setAnimationsEnabled] = useState(false);
   const [showMusicConsent, setShowMusicConsent] = useState(true);
 
-  // Setup audio when component mounts
   useEffect(() => {
     if (audioRef.current) {
       const audio = audioRef.current;
@@ -39,7 +38,6 @@ const Index = () => {
     }
   }, []);
 
-  // Handle music consent
   const handleMusicConsent = async (consent: boolean) => {
     setShowMusicConsent(false);
     setAnimationsEnabled(true);
@@ -56,7 +54,6 @@ const Index = () => {
 
   return (
     <AnimationContext.Provider value={{ animationsEnabled }}>
-      {/* Background Music - Always present */}
       <audio
         ref={audioRef}
         loop
@@ -66,13 +63,12 @@ const Index = () => {
         data-testid="background-audio"
       >
         <source
-          src="https://res.cloudinary.com/dr3xey7h9/video/upload/v1760179245/ytmp3free.cc_forevermore-side-a-wedding-violin-cover-youtubemp3free.org_ikuekf.mp3"
+          src="https://res.cloudinary.com/dpvmwejes/video/upload/v1760183359/ytmp3free.cc_forevermore-side-a-wedding-violin-cover-youtubemp3free.org_usyrdn.mp3"
           type="audio/mpeg"
         />
         Your browser does not support the audio element.
       </audio>
 
-      {/* Music Consent Popup */}
       <MusicConsentPopup 
         onConsent={handleMusicConsent} 
         isVisible={showMusicConsent} 
@@ -81,38 +77,37 @@ const Index = () => {
       <div className="min-h-screen relative">
         <Navigation />
 
-        {/* Main Content Sections */}
         <main className="relative z-10 space-y-0">
           <HeroSection audioRef={audioRef} />
-          <InvitationRevealSection />
-          <CountdownSection />
-          <ImageLoop />
-          <StorySection />
-          <TimelineCardsSection />
-          <LoveStoryCover />
-          <CoverSection
-            videoUrl={cover1Video}
-            alt="Paul & Diana Wedding Cover Video 1"
-          />
-          <ScrollTriggeredTimeline />
-          <VenueSection />
-          <CoverSection
-            videoUrl={cover2Video}
-            alt="Paul & Diana Wedding Cover Video 2"
-          />
-          <DressCodeSection />
-          <HashtagGiftsSection />
-          <MemorableMomentsSection />
-          <RSVPSection />
-          <EntourageSection />
-          <CoverSection
-            videoUrl={cover3Video}
-            alt="Paul & Diana Wedding Cover Video 3"
-          />
-          <FAQSection />
-          <Footer />
-        </main>
-      </div>
+        <InvitationRevealSection />
+        <CountdownSection />
+        <ImageLoop />
+        <StorySection />
+        <TimelineCardsSection />
+        <LoveStoryCover />
+        <CoverSection
+          videoUrl={cover1Video}
+          alt="Paul & Diana Wedding Cover Video 1"
+        />
+        <ScrollTriggeredTimeline />
+        <VenueSection />
+        <CoverSection
+          videoUrl={cover2Video}
+          alt="Paul & Diana Wedding Cover Video 2"
+        />
+        <DressCodeSection />
+        <HashtagGiftsSection />
+        <MemorableMomentsSection />
+        <RSVPSection />
+        <EntourageSection />
+        <CoverSection
+          videoUrl={cover3Video}
+          alt="Paul & Diana Wedding Cover Video 3"
+        />
+        <FAQSection />
+        <Footer />
+      </main>
+    </div>
     </AnimationContext.Provider>
   );
 };

@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { Clock, Camera, Utensils, Music, Heart, Users, Wine, PartyPopper, Sparkles } from 'lucide-react';
-import { useAnimationContext } from '@/contexts/AnimationContext';
 
 interface TimelineEvent {
     time: string;
@@ -211,15 +210,13 @@ const timelineEvents: TimelineEvent[] = [
 ];
 
 export default function ScrollTriggeredTimeline() {
-    const { animationsEnabled } = useAnimationContext();
-
     return (
         <motion.section 
             id="timeline" 
             className="section-pastel-blue bg-white relative overflow-hidden"
-            initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
+            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={animationsEnabled ? { duration: 0.8, ease: "easeOut" } : { duration: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
         >
             {/* Enhanced Background Decorative Elements */}
             <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
@@ -227,12 +224,12 @@ export default function ScrollTriggeredTimeline() {
                 <div className="absolute bottom-1/4 right-1/4 w-48 h-48 border border-primary/30 rounded-full"></div>
                 <div className="absolute top-1/3 right-1/3 w-24 h-24 border-2 border-primary/30 rotate-45"></div>
                 <div className="absolute bottom-1/3 left-1/5 w-16 h-16 border border-primary/30 rounded-full"></div>
-                <div className={`absolute top-1/2 left-1/6 w-6 h-6 bg-primary/40 rounded-full ${animationsEnabled ? 'animate-pulse' : ''}`}></div>
+                <div className="absolute top-1/2 left-1/6 w-6 h-6 bg-primary/40 rounded-full animate-pulse"></div>
                 <div className="absolute bottom-1/2 right-1/5 w-8 h-8 bg-primary/40 rotate-45"></div>
             </div>
             {/* Floating Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className={`absolute top-20 left-10 w-2 h-2 bg-white/20 rounded-full ${animationsEnabled ? 'animate-bounce' : ''}`} style={{animationDelay: '0s', animationDuration: '3s'}}></div>
+                <div className="absolute top-20 left-10 w-2 h-2 bg-white/20 rounded-full animate-bounce" style={{animationDelay: '0s', animationDuration: '3s'}}></div>
                 <div className="absolute top-40 right-20 w-1 h-1 bg-white/30 rounded-full animate-bounce" style={{animationDelay: '1s', animationDuration: '4s'}}></div>
                 <div className="absolute bottom-32 left-20 w-3 h-3 bg-white/15 rounded-full animate-bounce" style={{animationDelay: '2s', animationDuration: '3.5s'}}></div>
                 <div className="absolute bottom-20 right-32 w-1.5 h-1.5 bg-white/25 rounded-full animate-bounce" style={{animationDelay: '0.5s', animationDuration: '2.5s'}}></div>

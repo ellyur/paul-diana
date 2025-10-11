@@ -1,12 +1,10 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useAnimationContext } from '@/contexts/AnimationContext';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const TimelineCardsSection = () => {
-  const { animationsEnabled } = useAnimationContext();
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const timelineCards = [
@@ -31,7 +29,7 @@ const TimelineCardsSection = () => {
   ];
 
   useEffect(() => {
-    if (!animationsEnabled || !sectionRef.current) return;
+    if (!sectionRef.current) return;
 
     const ctx = gsap.context(() => {
       gsap.fromTo(".timeline-card", 
@@ -58,7 +56,7 @@ const TimelineCardsSection = () => {
     }, sectionRef);
 
     return () => ctx.revert();
-  }, [animationsEnabled]);
+  }, []);
 
   return (
     <section 

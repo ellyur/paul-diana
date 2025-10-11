@@ -1,6 +1,5 @@
 import { useRef, useEffect } from 'react';
 import { Renderer, Program, Mesh, Triangle, Vec2 } from 'ogl';
-import { useAnimationContext } from '@/contexts/AnimationContext';
 
 const vertex = `
 attribute vec2 position;
@@ -87,10 +86,8 @@ export default function DarkVeil({
   resolutionScale = 1
 }: Props) {
   const ref = useRef<HTMLCanvasElement>(null);
-  const { animationsEnabled } = useAnimationContext();
 
   useEffect(() => {
-    if (!animationsEnabled) return;
     
     const canvas = ref.current as HTMLCanvasElement;
     const parent = canvas.parentElement as HTMLElement;
@@ -153,7 +150,7 @@ export default function DarkVeil({
       gl.canvas.width = 1;
       gl.canvas.height = 1;
     };
-  }, [animationsEnabled, hueShift, noiseIntensity, scanlineIntensity, speed, scanlineFrequency, warpAmount, resolutionScale]);
+  }, [hueShift, noiseIntensity, scanlineIntensity, speed, scanlineFrequency, warpAmount, resolutionScale]);
 
   return (
     <canvas

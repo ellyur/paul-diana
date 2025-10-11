@@ -13,14 +13,12 @@ const HeroSection = ({ audioRef }: HeroSectionProps) => {
   const { animationsEnabled } = useAnimationContext();
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Sync video sound with background music
   useEffect(() => {
     const audio = audioRef.current;
     const video = videoRef.current;
     if (!audio || !video) return;
 
     const syncVideoWithAudio = () => {
-      // Sync mute state and volume
       video.muted = audio.paused || audio.muted || audio.volume === 0;
       if (!video.muted) {
         video.volume = audio.volume;
@@ -44,7 +42,6 @@ const HeroSection = ({ audioRef }: HeroSectionProps) => {
     audio.addEventListener('pause', handlePause);
     audio.addEventListener('volumechange', handleVolumeChange);
 
-    // Initial sync
     syncVideoWithAudio();
 
     return () => {

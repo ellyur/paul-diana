@@ -2,7 +2,6 @@
 import { Button } from '@/components/ui/button';
 import { MapPin, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { useAnimationContext } from '@/contexts/AnimationContext';
 import { LinkPreview } from '@/components/ui/link-preview';
 
 import venuee from "@assets/venuee.png";
@@ -10,7 +9,6 @@ import venuee from "@assets/venuee.png";
 const venueImage = "https://res.cloudinary.com/dnlreax2z/image/upload/v1759852614/venue_qklcxs.jpg";
 
 const VenueSection = () => {
-  const { animationsEnabled } = useAnimationContext();
   const venues = [
     {
       title: 'Ceremony and Reception',
@@ -30,16 +28,16 @@ const VenueSection = () => {
     <motion.section 
       id="venue" 
       className="section-pastel-blue bg-background py-8 px-4"
-      initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
+      initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={animationsEnabled ? { duration: 1, delay: 6.5 } : { duration: 0 }}
+      transition={{ duration: 1, delay: 6.5 }}
     >
       <div className="max-w-6xl mx-auto">
         <motion.div 
           className="text-center mb-16"
-          initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 6.8 } : { duration: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 6.8 }}
         >
           <h1 className="text-4xl font-display font-light mb-2 text-primary" data-testid="text-venue-section-title">
             Venue
@@ -50,9 +48,9 @@ const VenueSection = () => {
           {venues.map((venue, index) => (
             <motion.div 
               key={index}
-              initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 6.8 + (index * 0.4) } : { duration: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 6.8 + (index * 0.4) }}
             >
               {/* Modern Creative Container */}
               <div className="relative max-w-5xl mx-auto">
@@ -70,9 +68,9 @@ const VenueSection = () => {
                     
                     <div className="text-center relative z-10">
                       <motion.div 
-                        initial={animationsEnabled ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={animationsEnabled ? { duration: 0.6, ease: "easeOut", delay: 7.0 + (index * 0.4) } : { duration: 0 }}
+                        transition={{ duration: 0.6, ease: "easeOut", delay: 7.0 + (index * 0.4) }}
                       >
                         <h2 className="font-display text-foreground mb-2 text-2xl md:text-3xl" data-testid={`text-${venue.title.toLowerCase()}-title`}>
                           {venue.title}
