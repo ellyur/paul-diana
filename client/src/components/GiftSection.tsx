@@ -23,7 +23,7 @@ const GiftSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 9.8 }}
         >
-          <h2 className="text-5xl font-display italic text-gold-bright mb-8" data-testid="text-gifts-title">
+          <h2 className="text-5xl font-display font-light italic text-gold-bright mb-8" data-testid="text-gifts-title">
             Wedding Gifts
           </h2>
         </motion.div>

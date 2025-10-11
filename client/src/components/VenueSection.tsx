@@ -41,7 +41,7 @@ const VenueSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 6.8 } : { duration: 0 }}
         >
-          <h1 className="text-4xl font-display mb-2 text-primary" data-testid="text-venue-section-title">
+          <h1 className="text-4xl font-display font-light mb-2 text-primary" data-testid="text-venue-section-title">
             Venue
           </h1>
         </motion.div>

@@ -68,7 +68,7 @@ const TimelineCardsSection = () => {
     >
       <div className="max-w-7xl mx-auto">
         <h2 
-          className="text-4xl sm:text-5xl lg:text-6xl font-script italic text-center mb-16 text-foreground"
+          className="text-4xl sm:text-5xl lg:text-6xl font-display font-light italic text-center mb-16 text-foreground"
           data-testid="text-timeline-heading"
         >
           A story of forever and a lifetime!

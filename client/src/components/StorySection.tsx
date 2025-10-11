@@ -175,7 +175,7 @@ const StorySection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 3.8 } : { duration: 0 }}
         >
-          <h2 className="text-4xl sm:text-5xl font-script italic font-black mb-6 sm:mb-8 text-foreground" data-testid="text-story-title">
+          <h2 className="text-4xl sm:text-5xl font-display font-light italic mb-6 sm:mb-8 text-foreground" data-testid="text-story-title">
             Our Story
           </h2>
           <p className="text-base sm:text-lg max-w-2xl mx-auto mb-4 text-foreground/90">
