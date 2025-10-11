@@ -65,7 +65,7 @@ const RSVPSection = () => {
                 className="font-display text-2xl md:text-3xl lg:text-4xl font-normal text-black tracking-widest"
                 data-testid="text-rsvp-deadline"
               >
-                BY OCTOBER 30
+                DEADLINE
               </p>
               <a 
                 href="https://paul-diana-rsvp.replit.app" 
