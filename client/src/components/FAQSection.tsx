@@ -91,7 +91,7 @@ const FAQSection = () => {
               >
                 <div className="flex items-center gap-3">
                   <faq.icon className="w-5 h-5 text-primary flex-shrink-0" />
-                  <h3 className="text-lg font-display font-bold text-primary">
+                  <h3 className="text-lg text-primary" style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 600 }}>
                     {faq.question}
                   </h3>
                 </div>

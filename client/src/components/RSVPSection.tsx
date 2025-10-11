@@ -85,10 +85,15 @@ const RSVPSection = () => {
               {/* Message below button with white container */}
               <div className="mt-8 bg-white rounded-2xl p-8 max-w-2xl mx-auto shadow-2xl border border-gray-100">
                 <p 
-                  className="font-body text-base md:text-lg text-black font-medium text-center"
+                  className="font-body text-base md:text-lg text-black font-medium text-center mb-4"
                   data-testid="text-rsvp-message"
                 >
                   Please confirm your attendance by responding to our invitation. Click the RSVP HERE! button above.
+                </p>
+                <p className="text-center">
+                  <span className="font-body text-base md:text-lg font-bold text-black bg-yellow-200 px-3 py-1 rounded">
+                    THE DEADLINE IS OCTOBER 30
+                  </span>
                 </p>
               </div>
             </motion.div>
