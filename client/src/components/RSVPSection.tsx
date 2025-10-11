@@ -67,13 +67,6 @@ const RSVPSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={animationsEnabled ? { duration: 0.6, delay: 11.4 } : { duration: 0 }}
             >
-              <p 
-                className="font-display text-2xl md:text-3xl lg:text-4xl font-normal text-black tracking-widest mb-6"
-                data-testid="text-rsvp-deadline"
-              >
-                THE DEADLINE IS OCTOBER 30
-              </p>
-              
               <a 
                 href="https://paul-diana-rsvp.replit.app" 
                 target="_blank" 
