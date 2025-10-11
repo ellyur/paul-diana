@@ -41,7 +41,7 @@ const StorySection = () => {
     {
       id: 4,
       title: "Distance & Perseverance",
-      text: "Life had another test waiting—one of us had to go abroad, and distance slowly became part of our story. There were nights filled with tears, moments of loneliness, and countless days of missing each other deeply. Yet through every challenge, our hearts remained steadfast. Though miles stretched between us, our love never faltered.",
+      text: "Life had another test waiting—one of us had to go abroad, and distance became part of our story. Yet through every challenge, our hearts remained steadfast. Though miles stretched between us, our love never faltered.",
       image: "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760168746/05f2fa4b-69a1-4317-afea-3d5db95130e7_1_jlknxb.jpg",
       icon: Plane
     },
