@@ -257,13 +257,19 @@
     font-family: 'Telma', sans-serif;
   }
 
-  /* Apply Telma to all headers except hero section */
-  h1, h2, h3, h4, h5, h6 {
+  /* Apply Telma to all headers except hero section and custom styled headers */
+  h1:not([style*="fontFamily"]), 
+  h2:not([style*="fontFamily"]), 
+  h3:not([style*="fontFamily"]), 
+  h4:not([style*="fontFamily"]), 
+  h5:not([style*="fontFamily"]), 
+  h6:not([style*="fontFamily"]) {
     font-family: 'Telma', sans-serif !important;
   }
 
   /* Main section headers - bolder weight */
-  h1, h2 {
+  h1:not([style*="fontWeight"]), 
+  h2:not([style*="fontWeight"]) {
     font-weight: 700 !important;
   }
 

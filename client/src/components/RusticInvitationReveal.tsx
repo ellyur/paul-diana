@@ -86,7 +86,7 @@ const RusticInvitationReveal = ({ animationsEnabled }: RusticInvitationRevealPro
 
             <h2 
               className="text-5xl md:text-6xl font-script text-primary relative"
-              style={{ fontFamily: 'Boska, serif' }}
+              style={{ fontFamily: 'Boska, serif', fontWeight: 500 }}
             >
               You're Invited
               {/* Subtle underline accent */}
