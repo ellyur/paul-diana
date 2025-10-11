@@ -190,3 +190,9 @@ Successfully migrated from Lovable to Replit environment:
     - Added self-start alignment to image containers to eliminate white space above images
     - Maintained object-cover styling with rounded corners for proper appearance
     - Full images now visible without excessive spacing between text and image
+  - Fixed Safari/iPhone compatibility issues:
+    - Implemented MusicConsentPopup to request user permission for audio playback on mobile devices
+    - Safari/iOS blocks autoplay of unmuted audio, now music plays after user interaction (clicking "Play Music")
+    - Changed CoverSection videos from objectFit 'contain' to 'cover' to eliminate blank white space on mobile
+    - Videos now properly fill the screen on all mobile devices with objectPosition 'center'
+    - Resolved mobile deployment issues where videos showed blank white space on deployed sites
