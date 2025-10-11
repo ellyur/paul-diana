@@ -209,7 +209,7 @@ const StorySection = () => {
           {storyCards.map((card, index) => (
             <div
               key={card.id}
-              className="story-card flex-shrink-0 h-full flex items-center justify-center px-4 sm:px-8 py-8 sm:py-12"
+              className="story-card flex-shrink-0 h-full flex items-center justify-center px-2 sm:px-4 py-8 sm:py-12"
               style={{ width: '100vw', minWidth: '100vw' }}
             >
               <div 
@@ -225,8 +225,8 @@ const StorySection = () => {
               >
                 {/* Content */}
                 <div className={`space-y-6 sm:space-y-8 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                  <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full mb-4 sm:mb-6 bg-primary/20 border-2 border-primary">
-                    <card.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-primary" strokeWidth={2} />
+                  <div className="mb-4 sm:mb-6">
+                    <card.icon className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary" strokeWidth={1.5} />
                   </div>
                   
                   <h3 className="text-3xl sm:text-4xl lg:text-5xl font-script italic mb-4 sm:mb-6 text-foreground" data-testid={`text-story-card-${card.id}-title`}>
@@ -286,7 +286,7 @@ const StorySection = () => {
 
           {/* Final "Our Promise" Card */}
           <div
-            className="story-card flex-shrink-0 h-full flex items-center justify-center px-4 sm:px-8 py-8 sm:py-12"
+            className="story-card flex-shrink-0 h-full flex items-center justify-center px-2 sm:px-4 py-8 sm:py-12"
             style={{ width: '100vw', minWidth: '100vw' }}
           >
             <div 
@@ -296,8 +296,8 @@ const StorySection = () => {
             >
               {/* Content - Centered */}
               <div className="space-y-6 sm:space-y-8 text-center max-w-3xl mx-auto">
-                <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full mb-4 sm:mb-6 bg-primary/20 border-2 border-primary">
-                  <Heart className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-primary" strokeWidth={2} />
+                <div className="mb-4 sm:mb-6 flex justify-center">
+                  <Heart className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary" strokeWidth={1.5} />
                 </div>
                 
                 <h3 className="text-3xl sm:text-4xl lg:text-5xl font-script italic mb-4 sm:mb-6 text-foreground" data-testid="text-story-promise-title">
