@@ -21,7 +21,13 @@ const RSVPSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 10.8 } : { duration: 0 }}
         >
-          <h2 className="font-display text-gold text-[48px] md:text-5xl" style={{ fontFamily: 'Boska, serif', fontWeight: 300 }} data-testid="text-rsvp-header">RSVP Here</h2>
+          <h2 
+            className="text-gold text-[48px] md:text-5xl" 
+            style={{ fontFamily: 'Boska, serif', fontWeight: 300, fontStyle: 'normal' }} 
+            data-testid="text-rsvp-header"
+          >
+            RSVP Here
+          </h2>
         </motion.div>
 
         {/* RSVP Content */}
