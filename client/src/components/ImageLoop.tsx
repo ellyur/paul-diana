@@ -24,7 +24,7 @@ const ImageLoop = () => {
   ];
 
   return (
-    <section id="slideshow" className="image-loop-section section-hard-blue w-full overflow-hidden">
+    <section id="slideshow" className="image-loop-section section-hard-blue bg-white w-full overflow-hidden">
       <div className="image-loop-container">
         <div className={`${animationsEnabled ? 'image-loop-track' : 'image-loop-track-static'}`}>
           {/* First set of images */}

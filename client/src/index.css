@@ -200,7 +200,7 @@
   body {
     @apply text-foreground font-body;
     font-family: var(--font-body);
-    background: #d8d4cb;
+    background: #ffffff;
     position: relative;
     min-height: 100vh;
     margin: 0;

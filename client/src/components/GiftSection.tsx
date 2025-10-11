@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const GiftSection = () => {
   return (
     <motion.section 
-      className="section-hard-blue py-20 px-4 relative overflow-hidden"
+      className="section-hard-blue bg-white py-20 px-4 relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 9.5 }}

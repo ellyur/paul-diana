@@ -216,7 +216,7 @@ export default function ScrollTriggeredTimeline() {
     return (
         <motion.section 
             id="timeline" 
-            className="section-pastel-blue relative overflow-hidden"
+            className="section-pastel-blue bg-white relative overflow-hidden"
             initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
             animate={{ opacity: 1 }}
             transition={animationsEnabled ? { duration: 0.8, ease: "easeOut" } : { duration: 0 }}

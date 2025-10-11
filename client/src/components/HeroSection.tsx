@@ -56,10 +56,7 @@ const HeroSection = ({ audioRef }: HeroSectionProps) => {
 
   return (
     <section 
-      className="hero-section relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
-      style={{
-        backgroundColor: 'transparent'
-      }}
+      className="hero-section bg-white relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
     >
       {/* Background Video */}
       <video

@@ -7,7 +7,7 @@ interface CoverSectionProps {
 
 const CoverSection = ({ imageUrl, videoUrl, alt, className = "" }: CoverSectionProps) => {
   return (
-    <section className={`relative w-full overflow-hidden ${className}`}>
+    <section className={`bg-white relative w-full overflow-hidden ${className}`}>
       {/* Full Width Media Container */}
       <div className="relative w-screen left-1/2 -translate-x-1/2 overflow-hidden">
         {videoUrl ? (

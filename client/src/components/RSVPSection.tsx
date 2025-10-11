@@ -38,17 +38,6 @@ const RSVPSection = () => {
 
           {/* Content */}
           <div className="relative z-10 text-center px-4 w-full max-w-4xl mx-auto">
-            {/* "please" */}
-            <motion.p 
-              className="font-pencerio text-6xl md:text-7xl lg:text-8xl text-black mb-12"
-              initial={animationsEnabled ? { opacity: 0, y: -20 } : { opacity: 1, y: 0 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={animationsEnabled ? { duration: 0.6, delay: 11.0 } : { duration: 0 }}
-              data-testid="text-rsvp-please"
-            >
-              please
-            </motion.p>
-
             {/* "RSVP" - Split into RS and VP */}
             <motion.div 
               className="mb-12"
@@ -67,7 +56,7 @@ const RSVPSection = () => {
 
             {/* Deadline and Button */}
             <motion.div 
-              className="space-y-6 mb-12"
+              className="space-y-6"
               initial={animationsEnabled ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={animationsEnabled ? { duration: 0.6, delay: 11.4 } : { duration: 0 }}
@@ -86,17 +75,6 @@ const RSVPSection = () => {
                 data-testid="button-rsvp"
               >RSVP HERE!</a>
             </motion.div>
-
-            {/* "thank you" */}
-            <motion.p 
-              className="font-pencerio text-6xl md:text-7xl lg:text-8xl text-black"
-              initial={animationsEnabled ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={animationsEnabled ? { duration: 0.6, delay: 11.6 } : { duration: 0 }}
-              data-testid="text-rsvp-thankyou"
-            >
-              thank you
-            </motion.p>
           </div>
         </div>
       </div>
