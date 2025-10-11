@@ -10,17 +10,6 @@ const Landing = () => {
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-black relative overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <img
-          src="https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170858/Your_paragraph_text_hjm0fl.jpg"
-          alt="Wedding Invitation"
-          className="w-full h-full object-cover"
-        />
-        {/* Overlay for better button visibility */}
-        <div className="absolute inset-0 bg-black/20"></div>
-      </div>
-
       {/* Enter Button */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
