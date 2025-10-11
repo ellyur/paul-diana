@@ -3,7 +3,7 @@
   font-family: 'Boska';
   src: url('./boska-200.woff2') format('woff2');
   font-weight: 200;
-  font-style: italic;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -11,7 +11,7 @@
   font-family: 'Boska';
   src: url('./boska-300.woff2') format('woff2');
   font-weight: 300;
-  font-style: italic;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -19,7 +19,7 @@
   font-family: 'Boska';
   src: url('./boska-500.woff2') format('woff2');
   font-weight: 500;
-  font-style: italic;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -27,7 +27,7 @@
   font-family: 'Boska';
   src: url('./boska-700.woff2') format('woff2');
   font-weight: 700;
-  font-style: italic;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -35,7 +35,7 @@
   font-family: 'Boska';
   src: url('./boska-800.woff2') format('woff2');
   font-weight: 800;
-  font-style: italic;
+  font-style: normal;
   font-display: swap;
 }
 
