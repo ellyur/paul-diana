@@ -336,12 +336,12 @@ And now, as we begin this new chapter hand in hand, we remain hopeful and prayer
                 </div>
                 
                 <h3 className="text-3xl sm:text-4xl lg:text-5xl font-script italic mb-4 sm:mb-6 text-foreground" data-testid="text-story-promise-title">
-                  Don't forget—RSVP before you exit!
+                  Our Promise
                 </h3>
                 
                 <div className="space-y-4">
                   <p className="text-xl sm:text-2xl leading-relaxed italic text-foreground/90" data-testid="text-story-promise-verse">
-                    "He has made everything beautiful in its time." time."
+                    "He has made everything beautiful in its time."
                   </p>
                   <p className="text-base sm:text-lg text-foreground/80" data-testid="text-story-promise-reference">
                     Ecclesiastes 3:11

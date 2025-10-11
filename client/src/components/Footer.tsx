@@ -48,11 +48,8 @@ const Footer = () => {
             <p className="text-foreground text-sm">
               With love and gratitude,
             </p>
-            <p className="text-foreground mb-6" style={{ fontFamily: 'Boska, serif', fontWeight: 300 }}>
+            <p className="text-foreground" style={{ fontFamily: 'Boska, serif', fontWeight: 300 }}>
               Paul & Diana
-            </p>
-            <p className="text-foreground/60 text-xs">
-              Website created by <span className="font-semibold">Inviteee</span>
             </p>
           </div>
         </motion.div>
