@@ -248,7 +248,7 @@ And now, as we begin this new chapter hand in hand, we remain hopeful and prayer
               >
                 {/* Content */}
                 <div className={`space-y-6 sm:space-y-8 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                  <div className="mb-4 sm:mb-6">
+                  <div className="mb-4 sm:mb-6 inline-flex p-3 bg-primary/10 rounded-full">
                     <card.icon className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary" strokeWidth={1.5} />
                   </div>
                   
@@ -332,7 +332,9 @@ And now, as we begin this new chapter hand in hand, we remain hopeful and prayer
               {/* Content - Centered */}
               <div className="space-y-6 sm:space-y-8 text-center max-w-3xl mx-auto">
                 <div className="mb-4 sm:mb-6 flex justify-center">
-                  <Heart className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary" strokeWidth={1.5} />
+                  <div className="inline-flex p-3 bg-primary/10 rounded-full">
+                    <Heart className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary" strokeWidth={1.5} />
+                  </div>
                 </div>
                 
                 <h3 className="text-3xl sm:text-4xl lg:text-5xl font-script italic mb-4 sm:mb-6 text-foreground" data-testid="text-story-promise-title">
