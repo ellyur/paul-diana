@@ -25,7 +25,7 @@ const TimelineCardsSection = () => {
     {
       id: 3,
       image: "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760106974/JAH02565_1_upazo1.jpg",
-      title: "The day diana we'll say \"I do\"",
+      title: "The day we'll say \"I do\"",
       date: "12.26.25"
     }
   ];
