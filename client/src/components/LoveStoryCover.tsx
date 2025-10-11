@@ -15,7 +15,7 @@ const LoveStoryCover = () => {
           initial={animationsEnabled ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={animationsEnabled ? { duration: 0.8, ease: "easeOut" } : { duration: 0 }}
-          style={{ fontFamily: 'Boska, serif', fontWeight: 300 }}
+          style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 300 }}
           data-testid="text-love-story-quote"
         >
           <span className="font-semibold">EVERY LOVE STORY IS BEAUTIFUL BUT OURS IS MY FAVORITE</span>
@@ -23,19 +23,11 @@ const LoveStoryCover = () => {
       </div>
 
       {/* Cover Image */}
-      <div className="relative w-screen left-1/2 -translate-x-1/2 overflow-hidden">
+      <div className="max-w-5xl mx-auto px-4">
         <motion.img 
           src={loveStoryImage}
           alt="Love Story Cover"
-          style={{
-            display: 'block',
-            width: '100%',
-            height: 'auto',
-            objectFit: 'contain',
-            objectPosition: 'top',
-            margin: 0,
-            padding: 0
-          }}
+          className="w-full h-auto object-contain object-center mx-auto"
           initial={animationsEnabled ? { opacity: 0, scale: 1.1 } : { opacity: 1, scale: 1 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={animationsEnabled ? { duration: 1.2, ease: "easeOut" } : { duration: 0 }}
