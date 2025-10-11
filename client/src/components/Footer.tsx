@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Footer = () => {
   return (
     <motion.footer 
-      className="bg-gray-50 dark:bg-gray-900/50 text-foreground py-16 px-4 relative overflow-hidden border-t-2 border-primary/20"
+      className="bg-slate-50 dark:bg-slate-900/50 text-foreground py-16 px-4 relative overflow-hidden border-t-2 border-primary/20"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 12.5 }}
@@ -50,8 +50,8 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Bottom Border */}
-          <div className="border-t border-border pt-8">
+          {/* Bottom Section */}
+          <div className="pt-8">
             <p className="text-foreground text-sm">
               With love and gratitude,
             </p>

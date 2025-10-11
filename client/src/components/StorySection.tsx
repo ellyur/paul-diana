@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motion } from 'framer-motion';
 import { useAnimationContext } from '@/contexts/AnimationContext';
-import { Sparkles, Star, Ship, Heart, Infinity, BookOpen } from 'lucide-react';
+import { Church, Clock, Calendar, Plane, Heart, Infinity, BookOpen } from 'lucide-react';
 import flowerImage from '@assets/flower_1759854441531.png';
 
 // Register GSAP plugin
@@ -22,28 +22,28 @@ const StorySection = () => {
       title: "How We Met",
       text: "Our paths first crossed in 2011 through the church ministry of The Salvation Army, where a quiet friendship began to bloom—rooted in shared faith and service. From simple conversations to moments of laughter, a gentle connection began to grow. Fate had its own small ways of keeping our story alive—meeting in Mathematics competitions, crossing paths in school corridors, and catching glimpses of each other during church events.",
       image: "https://res.cloudinary.com/dnlreax2z/image/upload/v1759851677/loveStory1_wlmnn1.jpg",
-      icon: Sparkles
+      icon: Church
     },
     {
       id: 2, 
       title: "The Promise to Wait",
       text: "When one of us found the courage to confess what the heart already knew, we both agreed to wait—to let our friendship mature and to give space for growth. We promised not to rush into a relationship until after college, believing that love founded on faith and patience would endure the test of time.",
       image: "https://res.cloudinary.com/dnlreax2z/image/upload/v1759851677/loveStory3_breabq.jpg",
-      icon: Star
+      icon: Clock
     },
     {
       id: 3,
       title: "God's Perfect Timing", 
       text: "In God's perfect timing, seven years later, that quiet friendship blossomed into the love we now cherish—a love strengthened by faith, guided by fate, and joyfully celebrated as the beautiful story we continue to live today. As the years went by, we built dreams together and planned the life we hoped to share.",
       image: "https://res.cloudinary.com/dnlreax2z/image/upload/v1759851678/loveStory4_qij73x.jpg",
-      icon: Ship
+      icon: Calendar
     },
     {
       id: 4,
       title: "Distance & Perseverance",
       text: "Life had another test waiting—one of us had to go abroad, and distance slowly became part of our story. There were nights filled with tears, moments of loneliness, and countless days of missing each other deeply. Yet through every challenge, our hearts remained steadfast. Though miles stretched between us, our love never faltered.",
       image: "https://res.cloudinary.com/dnlreax2z/image/upload/v1759851678/loveStory12_rtxmx4.jpg",
-      icon: Heart
+      icon: Plane
     },
     {
       id: 5,
