@@ -42,7 +42,7 @@ const FAQSection = () => {
     {
       question: "I already answered NO to the RSVP, but my schedule cleared up and can now attend your wedding. What do I do?",
       icon: MessageCircle,
-      answer: "Please let us know on or before October 20, 2025. But please understand that we cannot guarantee the availability of the seat/s since we may already have allocated them to other guests when you declined the invitation. We will let you know if there's still seat for you."
+      answer: "Please let us know. But please understand that we cannot guarantee the availability of the seat/s since we may already have allocated them to other guests when you declined the invitation. We will let you know if there's still seat for you."
     },
     {
       question: "I already answered YES to the RSVP but something came up and cannot attend anymore. What should I do?",
