@@ -70,7 +70,7 @@ const TimelineCardsSection = () => {
         <h2 
           className="text-4xl sm:text-5xl lg:text-6xl font-display font-light italic text-center mb-16 text-foreground"
           data-testid="text-timeline-heading"
-          style={{ fontFamily: 'Boska, serif', fontWeight: 350 }}
+          style={{ fontFamily: 'Boska, serif', fontWeight: 300 }}
         >
           A story of forever and a lifetime!
         </h2>
