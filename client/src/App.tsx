@@ -5,6 +5,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Router, Route, Switch } from "wouter";
 import { queryClient } from "@/lib/queryClient";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import Landing from "./pages/Landing";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
@@ -16,7 +17,8 @@ const App = () => (
         <Sonner />
         <Router>
           <Switch>
-            <Route path="/" component={Index} />
+            <Route path="/" component={Landing} />
+            <Route path="/invitation" component={Index} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route component={NotFound} />
           </Switch>

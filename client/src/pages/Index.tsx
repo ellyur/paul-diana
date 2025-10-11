@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from 'react';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import ImageLoop from '@/components/ImageLoop';
-import MusicConsentPopup from '@/components/MusicConsentPopup';
 // Cover videos
 const cover1Video = "https://res.cloudinary.com/dr3xey7h9/video/upload/v1760101535/cover2_tpy0ji.mp4";
 const cover2Video = "https://res.cloudinary.com/dr3xey7h9/video/upload/v1760101543/part3_q0uvmz.mp4";
@@ -28,32 +27,29 @@ import { AnimationContext } from '@/contexts/AnimationContext';
 
 const Index = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
-  const [showMusicConsent, setShowMusicConsent] = useState(true);
-  const [animationsEnabled, setAnimationsEnabled] = useState(false);
+  const [animationsEnabled, setAnimationsEnabled] = useState(true);
 
-  // Handle music consent
-  const handleMusicConsent = async (consent: boolean) => {
-    setShowMusicConsent(false);
-    setAnimationsEnabled(true);
-    if (consent && audioRef.current) {
-      try {
-        await audioRef.current.play();
-      } catch (error) {
-        console.error('Music play failed:', error);
-      }
-    }
-  };
-
-  // Ensure audio is properly initialized
+  // Autoplay music on mount
   useEffect(() => {
     if (audioRef.current) {
       const audio = audioRef.current;
       audio.volume = 0.3;
       audio.loop = true;
 
+      // Autoplay music
+      const playMusic = async () => {
+        try {
+          await audio.play();
+          console.log('Audio playing');
+        } catch (error) {
+          console.error('Audio autoplay failed:', error);
+        }
+      };
+
       // Handle audio loading
       const handleCanPlay = () => {
         console.log('Audio is ready to play');
+        playMusic();
       };
 
       const handleError = (e: Event) => {
@@ -88,7 +84,7 @@ const Index = () => {
         data-testid="background-audio"
       >
         <source
-          src="https://res.cloudinary.com/dyos7sol5/video/upload/v1759744636/ytmp3free.cc_forevermore-side-a-wedding-violin-cover-youtubemp3free.org_xrela7.mp3"
+          src="https://res.cloudinary.com/dr3xey7h9/video/upload/v1760157523/ytmp3free.cc_at-last-etta-james-cover-by-saxophonist-carlos-cannon-youtubemp3free.org_wrv7gx.mp3"
           type="audio/mpeg"
         />
         Your browser does not support the audio element.
@@ -96,12 +92,6 @@ const Index = () => {
 
       <div className="min-h-screen relative">
         <Navigation />
-
-        {/* Music Consent Popup */}
-        <MusicConsentPopup 
-          onConsent={handleMusicConsent} 
-          isVisible={showMusicConsent}
-        />
 
         {/* Main Content Sections */}
         <main className="relative z-10 space-y-0">
