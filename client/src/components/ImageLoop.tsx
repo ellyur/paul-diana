@@ -14,7 +14,7 @@ const ImageLoop = () => {
           {invitations.map((text, index) => (
             <div key={`set1-${index}`} className="invitation-loop-item">
               <p 
-                className="text-sm sm:text-base md:text-lg text-foreground font-light tracking-[0.3em] uppercase whitespace-nowrap" 
+                className="text-sm sm:text-base md:text-lg font-light tracking-[0.3em] uppercase whitespace-nowrap text-[#262626]" 
                 data-testid={`text-invitation-${index}`}
                 style={{ fontFamily: 'Boska, serif', fontWeight: 300 }}
               >
