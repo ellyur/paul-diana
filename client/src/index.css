@@ -258,15 +258,88 @@
   }
 
   /* Apply Boska weight 300 to all headers except hero section and entourage section */
-  h1:not([style*="fontFamily"]), 
-  h2:not([style*="fontFamily"]), 
-  h3:not([style*="fontFamily"]), 
+  h1:not([style*="fontFamily"]) {
+    font-family: 'Boska', serif !important;
+    font-weight: 300 !important;
+    color: hsl(var(--primary)) !important;
+    font-size: 3rem !important; /* text-5xl */
+  }
+
+  @media (min-width: 768px) {
+    h1:not([style*="fontFamily"]) {
+      font-size: 3.75rem !important; /* text-6xl */
+    }
+  }
+
+  h2:not([style*="fontFamily"]) {
+    font-family: 'Boska', serif !important;
+    font-weight: 300 !important;
+    color: hsl(var(--primary)) !important;
+    font-size: 2.25rem !important; /* text-4xl */
+  }
+
+  @media (min-width: 768px) {
+    h2:not([style*="fontFamily"]) {
+      font-size: 3rem !important; /* text-5xl */
+    }
+  }
+
+  h3:not([style*="fontFamily"]) {
+    font-family: 'Boska', serif !important;
+    font-weight: 300 !important;
+    color: hsl(var(--primary)) !important;
+    font-size: 1.875rem !important; /* text-3xl */
+  }
+
+  @media (min-width: 768px) {
+    h3:not([style*="fontFamily"]) {
+      font-size: 2.25rem !important; /* text-4xl */
+    }
+  }
+
   h4:not([style*="fontFamily"]), 
   h5:not([style*="fontFamily"]), 
   h6:not([style*="fontFamily"]) {
     font-family: 'Boska', serif !important;
     font-weight: 300 !important;
     color: hsl(var(--primary)) !important;
+    font-size: 1.5rem !important; /* text-2xl */
+  }
+
+  @media (min-width: 768px) {
+    h4:not([style*="fontFamily"]), 
+    h5:not([style*="fontFamily"]), 
+    h6:not([style*="fontFamily"]) {
+      font-size: 1.875rem !important; /* text-3xl */
+    }
+  }
+
+  /* Body paragraphs styling */
+  p:not([style*="fontFamily"]):not([class*="italic"]) {
+    font-family: var(--font-body) !important;
+    font-weight: 300 !important;
+    color: hsl(0, 0%, 40%) !important; /* text-gray-700 equivalent */
+    font-size: 1.125rem !important; /* text-lg */
+  }
+
+  @media (min-width: 768px) {
+    p:not([style*="fontFamily"]):not([class*="italic"]) {
+      font-size: 1.25rem !important; /* text-xl */
+    }
+  }
+
+  /* Italic text styling */
+  p.italic, p[class*="italic"] {
+    font-family: var(--font-body) !important;
+    font-style: italic !important;
+    color: hsl(0, 0%, 45%) !important; /* text-gray-600 equivalent */
+    font-size: 1rem !important; /* text-base */
+  }
+
+  @media (min-width: 768px) {
+    p.italic, p[class*="italic"] {
+      font-size: 1.125rem !important; /* text-lg */
+    }
   }
 
   /* Restore original fonts and weights for headers in hero section */
@@ -275,9 +348,12 @@
   .hero-section h3,
   .hero-section h4,
   .hero-section h5,
-  .hero-section h6 {
+  .hero-section h6,
+  .hero-section p {
     font-family: var(--font-display) !important;
     font-weight: 300 !important;
+    font-size: revert !important;
+    color: revert !important;
   }
 
   /* Restore original styles for entourage section */
@@ -286,9 +362,11 @@
   .entourage-section h3,
   .entourage-section h4,
   .entourage-section h5,
-  .entourage-section h6 {
+  .entourage-section h6,
+  .entourage-section p {
     font-family: 'Telma', sans-serif !important;
     font-weight: 700 !important;
+    font-size: revert !important;
     color: inherit !important;
   }
 
