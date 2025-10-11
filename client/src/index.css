@@ -262,7 +262,17 @@
     font-family: 'Telma', sans-serif !important;
   }
 
-  /* Restore original fonts for headers in hero section */
+  /* Main section headers - bolder weight */
+  h1, h2 {
+    font-weight: 700 !important;
+  }
+
+  /* Sub-headers - lighter weight */
+  h3, h4, h5, h6 {
+    font-weight: 400 !important;
+  }
+
+  /* Restore original fonts and weights for headers in hero section */
   .hero-section h1,
   .hero-section h2,
   .hero-section h3,
@@ -270,6 +280,7 @@
   .hero-section h5,
   .hero-section h6 {
     font-family: var(--font-display) !important;
+    font-weight: 300 !important;
   }
 
   /* Mobile-First Responsive Typography */
