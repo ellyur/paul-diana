@@ -61,12 +61,20 @@ const RSVPSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={animationsEnabled ? { duration: 0.6, delay: 11.4 } : { duration: 0 }}
             >
-              <p 
-                className="font-display text-2xl md:text-3xl lg:text-4xl font-normal text-black tracking-widest"
-                data-testid="text-rsvp-deadline"
-              >
-                KINDLY REPLY BY OCTOBER 30
-              </p>
+              <div className="space-y-3">
+                <p 
+                  className="font-body text-base md:text-lg text-foreground/80"
+                  data-testid="text-rsvp-message"
+                >
+                  Please confirm your attendance by responding to our invitation.
+                </p>
+                <p 
+                  className="font-display text-2xl md:text-3xl lg:text-4xl font-normal text-black tracking-widest"
+                  data-testid="text-rsvp-deadline"
+                >
+                  THE DEADLINE IS OCTOBER 30
+                </p>
+              </div>
               <a 
                 href="https://paul-diana-rsvp.replit.app" 
                 target="_blank" 
