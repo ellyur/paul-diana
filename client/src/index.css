@@ -9,81 +9,81 @@
 
 @layer base {
   :root {
-    /* 70-20-10 Color Rule: Aesthetic Black Theme */
+    /* Modern White Theme with Clean Shadows */
     
-    /* 70% PRIMARY - Modern Beige Gray Background */
-    --background: 41 14% 82%; /* #d8d4cb background */
-    --foreground: 150 33% 1%; /* #020403 dark text */
+    /* PRIMARY - Clean White Background */
+    --background: 0 0% 100%; /* Pure white background */
+    --foreground: 0 0% 10%; /* Dark text for contrast */
 
-    /* Card Colors - Primary Palette */
-    --card: 41 14% 82%; /* #d8d4cb cards */
-    --card-foreground: 150 33% 1%; /* #020403 dark text on cards */
+    /* Card Colors - White with Shadow */
+    --card: 0 0% 100%; /* Pure white cards */
+    --card-foreground: 0 0% 10%; /* Dark text on cards */
 
-    /* Popover Colors - Primary Palette */
-    --popover: 45 12% 85%; /* #DDDBD5 popover */
-    --popover-foreground: 150 33% 1%; /* #020403 dark text */
+    /* Popover Colors */
+    --popover: 0 0% 100%; /* White popover */
+    --popover-foreground: 0 0% 10%; /* Dark text */
 
     /* Brand Color */
-    --brand: 150 33% 1%; /* #020403 - Main brand color */
+    --brand: 0 0% 15%; /* Dark brand color */
     
-    /* 20% SECONDARY - Black (Supporting) */
-    --primary: 150 33% 1%; /* #020403 primary */
-    --primary-foreground: 45 12% 85%; /* #DDDBD5 text on black */
+    /* SECONDARY - Dark Accents */
+    --primary: 0 0% 15%; /* Dark primary */
+    --primary-foreground: 0 0% 100%; /* White text on dark */
 
-    /* Secondary Colors - Supporting Palette */
-    --secondary: 0 0% 20%; /* Dark gray secondary */
-    --secondary-foreground: 45 12% 85%; /* #DDDBD5 text */
+    /* Secondary Colors */
+    --secondary: 0 0% 96%; /* Light gray secondary */
+    --secondary-foreground: 0 0% 10%; /* Dark text */
 
-    /* Muted Colors - Supporting Palette */
-    --muted: 45 10% 75%; /* Darker beige muted */
-    --muted-foreground: 0 0% 30%; /* Medium gray text */
+    /* Muted Colors */
+    --muted: 0 0% 96%; /* Light gray muted */
+    --muted-foreground: 0 0% 45%; /* Medium gray text */
 
-    /* 10% ACCENT - Black Accent (Standout Elements & CTAs) */
-    --accent: 0 0% 15%; /* Deep black accent */
-    --accent-foreground: 45 12% 85%; /* #DDDBD5 text */
+    /* ACCENT - Subtle Gray Accent */
+    --accent: 0 0% 96%; /* Light gray accent */
+    --accent-foreground: 0 0% 10%; /* Dark text */
 
-    /* Black/Special Accent - for CTAs and highlights */
-    --gold: 150 33% 1%; /* #020403 for buttons */
-    --gold-foreground: 45 12% 85%; /* #DDDBD5 text on black */
+    /* Special Accent - for CTAs and highlights */
+    --gold: 0 0% 15%; /* Dark for buttons */
+    --gold-foreground: 0 0% 100%; /* White text on dark */
     
-    /* Bright Black - for emphasis */
-    --gold-bright: 0 0% 5%; /* Deep black */
+    /* Bright Accent - for emphasis */
+    --gold-bright: 0 0% 10%; /* Darker for emphasis */
 
-    /* Aesthetic Palette - Soft accents */
-    --rose-gold: 45 12% 80%; /* Soft beige */
-    --rose-gold-dark: 45 12% 70%; /* Darker beige */
-    --amber-glow: 0 0% 25%; /* Dark glow */
-    --warm-light: 45 10% 75%; /* Warm beige light */
+    /* Aesthetic Palette - Modern grays */
+    --rose-gold: 0 0% 96%; /* Light gray */
+    --rose-gold-dark: 0 0% 90%; /* Slightly darker gray */
+    --amber-glow: 0 0% 85%; /* Medium gray */
+    --warm-light: 0 0% 98%; /* Very light gray */
 
-    /* Natural Accents Palette - Black tones */
-    --city-blue: 0 0% 30%; /* Dark gray accent */
-    --city-cyan: 0 0% 25%; /* Darker gray accent */
-    --city-amber: 0 0% 20%; /* Deep gray */
-    --city-purple: 0 0% 15%; /* Almost black */
+    /* Natural Accents Palette - Gray tones */
+    --city-blue: 0 0% 40%; /* Medium gray accent */
+    --city-cyan: 0 0% 35%; /* Darker gray accent */
+    --city-amber: 0 0% 30%; /* Deep gray */
+    --city-purple: 0 0% 25%; /* Very dark gray */
 
     /* Destructive */
     --destructive: 0 65% 50%;
     --destructive-foreground: 0 0% 100%;
 
     /* Borders & Inputs */
-    --border: 45 10% 75%; /* Darker beige border */
-    --input: 45 12% 85%; /* #DDDBD5 input */
-    --ring: 150 33% 1%; /* #020403 accent ring */
+    --border: 0 0% 90%; /* Light gray border */
+    --input: 0 0% 100%; /* White input */
+    --ring: 0 0% 15%; /* Dark accent ring */
 
     /* Border Radius */
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    /* Black Gradients */
-    --gradient-elegant: linear-gradient(135deg, hsl(45, 12%, 85%), hsl(45, 12%, 80%));
-    --gradient-gold: linear-gradient(135deg, hsl(150, 33%, 1%), hsl(0, 0%, 15%));
-    --gradient-night: linear-gradient(180deg, hsl(45, 12%, 85%) 0%, hsl(45, 12%, 80%) 100%);
-    --gradient-bokeh: radial-gradient(ellipse at center, hsl(150, 33%, 1%) 0%, transparent 60%);
+    /* Modern Gradients */
+    --gradient-elegant: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 0%, 98%));
+    --gradient-gold: linear-gradient(135deg, hsl(0, 0%, 15%), hsl(0, 0%, 25%));
+    --gradient-night: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 98%) 100%);
+    --gradient-bokeh: radial-gradient(ellipse at center, hsl(0, 0%, 15%) 0%, transparent 60%);
 
-    /* Black Shadows */
-    --shadow-elegant: 0 10px 30px -5px rgba(2, 4, 3, 0.15);
-    --shadow-soft: 0 5px 20px -3px rgba(2, 4, 3, 0.1);
-    --shadow-warm: 0 8px 25px -5px rgba(2, 4, 3, 0.15);
-    --shadow-glow: 0 0 20px rgba(2, 4, 3, 0.2);
+    /* Modern Clean Shadows */
+    --shadow-elegant: 0 10px 40px -10px rgba(0, 0, 0, 0.15);
+    --shadow-soft: 0 4px 20px -4px rgba(0, 0, 0, 0.1);
+    --shadow-warm: 0 8px 30px -8px rgba(0, 0, 0, 0.12);
+    --shadow-glow: 0 0 30px rgba(0, 0, 0, 0.08);
 
     /* Elegant Typography Scale */
     --font-display: 'Boska', 'Cormorant Garamond', serif; /* Headers - Boska 700 */
@@ -95,14 +95,14 @@
     --transition-elegant: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-background: 45 12% 85%;
-    --sidebar-foreground: 150 33% 1%;
-    --sidebar-primary: 150 33% 1%;
-    --sidebar-primary-foreground: 45 12% 85%;
-    --sidebar-accent: 0 0% 15%;
-    --sidebar-accent-foreground: 45 12% 85%;
-    --sidebar-border: 45 10% 75%;
-    --sidebar-ring: 150 33% 1%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 10%;
+    --sidebar-primary: 0 0% 15%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 0 0% 15%;
   }
 
   /* Custom Wedding Animations */
@@ -220,14 +220,14 @@
     pointer-events: none;
   }
 
-  /* Gradient Overlays */
+  /* Gradient Overlays - Subtle Modern */
   body::after {
     content: "";
     position: fixed;
     inset: 0;
     background: 
-      radial-gradient(circle at top left, rgba(0,0,0,0.05) 0%, transparent 60%),
-      radial-gradient(circle at bottom right, rgba(0,0,0,0.05) 0%, transparent 60%);
+      radial-gradient(circle at top left, rgba(0,0,0,0.02) 0%, transparent 60%),
+      radial-gradient(circle at bottom right, rgba(0,0,0,0.02) 0%, transparent 60%);
     z-index: 0;
     pointer-events: none;
   }
@@ -313,7 +313,7 @@
   }
 
   .hover-glow:hover {
-    box-shadow: 0 0 30px rgba(2, 4, 3, 0.3);
+    box-shadow: 0 8px 30px -8px rgba(0, 0, 0, 0.2);
   }
 
   .gold-underline {
@@ -323,7 +323,7 @@
   .gold-underline::after {
     content: '';
     @apply absolute bottom-0 left-0 h-0.5;
-    background-color: #020403;
+    background-color: hsl(var(--primary));
     width: 0;
     transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -357,12 +357,13 @@
     background: transparent;
   }
 
-  /* Glass Morphism Effect */
+  /* Glass Morphism Effect - Modern White */
   .glass-effect {
-    background: rgba(221, 219, 213, 0.85);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(2, 4, 3, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.1);
   }
 
   /* Clean Mobile Styles */
@@ -433,9 +434,9 @@
     }
   }
 
-  /* Custom Scrollbar */
+  /* Custom Scrollbar - Modern */
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
   }
 
   ::-webkit-scrollbar-track {
@@ -443,12 +444,12 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: rgba(2, 4, 3, 0.4);
+    background-color: rgba(0, 0, 0, 0.2);
     @apply rounded-full;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(2, 4, 3, 0.6);
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   /* Remove any unwanted borders */
@@ -476,7 +477,7 @@
     outline-offset: 2px;
   }
 
-  /* Modern Black Button with Glow */
+  /* Modern Button with Elegant Shadow */
   .shadow__btn {
     padding: 10px 20px;
     border: none;
@@ -489,14 +490,11 @@
     transition: 0.5s;
     transition-property: box-shadow;
     background: hsl(var(--primary));
-    box-shadow: 0 0 25px rgba(2, 4, 3, 0.3);
+    box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.2);
   }
 
   .shadow__btn:hover {
-    box-shadow: 0 0 5px hsl(var(--primary)),
-                0 0 25px hsl(var(--primary)),
-                0 0 50px hsl(var(--primary)),
-                0 0 100px hsl(var(--primary));
+    box-shadow: 0 8px 30px -8px rgba(0, 0, 0, 0.3);
   }
 
   /* Image Loop Animation Styles */
@@ -529,8 +527,8 @@
     height: 200px;
     overflow: hidden;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(2, 4, 3, 0.1);
-    border: 1px solid rgba(2, 4, 3, 0.1);
+    box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.08);
   }
 
   .image-loop-img {

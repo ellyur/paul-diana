@@ -29,7 +29,7 @@ const VenueSection = () => {
   return (
     <motion.section 
       id="venue" 
-      className="section-pastel-blue bg-white py-20 px-4"
+      className="section-pastel-blue bg-background py-20 px-4"
       initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
       animate={{ opacity: 1 }}
       transition={animationsEnabled ? { duration: 1, delay: 6.5 } : { duration: 0 }}
@@ -58,10 +58,10 @@ const VenueSection = () => {
               <div className="relative max-w-5xl mx-auto">
                 {/* Decorative background layers */}
                 <div className="absolute -inset-4 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent rounded-2xl blur-xl opacity-60" />
-                <div className="absolute -inset-2 bg-white/30 backdrop-blur-sm rounded-xl" />
+                <div className="absolute -inset-2 bg-card/30 backdrop-blur-sm rounded-xl" />
                 
                 {/* Main Content Card */}
-                <div className="relative bg-white rounded-xl shadow-2xl overflow-hidden border border-primary/20">
+                <div className="relative bg-card rounded-xl shadow-elegant overflow-hidden border border-border">
                   {/* Header with decorative elements */}
                   <div className="relative bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 p-8 border-b-2 border-primary/20">
                     {/* Decorative corners */}
