@@ -11,14 +11,14 @@ const LoveStoryCover = () => {
       {/* Text Above Image */}
       <div className="py-12 px-4">
         <motion.p 
-          className="text-center text-lg md:text-xl lg:text-2xl font-light tracking-wide text-foreground max-w-4xl mx-auto"
+          className="text-center text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-light tracking-wide text-foreground max-w-5xl mx-auto leading-tight"
           initial={animationsEnabled ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={animationsEnabled ? { duration: 0.8, ease: "easeOut" } : { duration: 0 }}
-          style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 300 }}
+          style={{ fontFamily: 'Boska, serif', fontWeight: 300 }}
           data-testid="text-love-story-quote"
         >
-          EVERY LOVE STORY IS BEAUTIFUL BUT OURS IS MY FAVORITE
+          <span className="font-semibold">EVERY LOVE STORY IS BEAUTIFUL BUT OURS IS MY FAVORITE</span>
         </motion.p>
       </div>
 

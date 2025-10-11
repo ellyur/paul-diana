@@ -249,7 +249,7 @@ export default function ScrollTriggeredTimeline() {
                     <h2 className="text-4xl md:text-5xl font-serif italic mb-4 text-primary" data-testid="text-timeline-title">
                         Wedding Timeline
                     </h2>
-                    <p className="max-w-2xl mx-auto text-[#0b0c0b]">
+                    <p className="max-w-2xl mx-auto text-[#0b0b0b]">
                         Here's what to expect on our special day.
                     </p>
                 </motion.div>
@@ -258,7 +258,7 @@ export default function ScrollTriggeredTimeline() {
             <div className="relative max-w-4xl mx-auto px-4 py-8">
                 {/* Center vertical line */}
                 <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/30 -translate-x-1/2"></div>
-                
+
                 {timelineEvents.map((timelineEvent, i) => (
                     <TimelineCard i={i} timelineEvent={timelineEvent} key={`${timelineEvent.event}-${i}`} />
                 ))}
