@@ -18,7 +18,7 @@ const TimelineCardsSection = () => {
     },
     {
       id: 2,
-      image: "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760179831/f16846e9-82d9-4b4c-9197-935b9ac83617.png",
+      image: "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760106977/513281087_10081304398590972_8164128154106684885_n_1_fore49.jpg",
       title: "The day diana said \"Yes\"",
       date: "12.17.24"
     },
