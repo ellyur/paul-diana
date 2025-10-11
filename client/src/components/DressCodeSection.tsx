@@ -169,64 +169,7 @@ const DressCodeSection = () => {
           </div>
         </motion.div>
 
-        {/* Modern Additional Guidelines */}
-        <motion.div 
-          className="bg-card/30 border border-border rounded-xl p-8 shadow-soft max-w-4xl mx-auto"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 9.0 }}
-        >
-          <motion.h3 
-            className="text-xl font-body font-medium text-foreground mb-8 text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 9.2 }}
-          >
-            Additional Guidelines
-          </motion.h3>
-          
-          <div className="grid md:grid-cols-2 gap-6 relative z-10">
-            {[
-              { 
-                title: "Principal Sponsors - Men", 
-                description: "Black Suit and Slacks, White Long Sleeves, Gray Tie",
-                delay: 9.4
-              },
-              { 
-                title: "Principal Sponsors - Women", 
-                description: "Light Gray/Silver Formal Long Gown",
-                delay: 9.5
-              },
-              { 
-                title: "Guests Dress Code", 
-                description: "Formal to Semi-Formal attire in the recommended color palette",
-                delay: 9.6
-              },
-              { 
-                title: "Respectful attire", 
-                description: "Kindly ensure your attire is respectful and appropriate for a wedding ceremony.",
-                delay: 9.7
-              }
-            ].map((guideline, index) => (
-              <motion.div 
-                key={index}
-                className="bg-card/20 rounded-xl p-4 border border-border/50 hover:bg-card/40 transition-all duration-300"
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: guideline.delay }}
-                whileHover={{ scale: 1.02 }}
-              >
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="font-medium text-foreground mb-1">{guideline.title}</h4>
-                    <p className="text-foreground text-sm leading-relaxed">{guideline.description}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+        
       </div>
     </motion.section>
   );
