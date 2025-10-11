@@ -83,9 +83,9 @@ const RSVPSection = () => {
               >RSVP HERE!</a>
 
               {/* Message below button with white container */}
-              <div className="mt-8 bg-white/90 backdrop-blur-sm rounded-xl p-6 max-w-xl mx-auto shadow-soft">
+              <div className="mt-8 bg-white rounded-2xl p-8 max-w-2xl mx-auto shadow-2xl border border-gray-100">
                 <p 
-                  className="font-body text-base md:text-lg text-foreground/80"
+                  className="font-body text-base md:text-lg text-black font-medium text-center"
                   data-testid="text-rsvp-message"
                 >
                   Please confirm your attendance by responding to our invitation. Click the RSVP HERE! button above.
