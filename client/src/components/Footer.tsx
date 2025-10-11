@@ -52,6 +52,13 @@ const Footer = () => {
               Paul & Diana
             </p>
           </div>
+
+          {/* Website Design Credit */}
+          <div className="pt-8">
+            <p className="text-foreground/60 text-xs" data-testid="text-design-credit">
+              © website designed by MadDog of inviteee
+            </p>
+          </div>
         </motion.div>
       </div>
       {/* Background Decorative Elements */}
