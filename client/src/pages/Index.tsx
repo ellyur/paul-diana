@@ -23,54 +23,36 @@ import Footer from '@/components/Footer';
 import CoverSection from '@/components/CoverSection';
 import InvitationRevealSection from '@/components/InvitationRevealSection';
 import MusicControl from '@/components/MusicControl';
+import MusicConsentPopup from '@/components/MusicConsentPopup';
 import { AnimationContext } from '@/contexts/AnimationContext';
 
 const Index = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [animationsEnabled, setAnimationsEnabled] = useState(true);
+  const [showMusicConsent, setShowMusicConsent] = useState(true);
 
-  // Autoplay music on mount
+  // Setup audio when component mounts
   useEffect(() => {
     if (audioRef.current) {
       const audio = audioRef.current;
       audio.volume = 0.3;
       audio.loop = true;
-
-      // Autoplay music
-      const playMusic = async () => {
-        try {
-          await audio.play();
-          console.log('Audio playing');
-        } catch (error) {
-          console.error('Audio autoplay failed:', error);
-        }
-      };
-
-      // Handle audio loading
-      const handleCanPlay = () => {
-        console.log('Audio is ready to play');
-        playMusic();
-      };
-
-      const handleError = (e: Event) => {
-        console.error('Audio loading error:', e);
-      };
-
-      const handleLoadedData = () => {
-        console.log('Audio data loaded successfully');
-      };
-
-      audio.addEventListener('canplay', handleCanPlay);
-      audio.addEventListener('error', handleError);
-      audio.addEventListener('loadeddata', handleLoadedData);
-
-      return () => {
-        audio.removeEventListener('canplay', handleCanPlay);
-        audio.removeEventListener('error', handleError);
-        audio.removeEventListener('loadeddata', handleLoadedData);
-      };
     }
   }, []);
+
+  // Handle music consent
+  const handleMusicConsent = async (consent: boolean) => {
+    setShowMusicConsent(false);
+    
+    if (consent && audioRef.current) {
+      try {
+        await audioRef.current.play();
+        console.log('Audio playing after user consent');
+      } catch (error) {
+        console.error('Audio playback failed:', error);
+      }
+    }
+  };
 
   return (
     <AnimationContext.Provider value={{ animationsEnabled }}>
@@ -89,6 +71,12 @@ const Index = () => {
         />
         Your browser does not support the audio element.
       </audio>
+
+      {/* Music Consent Popup */}
+      <MusicConsentPopup 
+        onConsent={handleMusicConsent} 
+        isVisible={showMusicConsent && animationsEnabled} 
+      />
 
       <div className="min-h-screen relative">
         <Navigation />

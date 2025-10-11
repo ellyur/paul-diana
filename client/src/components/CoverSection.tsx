@@ -21,8 +21,8 @@ const CoverSection = ({ imageUrl, videoUrl, alt, className = "" }: CoverSectionP
               display: 'block',
               width: '100%',
               height: 'auto',
-              objectFit: 'contain',
-              objectPosition: 'top',
+              objectFit: 'cover',
+              objectPosition: 'center',
               margin: 0,
               padding: 0
             }}
@@ -36,8 +36,8 @@ const CoverSection = ({ imageUrl, videoUrl, alt, className = "" }: CoverSectionP
               display: 'block',
               width: '100%',
               height: 'auto',
-              objectFit: 'contain',
-              objectPosition: 'top',
+              objectFit: 'cover',
+              objectPosition: 'center',
               margin: 0,
               padding: 0
             }}
