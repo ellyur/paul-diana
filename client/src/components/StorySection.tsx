@@ -289,7 +289,7 @@ And now, as we begin this new chapter hand in hand, we remain hopeful and prayer
                     <img
                       src={card.image}
                       alt={`Story moment ${index + 1}`}
-                      className="w-full h-full object-cover rounded-2xl shadow-lg"
+                      className="w-full h-full object-contain rounded-2xl shadow-lg"
                       data-testid={`img-story-card-${card.id}`}
                     />
 

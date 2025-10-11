@@ -170,3 +170,17 @@ Successfully migrated from Lovable to Replit environment:
   - Shows "Perfect Score!" message only for 5/5, "Amazing Score!" with actual score for 4/5
   - Implemented functional state updates for reliable score tracking
   - Adjusted invitation paper dimensions: wider (max-w-5xl) and shorter (reduced padding and spacing)
+- **2025-10-11**: UI improvements for mobile responsiveness and content visibility:
+  - Fixed hashtag display on mobile view in ScrollTriggeredTimeline component:
+    - Added responsive font sizing (text-sm sm:text-base md:text-lg)
+    - Added max-w-full and break-all for proper text wrapping on narrow viewports
+    - Improved padding responsiveness (px-4 md:px-6)
+  - Significantly shortened all love story card texts in StorySection to improve image visibility:
+    - "How We Met": Reduced from 3 sentences to 1 concise sentence
+    - "The Promise to Wait": Reduced from 2 long sentences to 2 short sentences
+    - "God's Perfect Timing": Reduced from 2 sentences to 1 sentence
+    - "Distance & Perseverance": Reduced to 2 short sentences
+    - "Forever Begins": Reduced from 3 sentences to 1 sentence
+    - All core narrative beats preserved while improving visual balance with images
+  - Removed "I already answered NO to the RSVP" question from FAQ section per user request
+  - Maintained full story content in modal popup for users who want to read complete narrative
