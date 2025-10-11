@@ -185,6 +185,8 @@ Successfully migrated from Lovable to Replit environment:
   - Removed "I already answered NO to the RSVP" question from FAQ section per user request
   - Maintained full story content in modal popup for users who want to read complete narrative
   - Fixed image positioning in StorySection:
-    - Added self-start alignment to position images at the top of their containers
-    - Reduced white space below images for better visual balance
+    - Reduced grid gap from gap-8 lg:gap-16 to gap-4 lg:gap-6 to bring images closer to text
+    - Changed grid alignment from items-center to items-start to align both text and image to the top
+    - Added self-start alignment to image containers to eliminate white space above images
     - Maintained object-cover styling with rounded corners for proper appearance
+    - Full images now visible without excessive spacing between text and image
