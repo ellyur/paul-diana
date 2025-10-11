@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 @import url('https://api.fontshare.com/v2/css?f[]=pencerio@1&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=telma@300,400,500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -250,6 +251,10 @@
 
   .font-times {
     font-family: var(--font-times);
+  }
+
+  .font-telma {
+    font-family: 'Telma', sans-serif;
   }
 
   /* Mobile-First Responsive Typography */

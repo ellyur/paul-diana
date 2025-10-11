@@ -143,7 +143,7 @@ const EntourageSection = () => {
                   {parent.label}
                 </h3>
                 {parent.names.map((name, nameIndex) => (
-                  <p key={nameIndex} className="text-xs md:text-base lg:text-lg font-body text-foreground" data-testid={`parent-name-${index}-${nameIndex}`}>
+                  <p key={nameIndex} className="text-xs md:text-base lg:text-lg font-telma text-foreground" data-testid={`parent-name-${index}-${nameIndex}`}>
                     {name}
                   </p>
                 ))}
@@ -165,14 +165,14 @@ const EntourageSection = () => {
           <div className="grid grid-cols-2 gap-2 md:gap-4 max-w-5xl mx-auto">
             <div className="text-center">
               {entourageData.principalSponsors.men.map((name, index) => (
-                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1 whitespace-nowrap text-right" data-testid={`principal-sponsor-men-${index}`}>
+                <p key={index} className="text-xs md:text-base lg:text-lg font-telma text-foreground mb-1 whitespace-nowrap text-right" data-testid={`principal-sponsor-men-${index}`}>
                   {name}
                 </p>
               ))}
             </div>
             <div className="text-center">
               {entourageData.principalSponsors.women.map((name, index) => (
-                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1 whitespace-nowrap text-left" data-testid={`principal-sponsor-women-${index}`}>
+                <p key={index} className="text-xs md:text-base lg:text-lg font-telma text-foreground mb-1 whitespace-nowrap text-left" data-testid={`principal-sponsor-women-${index}`}>
                   {name}
                 </p>
               ))}
@@ -197,7 +197,7 @@ const EntourageSection = () => {
                   {item.role}
                 </h4>
                 {item.names.map((name, nameIndex) => (
-                  <p key={nameIndex} className="text-xs md:text-base lg:text-lg font-body text-foreground" data-testid={`${item.role.toLowerCase()}-name-${nameIndex}`}>
+                  <p key={nameIndex} className="text-xs md:text-base lg:text-lg font-telma text-foreground" data-testid={`${item.role.toLowerCase()}-name-${nameIndex}`}>
                     {name}
                   </p>
                 ))}
@@ -218,7 +218,7 @@ const EntourageSection = () => {
               <h3 className="text-sm md:text-lg lg:text-xl font-display font-semibold mb-2 md:mb-3 text-primary">
                 {entourageData.matronOfHonor.role}
               </h3>
-              <p className="text-xs md:text-base lg:text-lg font-body text-foreground" data-testid="matron-of-honor-name">
+              <p className="text-xs md:text-base lg:text-lg font-telma text-foreground" data-testid="matron-of-honor-name">
                 {entourageData.matronOfHonor.name}
               </p>
             </div>
@@ -226,7 +226,7 @@ const EntourageSection = () => {
               <h3 className="text-sm md:text-lg lg:text-xl font-display font-semibold mb-2 md:mb-3 text-primary">
                 {entourageData.bestMan.role}
               </h3>
-              <p className="text-xs md:text-base lg:text-lg font-body text-foreground" data-testid="best-man-name">
+              <p className="text-xs md:text-base lg:text-lg font-telma text-foreground" data-testid="best-man-name">
                 {entourageData.bestMan.name}
               </p>
             </div>
@@ -234,7 +234,7 @@ const EntourageSection = () => {
               <h3 className="text-sm md:text-lg lg:text-xl font-display font-semibold mb-2 md:mb-3 text-primary">
                 {entourageData.maidOfHonor.role}
               </h3>
-              <p className="text-xs md:text-base lg:text-lg font-body text-foreground" data-testid="maid-of-honor-name">
+              <p className="text-xs md:text-base lg:text-lg font-telma text-foreground" data-testid="maid-of-honor-name">
                 {entourageData.maidOfHonor.name}
               </p>
             </div>
@@ -254,7 +254,7 @@ const EntourageSection = () => {
                 Senior Groomsmen
               </h3>
               {entourageData.seniorGroomsmen.map((name, index) => (
-                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1 text-right" data-testid={`senior-groomsman-${index}`}>
+                <p key={index} className="text-xs md:text-base lg:text-lg font-telma text-foreground mb-1 text-right" data-testid={`senior-groomsman-${index}`}>
                   {name}
                 </p>
               ))}
@@ -264,7 +264,7 @@ const EntourageSection = () => {
                 Senior Bridesmaids
               </h3>
               {entourageData.seniorBridesmaids.map((name, index) => (
-                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1 text-left" data-testid={`senior-bridesmaid-${index}`}>
+                <p key={index} className="text-xs md:text-base lg:text-lg font-telma text-foreground mb-1 text-left" data-testid={`senior-bridesmaid-${index}`}>
                   {name}
                 </p>
               ))}
@@ -285,7 +285,7 @@ const EntourageSection = () => {
                 Junior Groomsmen
               </h3>
               {entourageData.juniorGroomsmen.map((name, index) => (
-                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1 text-right" data-testid={`junior-groomsman-${index}`}>
+                <p key={index} className="text-xs md:text-base lg:text-lg font-telma text-foreground mb-1 text-right" data-testid={`junior-groomsman-${index}`}>
                   {name}
                 </p>
               ))}
@@ -295,7 +295,7 @@ const EntourageSection = () => {
                 Junior Bridesmaids
               </h3>
               {entourageData.juniorBridesmaids.map((name, index) => (
-                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1 text-left" data-testid={`junior-bridesmaid-${index}`}>
+                <p key={index} className="text-xs md:text-base lg:text-lg font-telma text-foreground mb-1 text-left" data-testid={`junior-bridesmaid-${index}`}>
                   {name}
                 </p>
               ))}
@@ -317,7 +317,7 @@ const EntourageSection = () => {
                   {item.role}
                 </h4>
                 {item.names.map((name, nameIndex) => (
-                  <p key={nameIndex} className="text-xs md:text-base font-body text-foreground" data-testid={`${item.role.toLowerCase().replace(/\s+/g, '-')}-name-${nameIndex}`}>
+                  <p key={nameIndex} className="text-xs md:text-base font-telma text-foreground" data-testid={`${item.role.toLowerCase().replace(/\s+/g, '-')}-name-${nameIndex}`}>
                     {name}
                   </p>
                 ))}
@@ -339,7 +339,7 @@ const EntourageSection = () => {
             </h3>
             <div className="grid grid-cols-2 gap-2 max-w-3xl mx-auto">
               {entourageData.flowerGirls.map((name, index) => (
-                <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1" data-testid={`flower-girl-${index}`}>
+                <p key={index} className="text-xs md:text-base lg:text-lg font-telma text-foreground mb-1" data-testid={`flower-girl-${index}`}>
                   {name}
                 </p>
               ))}
@@ -359,7 +359,7 @@ const EntourageSection = () => {
               Banner Bearers
             </h3>
             {entourageData.bannerBearers.map((name, index) => (
-              <p key={index} className="text-xs md:text-base lg:text-lg font-body text-foreground mb-1" data-testid={`banner-bearer-${index}`}>
+              <p key={index} className="text-xs md:text-base lg:text-lg font-telma text-foreground mb-1" data-testid={`banner-bearer-${index}`}>
                 {name}
               </p>
             ))}
@@ -377,7 +377,7 @@ const EntourageSection = () => {
               <h3 className="text-sm md:text-lg lg:text-xl font-display font-semibold mb-2 md:mb-3 text-primary">
                 Little Groom
               </h3>
-              <p className="text-xs md:text-base lg:text-lg font-body text-foreground" data-testid="little-groom-name">
+              <p className="text-xs md:text-base lg:text-lg font-telma text-foreground" data-testid="little-groom-name">
                 {entourageData.littleGroom}
               </p>
             </div>
@@ -385,7 +385,7 @@ const EntourageSection = () => {
               <h3 className="text-sm md:text-lg lg:text-xl font-display font-semibold mb-2 md:mb-3 text-primary">
                 Little Bride
               </h3>
-              <p className="text-xs md:text-base lg:text-lg font-body text-foreground" data-testid="little-bride-name">
+              <p className="text-xs md:text-base lg:text-lg font-telma text-foreground" data-testid="little-bride-name">
                 {entourageData.littleBride}
               </p>
             </div>
