@@ -67,13 +67,13 @@ const TimelineCardsSection = () => {
       data-testid="section-timeline-cards"
     >
       <div className="max-w-7xl mx-auto">
-        <h2 
-          className="text-4xl sm:text-5xl lg:text-6xl font-display italic text-center mb-16 text-foreground font-normal"
+        <span 
+          className="text-4xl sm:text-5xl lg:text-6xl font-display italic text-center mb-16 text-foreground font-normal block"
           data-testid="text-timeline-heading"
           style={{ fontFamily: 'Boska, serif', fontWeight: 400 }}
         >
           A story of forever and a lifetime!
-        </h2>
+        </span>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {timelineCards.map((card) => (
