@@ -336,7 +336,7 @@ And now, as we begin this new chapter hand in hand, we remain hopeful and prayer
                 </div>
                 
                 <h3 className="text-3xl sm:text-4xl lg:text-5xl font-script italic mb-4 sm:mb-6 text-foreground" data-testid="text-story-promise-title">
-                  Our Promise
+                  God's Promise
                 </h3>
                 
                 <div className="space-y-4">
