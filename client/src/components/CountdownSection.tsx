@@ -37,7 +37,7 @@ const CountdownSection = () => {
   return (
     <motion.section 
       id="countdown" 
-      className="section-pastel-blue"
+      className="section-pastel-blue bg-white"
       initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
       animate={{ opacity: 1 }}
       transition={animationsEnabled ? { duration: 1, delay: 2.5 } : { duration: 0 }}

@@ -38,7 +38,7 @@ const FAQSection = () => {
 
   return (
     <motion.section 
-      className="section-pastel-blue"
+      className="section-pastel-blue bg-white"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 11.5 }}
