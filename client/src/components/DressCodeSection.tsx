@@ -17,7 +17,7 @@ const DressCodeSection = () => {
   return (
     <motion.section 
       id="dresscode" 
-      className="section-pastel-blue bg-white relative overflow-hidden -mt-20"
+      className="section-pastel-blue bg-white relative overflow-hidden mt-[10px]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 7.5 }}
@@ -71,14 +71,14 @@ const DressCodeSection = () => {
                     <h3 className="text-xl font-display font-medium text-foreground mb-4 relative z-10">
                       FOR PRINCIPAL SPONSORS
                     </h3>
-                    <div className="space-y-3 text-left px-4">
+                    <div className="grid grid-cols-2 gap-4 text-left px-4">
                       <div>
                         <p className="text-sm font-semibold text-foreground mb-2">For Men:</p>
                         <p className="text-sm text-foreground">Black Suit and Slacks</p>
                         <p className="text-sm text-foreground">White Long Sleeves</p>
                         <p className="text-sm text-foreground">Gray Tie</p>
                       </div>
-                      <div className="pt-2">
+                      <div>
                         <p className="text-sm font-semibold text-foreground mb-2">For Women:</p>
                         <p className="text-sm text-foreground">Light Gray/Silver</p>
                         <p className="text-sm text-foreground">Formal Long Gown</p>

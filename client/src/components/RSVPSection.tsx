@@ -46,8 +46,8 @@ const RSVPSection = () => {
               transition={animationsEnabled ? { duration: 0.8, delay: 11.2 } : { duration: 0 }}
             >
               <h2 
-                className="font-display text-[150px] md:text-[240px] lg:text-[320px] leading-[0.8] text-black tracking-tight"
-                style={{ fontWeight: 300 }}
+                className="text-[150px] md:text-[240px] lg:text-[320px] leading-[0.8] text-black tracking-tight"
+                style={{ fontFamily: 'Boska, serif', fontWeight: 350 }}
                 data-testid="text-rsvp-title"
               >
                 RS<br />VP
@@ -61,20 +61,13 @@ const RSVPSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={animationsEnabled ? { duration: 0.6, delay: 11.4 } : { duration: 0 }}
             >
-              <div className="space-y-3">
-                <p 
-                  className="font-body text-base md:text-lg text-foreground/80"
-                  data-testid="text-rsvp-message"
-                >
-                  Please confirm your attendance by responding to our invitation.
-                </p>
-                <p 
-                  className="font-display text-2xl md:text-3xl lg:text-4xl font-normal text-black tracking-widest"
-                  data-testid="text-rsvp-deadline"
-                >
-                  THE DEADLINE IS OCTOBER 30
-                </p>
-              </div>
+              <p 
+                className="font-display text-2xl md:text-3xl lg:text-4xl font-normal text-black tracking-widest mb-6"
+                data-testid="text-rsvp-deadline"
+              >
+                THE DEADLINE IS OCTOBER 30
+              </p>
+              
               <a 
                 href="https://paul-diana-rsvp.replit.app" 
                 target="_blank" 
@@ -82,6 +75,16 @@ const RSVPSection = () => {
                 className="inline-block px-10 py-4 bg-black text-white text-sm md:text-base font-display tracking-wider hover:bg-gray-800 transition-colors duration-300 border-2 border-black uppercase"
                 data-testid="button-rsvp"
               >RSVP HERE!</a>
+
+              {/* Message below button with white container */}
+              <div className="mt-8 bg-white/90 backdrop-blur-sm rounded-xl p-6 max-w-xl mx-auto shadow-soft">
+                <p 
+                  className="font-body text-base md:text-lg text-foreground/80"
+                  data-testid="text-rsvp-message"
+                >
+                  Please confirm your attendance by responding to our invitation. Click the RSVP HERE! button above.
+                </p>
+              </div>
             </motion.div>
           </div>
         </div>

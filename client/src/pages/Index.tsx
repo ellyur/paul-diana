@@ -11,6 +11,7 @@ const cover3Video = "https://res.cloudinary.com/dr3xey7h9/video/upload/v17601015
 import CountdownSection from '@/components/CountdownSection';
 import StorySection from '@/components/StorySection';
 import TimelineCardsSection from '@/components/TimelineCardsSection';
+import LoveStoryCover from '@/components/LoveStoryCover';
 import ScrollTriggeredTimeline from '@/components/ScrollTriggeredTimeline';
 import VenueSection from '@/components/VenueSection';
 import DressCodeSection from '@/components/DressCodeSection';
@@ -110,6 +111,7 @@ const Index = () => {
           <ImageLoop />
           <StorySection />
           <TimelineCardsSection />
+          <LoveStoryCover />
           <CoverSection
             videoUrl={cover1Video}
             alt="Paul & Diana Wedding Cover Video 1"
