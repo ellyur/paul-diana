@@ -257,6 +257,21 @@
     font-family: 'Telma', sans-serif;
   }
 
+  /* Apply Dancing Script to all headers except hero section */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Dancing Script', cursive !important;
+  }
+
+  /* Restore original fonts for headers in hero section */
+  .hero-section h1,
+  .hero-section h2,
+  .hero-section h3,
+  .hero-section h4,
+  .hero-section h5,
+  .hero-section h6 {
+    font-family: var(--font-display) !important;
+  }
+
   /* Mobile-First Responsive Typography */
   .text-hero {
     @apply text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-display font-light tracking-tight;
