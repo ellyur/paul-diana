@@ -61,49 +61,49 @@ const EntourageSection = () => {
     bestMan: { name: "Denver Josh Magalong", role: "Best Man" },
     maidOfHonor: { name: "Lyca May Baladjay", role: "Maid of Honor" },
     seniorGroomsmen: [
-      "KEANE KIMVERLEE EUSEBIO",
-      "RUEL FERRER",
-      "ELLIOTT NESS CONDE",
-      "ADRIAN MOISES SOLIS",
-      "ZION JOHN LOBO",
-      "JOHN ANDREI SISON"
+      "Keane Kimverlee Eusebio",
+      "Ruel Ferrer",
+      "Elliott Ness Conde",
+      "Adrian Moises Solis",
+      "Zion John Lobo",
+      "John Andrei Sison"
     ],
     seniorBridesmaids: [
-      "MARIANNE ROMERO",
-      "MONICA AGBUYA",
-      "JENIA REINE GABRIEL",
-      "PRINCESS RICA ARAMBULO",
-      "MA. ANDREA ROSE RUIZ",
-      "JASNEY MAE MAGALONG"
+      "Marianne Romero",
+      "Monica Agbuya",
+      "Jenia Reine Gabriel",
+      "Princess Rica Arambulo",
+      "Ma. Andrea Rose Ruiz",
+      "Jasney Mae Magalong"
     ],
     juniorGroomsmen: [
-      "RANDY II BALADJAY",
-      "MARK JURIEL RAMOS",
-      "REON JAMES CHING",
-      "FRED GABRIEL GARCIA",
-      "MARK ENZO GARCIA"
+      "Randy II Baladjay",
+      "Mark Juriel Ramos",
+      "Reon James Ching",
+      "Fred Gabriel Garcia",
+      "Mark Enzo Garcia"
     ],
     juniorBridesmaids: [
-      "MA. JASMINE RAMOS",
-      "DIVINE GRACE GARCIA",
-      "MICHAELLA ROSE GARCIA",
-      "NERIAH GARCIA",
-      "ATASHA MYRLYN RUIZ"
+      "Ma. Jasmine Ramos",
+      "Divine Grace Garcia",
+      "Michaella Rose Garcia",
+      "Neriah Garcia",
+      "Atasha Myrlyn Ruiz"
     ],
     bearers: [
-      { role: "Ring Bearer", names: ["AIEON AZRAEL ARAMBULO"] },
-      { role: "Coin Bearer", names: ["SYMON REMILLOSA"] },
-      { role: "Bible Bearer", names: ["WIZE AXL MACARANAS"] }
+      { role: "Ring Bearer", names: ["Aieon Azrael Arambulo"] },
+      { role: "Coin Bearer", names: ["Symon Remillosa"] },
+      { role: "Bible Bearer", names: ["Wize Axl Macaranas"] }
     ],
     flowerGirls: [
-      "MINEAH ROWAINE GARCIA",
-      "MEZIAH GARCIA",
-      "DAYANA NHEBEA QUIÑONES",
-      "ANGEL BAÑAGA"
+      "Mineah Rowaine Garcia",
+      "Meziah Garcia",
+      "Dayana Nhebea Quiñones",
+      "Angel Bañaga"
     ],
     bannerBearers: ["Oleen Andana", "Oyeen Andana"],
-    littleGroom: "EMMANUEL AGBUYA",
-    littleBride: "OLIVIA IVANNA TAGUM"
+    littleGroom: "Emmanuel Agbuya",
+    littleBride: "Olivia Ivanna Tagum"
   };
 
   return (
