@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motion } from 'framer-motion';
 import { useAnimationContext } from '@/contexts/AnimationContext';
-import { Sparkles, Star, Ship, Heart, Infinity } from 'lucide-react';
+import { Sparkles, Star, Ship, Heart, Infinity, BookOpen } from 'lucide-react';
 import flowerImage from '@assets/flower_1759854441531.png';
 
 // Register GSAP plugin
@@ -14,44 +14,67 @@ const StorySection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const horizontalRef = useRef<HTMLDivElement>(null);
   const [mousePosition, setMousePosition] = useState<{ [key: number]: { x: number; y: number } }>({});
+  const [showFullStory, setShowFullStory] = useState(false);
 
   const storyCards = [
     {
       id: 1,
       title: "How We Met",
-      text: "We met while serving in church ministry, unaware of how meaningful that moment would become. What started as friendship grew into a special bond through faith.",
+      text: "Our paths first crossed in 2011 through the church ministry of The Salvation Army, where a quiet friendship began to bloom—rooted in shared faith and service. From simple conversations to moments of laughter, a gentle connection began to grow. Fate had its own small ways of keeping our story alive—meeting in Mathematics competitions, crossing paths in school corridors, and catching glimpses of each other during church events.",
       image: "https://res.cloudinary.com/dnlreax2z/image/upload/v1759851677/loveStory1_wlmnn1.jpg",
       icon: Sparkles
     },
     {
       id: 2, 
-      title: "Dreams Together",
-      text: "We found love in the simple moments—shared dreams and quiet support. Even as one journeyed abroad and the other set sail across the ocean, our hearts kept moving in the same direction, always dreaming together.",
+      title: "The Promise to Wait",
+      text: "When one of us found the courage to confess what the heart already knew, we both agreed to wait—to let our friendship mature and to give space for growth. We promised not to rush into a relationship until after college, believing that love founded on faith and patience would endure the test of time.",
       image: "https://res.cloudinary.com/dnlreax2z/image/upload/v1759851677/loveStory3_breabq.jpg",
       icon: Star
     },
     {
       id: 3,
-      title: "Oceans Apart", 
-      text: "Though miles and oceans lay between us, love bridged the distance. With every challenge, our hearts grew closer, always moving as one.",
+      title: "God's Perfect Timing", 
+      text: "In God's perfect timing, seven years later, that quiet friendship blossomed into the love we now cherish—a love strengthened by faith, guided by fate, and joyfully celebrated as the beautiful story we continue to live today. As the years went by, we built dreams together and planned the life we hoped to share.",
       image: "https://res.cloudinary.com/dnlreax2z/image/upload/v1759851678/loveStory4_qij73x.jpg",
       icon: Ship
     },
     {
       id: 4,
-      title: "The Decision",
-      text: "We chose to wait for the right time, setting aside our dream wedding to focus on what mattered most—supporting one another. With a simple civil union as our beginning, we now look forward to celebrating our love in its fullness.",
+      title: "Distance & Perseverance",
+      text: "Life had another test waiting—one of us had to go abroad, and distance slowly became part of our story. There were nights filled with tears, moments of loneliness, and countless days of missing each other deeply. Yet through every challenge, our hearts remained steadfast. Though miles stretched between us, our love never faltered.",
       image: "https://res.cloudinary.com/dnlreax2z/image/upload/v1759851678/loveStory12_rtxmx4.jpg",
       icon: Heart
     },
     {
       id: 5,
-      title: "Our Future",
-      text: "Today we celebrate a promise made possible by God's grace. With Him at the center, we step into the future together.",
+      title: "Forever Begins",
+      text: "It took seven years before our journey together truly began. Then again, we found ourselves waiting—another seven years filled with perseverance, hope, and unwavering love that finally led us to our \"I do.\" From young churchmates to soon-to-be husband and wife, our story stands as a testament that true love, though tested by distance and time, always finds its way.",
       image: "https://res.cloudinary.com/dnlreax2z/image/upload/v1759851678/loveStory15_ighl0h.jpg",
-      icon: Infinity
+      icon: Infinity,
+      hasButton: true
     }
   ];
+
+  const fullStory = `How we met
+Our paths first crossed in 2011 through the church ministry of The Salvation Army, where a quiet friendship began to bloom—rooted in shared faith and service. From simple conversations to moments of laughter, a gentle connection began to grow.
+
+Fate, however, had its own small ways keeping our story alive. We would often find ourselves meeting in Mathematics competitions, crossing paths in school corridors, and even catching glimpses of each other during church events—small, meaningful coincidences that felt like divine reminders of something beautiful that is meant to be.
+
+When one of us found the courage to confess what the heart already knew, we both agreed to wait—to let our friendship mature and to give space for growth. We promised not to rush into a relationship until after college, believing that love founded on faith and patience would endure the test of time.
+
+And true enough, in God's perfect timing, seven years later, that quiet friendship blossomed into the love we now cherish—a love strengthened by faith, guided by fate, and joyfully celebrated as the beautiful story we continue to live today.
+
+As the years went by, we built dreams together and planned the life we hoped to share. But life had another test waiting. One of us had to go abroad, and distance slowly became part of our story. There were nights filled with tears, moments of loneliness, and countless days of missing each other deeply.
+
+Yet, through every challenge, our hearts remained steadfast. Though miles stretched between us, our love never faltered. We kept dreaming together, waiting for the right time, and trusting that God would lead us back into each other's arms. What began with faith has now endured with patience—and today, we stand side by side, ready to begin forever with the same love that never wavered, strengthened by every tear that taught us patience, and every prayer that brought us home to each other.
+
+It took seven years before our journey together truly began. Then again, we found ourselves waiting—another seven years filled with perseverance, hope, and unwavering love that finally led us to our "I do."
+
+The waiting was never easy, but it shaped us—it taught us to love selflessly, to dream fearlessly, and to trust wholeheartedly.
+
+From young churchmates to soon-to-be husband and wife, our story stands as a testament that true love, though tested by distance and time, always finds its way—and that what's meant to be will always be worth the wait.
+
+And now, as we begin this new chapter hand in hand, we remain hopeful and prayerful for the days ahead—trusting that the same God who wrote our story will continue to bless the pages yet to come.`;
 
   useEffect(() => {
     const container = containerRef.current;
@@ -237,6 +260,18 @@ const StorySection = () => {
                     {card.text}
                   </p>
 
+                  {/* Read Full Story Button - Only on last card */}
+                  {card.hasButton && (
+                    <button
+                      onClick={() => setShowFullStory(true)}
+                      className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-300"
+                      data-testid="button-read-full-story"
+                    >
+                      <BookOpen className="w-5 h-5" />
+                      <span>Read Full Story</span>
+                    </button>
+                  )}
+
                   {/* SVG Decorative Element */}
                   <div className="flex items-center space-x-4 pt-4 sm:pt-6">
                     <div className="w-12 sm:w-16 h-px bg-primary-foreground/60"></div>
@@ -306,10 +341,10 @@ const StorySection = () => {
                 
                 <div className="space-y-4">
                   <p className="text-xl sm:text-2xl leading-relaxed italic text-foreground/90" data-testid="text-story-promise-verse">
-                    "Above all, clothe yourselves with love, which binds us all together in perfect harmony."
+                    "He has made everything beautiful in its time."
                   </p>
                   <p className="text-base sm:text-lg text-foreground/80" data-testid="text-story-promise-reference">
-                    Colossians 3:14
+                    Ecclesiastes 3:11
                   </p>
                 </div>
 
@@ -334,6 +369,30 @@ const StorySection = () => {
           </div>
         </div>
       </div>
+
+      {/* Full Story Modal */}
+      {showFullStory && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80" onClick={() => setShowFullStory(false)}>
+          <div className="bg-white rounded-2xl p-8 max-w-4xl max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+            <div className="flex justify-between items-center mb-6">
+              <h3 className="text-3xl font-script italic text-foreground">Our Full Story</h3>
+              <button 
+                onClick={() => setShowFullStory(false)}
+                className="text-2xl text-foreground hover:text-primary transition-colors"
+              >
+                ×
+              </button>
+            </div>
+            <div className="prose prose-lg max-w-none">
+              {fullStory.split('\n\n').map((paragraph, index) => (
+                <p key={index} className="mb-4 text-foreground/90 leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </motion.section>
   );
 };
