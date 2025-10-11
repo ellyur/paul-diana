@@ -281,7 +281,7 @@ export default function ScrollTriggeredTimeline() {
                     <p className="text-sm md:text-base text-muted-foreground mb-4">
                         Help us capture moments on our special day by using the hashtag
                     </p>
-                    <div className="inline-block bg-primary/20 border-2 border-primary rounded-lg px-6 py-3">
+                    <div className="inline-block border-2 border-primary rounded-lg px-6 py-3 bg-[#ffffff]">
                         <p className="font-display text-primary text-lg" data-testid="text-hashtag">#HapPAULyEverAfterWithDIANA</p>
                     </div>
                 </div>
