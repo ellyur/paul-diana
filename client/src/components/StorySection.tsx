@@ -236,7 +236,7 @@ And now, as we begin this new chapter hand in hand, we remain hopeful and prayer
               style={{ width: '100vw', minWidth: '100vw' }}
             >
               <div 
-                className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-16 items-center h-full relative overflow-hidden rounded-3xl p-8 transition-all duration-300 bg-black/5 dark:bg-white/5 border border-white/10 backdrop-blur-sm"
+                className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-4 lg:gap-6 items-start h-full relative overflow-hidden rounded-3xl p-8 transition-all duration-300 bg-black/5 dark:bg-white/5 border border-white/10 backdrop-blur-sm"
                 style={{
                   background: mousePosition[card.id] 
                     ? `radial-gradient(600px circle at ${mousePosition[card.id].x}px ${mousePosition[card.id].y}px, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02) 40%), rgba(0, 0, 0, 0.05)`

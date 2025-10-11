@@ -184,7 +184,7 @@ Successfully migrated from Lovable to Replit environment:
     - All core narrative beats preserved while improving visual balance with images
   - Removed "I already answered NO to the RSVP" question from FAQ section per user request
   - Maintained full story content in modal popup for users who want to read complete narrative
-  - Fixed image cropping issue in StorySection:
-    - Changed image styling from object-cover to object-contain to prevent bottom cropping
-    - Ensures full images are visible within square containers without any clipping
-    - Images now scale to fit entirely while maintaining aspect ratio
+  - Fixed image positioning in StorySection:
+    - Added self-start alignment to position images at the top of their containers
+    - Reduced white space below images for better visual balance
+    - Maintained object-cover styling with rounded corners for proper appearance
