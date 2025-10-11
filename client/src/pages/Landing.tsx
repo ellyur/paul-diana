@@ -30,7 +30,7 @@ const Landing = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="text-4xl font-display font-light tracking-wider text-gray-800"
+          className="text-4xl font-display font-[350] tracking-wider text-gray-800"
         >
           PAUL & DIANA
         </motion.span>
