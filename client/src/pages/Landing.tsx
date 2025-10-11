@@ -30,7 +30,7 @@ const Landing = () => {
       >
         <button
           onClick={handleEnter}
-          className="px-12 py-4 bg-white/90 hover:bg-white text-black font-semibold text-lg rounded-full shadow-2xl transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+          className="px-12 py-4 bg-white/90 hover:bg-white text-black font-semibold text-lg shadow-2xl transition-all duration-300 hover:scale-105 backdrop-blur-sm"
           data-testid="button-enter-invitation"
         >
           Open Invitation
