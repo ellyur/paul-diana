@@ -36,6 +36,13 @@ const Footer = () => {
             <div className="w-16 h-px bg-border"></div>
           </div>
 
+          {/* Confidentiality Message */}
+          <div className="max-w-3xl mx-auto bg-primary/5 border border-primary/20 rounded-lg p-6">
+            <p className="text-foreground leading-relaxed text-sm" data-testid="text-confidentiality">
+              We kindly request that you treat this invitation with utmost confidentiality. Our wedding is an intimate and small ceremony, reserved for our dearest and closest loved ones. We trust that only those invited will be present, so we ask that you refrain from sharing this information with others. Your understanding and respect for our privacy are sincerely appreciated. Thank you for being part of our special day.
+            </p>
+          </div>
+
           {/* Thank You Message */}
           <div className="max-w-2xl mx-auto">
             <p className="text-foreground leading-relaxed italic">
